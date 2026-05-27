@@ -7,6 +7,7 @@ import tempfile
 from pathlib import Path
 
 from code.run_hmgraph_pipeline import build_stages, count_jsonl_lines, make_range_label, output_paths
+from code.l1.segment_proposer import propose_l1_reasoning_segments
 from code.stages.l1_postprocess import _ensure_final_l1_ledger_coverage
 from code.validate_hmgraph_pipeline_outputs import _check_l1_schema, _check_times, read_jsonl
 
@@ -89,6 +90,7 @@ def test_dry_run_stage_construction() -> None:
         end_sec = 5.0
         range_label = None
         overwrite = False
+        max_frames_per_segment = 16
     stages = build_stages(Args())
     assert [s.name for s in stages] == ["w_scene", "rolling_combined", "l1_reasoner", "l1_postprocess"]
     assert any("code.stages.w_scene" in " ".join(s.command) for s in stages)
@@ -132,6 +134,71 @@ def test_postprocess_ledger_coverage_fallback() -> None:
     assert log and log[0]["l1_id"] == "l1_a"
 
 
+def _fake_combined_record(idx: int, verb: str, obj: str, confidence: float = 0.8) -> dict:
+    return {
+        "window_idx": idx,
+        "t_start": float(idx),
+        "t_end": float(idx + 1),
+        "W_action": {
+            "record": {
+                "action_present": True,
+                "valid_actions": [
+                    {
+                        "verb": verb,
+                        "direct_object": obj,
+                        "confidence": confidence,
+                        "object_attributes": {"part": "none"},
+                    }
+                ],
+            }
+        },
+        "scene_observation": {
+            "calibrated_action_presence": {"calibrated_status": "visible_action"},
+            "record": {
+                "scene_observation": {
+                    "scene_type": "kitchen",
+                    "current_focus": obj,
+                    "action_presence": {"status": "visible_action", "confidence": confidence},
+                    "visible_objects": [{"name": obj}],
+                }
+            },
+        },
+        "rolling_context_v1_1": {
+            "after_window": {
+                "current_focus": obj,
+                "stable_objects": [{"canonical_name": obj, "raw_name": obj}],
+            }
+        },
+    }
+
+
+def test_w_grouped_l1_segments_follow_action_identity() -> None:
+    records = [
+        _fake_combined_record(0, "open", "cupboard door"),
+        _fake_combined_record(1, "open", "cupboard door"),
+        _fake_combined_record(2, "pick up", "mug"),
+    ]
+    segments = propose_l1_reasoning_segments(records)
+    assert len(segments) == 2
+    assert segments[0]["source_window_indices"] == [0, 1]
+    assert segments[1]["source_window_indices"] == [2]
+    assert segments[0]["w_grouping_diagnostics"]["grouping_unit"] == "W_action_1sec"
+
+
+def test_w_grouped_l1_segments_mark_vague_groups_for_more_frames() -> None:
+    records = [
+        _fake_combined_record(0, "touch", "object", 0.3),
+        _fake_combined_record(1, "touch", "object", 0.3),
+    ]
+    segments = propose_l1_reasoning_segments(records)
+    assert len(segments) == 1
+    diagnostics = segments[0]["w_grouping_diagnostics"]
+    assert diagnostics["n_low_confidence_w_actions"] == 2
+    assert diagnostics["n_generic_or_vague_w_objects"] == 2
+    assert diagnostics["needs_dense_visual_verification"] is True
+    assert segments[0]["recommended_frame_budget"] > 8
+
+
 def main() -> int:
     tests = [
         test_range_label_generation,
@@ -142,6 +209,8 @@ def main() -> int:
         test_dry_run_stage_construction,
         test_evidence_ledger_id_matching_contract,
         test_postprocess_ledger_coverage_fallback,
+        test_w_grouped_l1_segments_follow_action_identity,
+        test_w_grouped_l1_segments_mark_vague_groups_for_more_frames,
         test_dry_run_does_not_create_model_outputs_contract,
     ]
     for test in tests:

@@ -1,9 +1,4 @@
-"""Full-frame selection for L1 multimodal reasoning.
-
-This module contains the current frame-selection implementation used by the
-canonical pipeline. Function names keep version suffixes where output
-schemas and stage code still reference them.
-"""
+"""Full-frame selection for L1 multimodal verification."""
 
 
 
@@ -22,7 +17,8 @@ def _select_l1_reasoning_frames_base(video_path: str, segment: dict, max_frames:
     out_dir.mkdir(parents=True, exist_ok=True)
     for old in out_dir.glob("frame_*.jpg"):
         old.unlink()
-    times = _limit_times(_sample_times(segment), max_frames)
+    frame_budget = _frame_budget(segment, max_frames)
+    times = _limit_times(_sample_times(segment), frame_budget)
     cap = cv2.VideoCapture(str(video_path))
     if not cap.isOpened():
         raise RuntimeError(f"Could not open video: {video_path}")
@@ -35,7 +31,7 @@ def _select_l1_reasoning_frames_base(video_path: str, segment: dict, max_frames:
         path = out_dir / f"frame_{idx:02d}_{role}_{timestamp:.2f}.jpg"
         if not cv2.imwrite(str(path), frame):
             raise RuntimeError(f"Could not write frame: {path}")
-        records.append({"frame_id": f"{segment['segment_id']}_frame_{idx:02d}", "timestamp_sec": round(float(timestamp), 3), "role": role, "image_path": str(path)})
+        records.append({"frame_id": f"{segment['segment_id']}_frame_{idx:02d}", "timestamp_sec": round(float(timestamp), 3), "role": role, "image_path": str(path), "frame_budget": frame_budget})
     cap.release()
     return records
 
@@ -49,7 +45,7 @@ def _sample_times(segment: dict) -> list[tuple[float, str]]:
         times.append((before[-1], "before_context"))
     if after:
         times.append((after[0], "after_context"))
-    core = _fps_times(t0, t1, 7.0)
+    core = _fps_times(t0, t1, _core_sampling_fps(segment))
     boundaries = [t0, (t0 + t1) / 2.0, max(t0, t1 - 0.05)]
     for window_idx in segment.get("source_window_indices", []):
         boundaries.extend([float(window_idx), float(window_idx) + 1.0])
@@ -60,6 +56,23 @@ def _sample_times(segment: dict) -> list[tuple[float, str]]:
     times.extend((t, "before_context") for t in before[:-1])
     times.extend((t, "after_context") for t in after[1:])
     return _dedup(times)
+
+
+def _frame_budget(segment: dict, max_frames: int) -> int:
+    requested = segment.get("recommended_frame_budget")
+    try:
+        requested_i = int(requested)
+    except Exception:
+        requested_i = max_frames
+    return max(4, min(int(max_frames), requested_i))
+
+
+def _core_sampling_fps(segment: dict) -> float:
+    diagnostics = segment.get("w_grouping_diagnostics") or {}
+    if diagnostics.get("needs_dense_visual_verification"):
+        return 6.0
+    duration = float(segment["t_end"]) - float(segment["t_start"])
+    return 5.0 if duration > 4.0 else 4.0
 
 
 def _limit_times(times: list[tuple[float, str]], max_frames: int) -> list[tuple[float, str]]:
@@ -102,11 +115,6 @@ def _even_pick(items: list[tuple[float, str]], n: int) -> list[tuple[float, str]
         return [items[len(items) // 2]]
     idxs = [round(i * (len(items) - 1) / (n - 1)) for i in range(n)]
     return [items[i] for i in sorted(set(idxs))]
-
-
-def _select_l1_reasoning_frames_base_alias(video_path: str, segment: dict, max_frames: int = 24, output_dir=None) -> list[dict]:
-    return _select_l1_reasoning_frames_base(video_path, segment, max_frames, output_dir=output_dir)
-
 
 def select_l1_reasoning_frames(video_path: str, segment: dict, max_frames: int = 24, output_dir=None) -> list[dict]:
     return _select_l1_reasoning_frames_base(video_path, segment, max_frames, output_dir=output_dir)

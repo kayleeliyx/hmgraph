@@ -186,11 +186,25 @@ Guidelines:
   object is being moved,
   opened, closed, tilted, poured from, pressed, turned, cut, wiped, rinsed,
   inserted, removed, picked up, or put down, use that more specific verb.
-- If both a support action and a primary manipulation are visible in the TARGET
-  interval, keep both
-  only when they involve different hands or different objects. Mark the
-  support action role as "support" and the manipulation role as
-  "primary_manipulation".
+- Bimanual rule: when the two hands perform DIFFERENT actions on DIFFERENT
+  objects in the TARGET interval, emit ONE entry per hand, each with
+  interaction.hand set to "left" or "right" (never "both" in this case) and
+  interaction.role set to "primary_manipulation" on BOTH. Do not collapse two
+  different hand actions into a single entry. Example: if the left hand lifts
+  the lid of a food recycling bin while the right hand drops an orange skin
+  into the bin, output two entries: (verb="open" or "lift", object="bin lid",
+  hand="left") and (verb="throw" or "drop", object="orange skin", hand="right").
+- If one hand performs a primary manipulation and the other hand only steadies
+  or supports an object with no independent action, keep the old behavior:
+  emit the primary as primary_manipulation and the support as role="support".
+- Discard / transfer-into-container rule: when an object visibly leaves the
+  hand and enters a bin, container, sink, or other receptacle in the TARGET
+  interval, use verb="throw", "drop", "discard", or "dispose" as appropriate
+  (not "place" -- "place" implies setting down on a surface, not releasing into
+  a container). why_this_verb must cite the visible release and the receiving
+  container, for example: "orange skin leaves the right hand and falls into
+  the open recycling bin" or "tea bag drops into the mug". A brief contact
+  followed by visible release is valid evidence for these verbs.
 - Avoid generic verbs such as hold, reach for, touch, manipulate, use, handle,
   or operate when a more specific physical action is visible.
 - Fill "why_this_verb" with concrete visual evidence from the TARGET interval,
@@ -234,6 +248,33 @@ Guidelines:
 - For object attributes, report only visible evidence. Use "unknown", "none",
   or empty lists when details are not visible.
 - If no hand-object action is visible in the TARGET interval, output {"actions": []}.
+
+Example A (bimanual lift + discard):
+TARGET interval shows the left hand lifting the brown lid of the food
+recycling bin while the right hand simultaneously releases a used orange skin
+half into the open bin.
+Correct output: two actions in the same JSON object.
+  - {verb: "lift", direct_object.name: "lid of food recycling bin",
+     interaction.hand: "left", interaction.role: "primary_manipulation",
+     interaction.contact_type: "grasp", interaction.object_change: "lid lifted",
+     why_this_verb: "left hand grips the lid and the lid moves up off the bin"}
+  - {verb: "throw", direct_object.name: "orange skin",
+     interaction.hand: "right", interaction.role: "primary_manipulation",
+     interaction.contact_type: "none", interaction.object_change: "released into bin",
+     why_this_verb: "orange skin leaves the right hand and falls into the open recycling bin"}
+
+Example B (bimanual hold + cap):
+TARGET interval shows the left hand holding a milk bottle upright while the
+right hand places and rotates a cap onto the bottle opening.
+Correct output: two actions in the same JSON object.
+  - {verb: "place", direct_object.name: "lid", interaction.hand: "right",
+     interaction.role: "primary_manipulation", interaction.contact_type: "press",
+     interaction.object_change: "lid placed on bottle",
+     why_this_verb: "right hand lowers the cap onto the bottle opening"}
+  - {verb: "hold", direct_object.name: "milk bottle", interaction.hand: "left",
+     interaction.role: "support", interaction.contact_type: "hold",
+     interaction.object_change: "no_visible_change",
+     why_this_verb: "left hand keeps the milk bottle steady with no object change"}
 """
 
 ADAPTIVE_CROPS_PROMPT = (
@@ -324,6 +365,31 @@ STRONG_OBJECT_CHANGE_KEYWORDS = {
 }
 MATERIAL_TRANSFER_VERBS = {"pour", "rinse", "sprinkle", "add", "transfer"}
 TOOL_EFFECT_VERBS = {"cut", "slice", "peel", "wipe", "scrub", "scrape", "stir", "mix"}
+DISCARD_VERBS = {"throw", "throw away", "drop", "discard", "dispose", "toss", "bin", "release", "let go"}
+DISCARD_EVIDENCE_TERMS = {
+    "into the bin",
+    "into bin",
+    "in the bin",
+    "into the recycling",
+    "recycling bin",
+    "food waste",
+    "trash",
+    "rubbish",
+    "compost",
+    "lets go",
+    "releases",
+    "drops",
+    "thrown",
+    "tossed",
+    "dropped",
+    "lid opens",
+    "lid raises",
+    "bin opens",
+    "orange skin enters",
+    "skin falls",
+    "peel falls",
+    "waste enters",
+}
 REACH_VERBS = {"reach", "reach for"}
 EMPTY_OR_WEAK_CHANGES = {"", "unknown", "none", "no_visible_change", "no visible change"}
 VISIBILITY_ONLY_PHRASES = {
@@ -429,6 +495,18 @@ def _validity_rejection_reason(action: Dict[str, Any]) -> str | None:
 
     if verb in MATERIAL_TRANSFER_VERBS and _contains_any(
         f"{why_this_verb} {object_change}", TRANSFER_EVIDENCE_TERMS
+    ):
+        return None
+
+    # Discard / transfer-into-container verbs are valid when there is visible
+    # release evidence in TARGET frames, even if contact is brief by nature.
+    if verb in DISCARD_VERBS and (
+        hand in {"left", "right", "both"}
+        and (
+            _contains_any(why_this_verb, DISCARD_EVIDENCE_TERMS)
+            or _contains_any(object_change, DISCARD_EVIDENCE_TERMS)
+            or _contains_any(object_change, {"released", "dropped", "thrown", "discarded"})
+        )
     ):
         return None
 

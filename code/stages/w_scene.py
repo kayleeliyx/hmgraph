@@ -41,10 +41,28 @@ def write_jsonl(records: Iterable[dict], path: str | Path, overwrite: bool) -> N
 
 
 def _assert_exact_range(records: list[dict], start_sec: float, end_sec: float) -> None:
-    expected = [(idx, float(idx), float(idx + 1)) for idx in range(int(start_sec), int(end_sec))]
+    """Check that W records cover complete 1-second windows.
+
+    This is intentionally concise. Full-video runs can have hundreds of
+    windows, so do not print the entire expected list on failure.
+    """
+    start_i = int(round(float(start_sec)))
+    end_i = int(round(float(end_sec)))
+    expected = [(idx, float(idx), float(idx + 1)) for idx in range(start_i, end_i)]
     actual = [(int(r["window_idx"]), float(r["t_start"]), float(r["t_end"])) for r in records]
-    if actual != expected:
-        raise RuntimeError(f"Expected W windows {expected}; got {actual}")
+
+    if len(actual) != len(expected):
+        raise RuntimeError(
+            f"Expected {len(expected)} W windows from {start_i} to {end_i}; "
+            f"got {len(actual)}. actual_first={actual[:3]} actual_last={actual[-3:]}"
+        )
+
+    for i, (exp, act) in enumerate(zip(expected, actual)):
+        if exp[0] != act[0] or abs(exp[1] - act[1]) > 1e-6 or abs(exp[2] - act[2]) > 1e-6:
+            raise RuntimeError(
+                f"W window mismatch at position {i}: expected={exp}, actual={act}; "
+                f"actual_first={actual[:3]} actual_last={actual[-3:]}"
+            )
 
 
 def _ensure_w_action(args: argparse.Namespace) -> tuple[list[dict], str]:

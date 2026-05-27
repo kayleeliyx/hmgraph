@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -82,7 +83,7 @@ def build_stages(args: argparse.Namespace) -> list[Stage]:
     p = output_paths(args.output_dir, args.start_sec, args.end_sec, args.range_label)
     py = resolve_python_executable(getattr(args, "python_executable", None))
     common_overwrite = ["--overwrite"] if args.overwrite else []
-    scene_overwrite_w = ["--overwrite-w-action"] if args.overwrite else []
+    scene_overwrite_w = ["--overwrite-w-action"] if args.overwrite and args.allow_w_regenerate else []
     gt = ["--gt-jsonl", args.gt_jsonl] if args.gt_jsonl else []
     time_args = ["--start-sec", str(args.start_sec), "--end-sec", str(end_sec)]
     return [
@@ -143,7 +144,7 @@ def build_stages(args: argparse.Namespace) -> list[Stage]:
                 "--quality-report-json", str(p["raw_quality"]),
                 *gt,
                 *time_args,
-                "--max-frames-per-segment", "24",
+                "--max-frames-per-segment", str(args.max_frames_per_segment),
                 "--frame-output-dir", str(p["l1_frames"]),
                 *common_overwrite,
             ],
@@ -172,7 +173,11 @@ def build_stages(args: argparse.Namespace) -> list[Stage]:
 
 def run(args: argparse.Namespace) -> dict:
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
-    stages = _select_stages(build_stages(args), args.stage)
+    all_stages = build_stages(args)
+    if args.resume_existing and args.stage == "all":
+        stages = _resume_stages_from_existing_outputs(all_stages, args)
+    else:
+        stages = _select_stages(all_stages, args.stage)
     manifest = _base_manifest(args, stages)
     paths = output_paths(args.output_dir, args.start_sec, args.end_sec, args.range_label)
     if args.dry_run:
@@ -192,12 +197,22 @@ def run(args: argparse.Namespace) -> dict:
 
 
 def resolve_end_sec(video_path: str | Path, start_sec: float, end_sec: float | None) -> float:
+    """Resolve the run end time using complete 1-second W windows.
+
+    This pipeline produces one W record per complete second. Therefore, both
+    explicit and implicit end times are floored to the nearest lower integer
+    second. For example, a 396.267s video runs as 0.0-396.0 and skips the final
+    0.267s partial window.
+    """
     if end_sec is not None:
-        return float(end_sec)
-    duration = _probe_video_duration(video_path)
-    if duration <= start_sec:
-        raise ValueError(f"Video duration {duration} is not greater than start_sec {start_sec}")
-    return duration
+        resolved = float(math.floor(float(end_sec)))
+    else:
+        duration = _probe_video_duration(video_path)
+        resolved = float(math.floor(duration))
+
+    if resolved <= float(start_sec):
+        raise ValueError(f"Invalid time range: start_sec={start_sec}, end_sec={resolved}")
+    return resolved
 
 
 def resolve_python_executable(requested: str | None = None) -> str:
@@ -282,6 +297,56 @@ def _select_stages(stages: list[Stage], selected: str) -> list[Stage]:
         if stage.name == selected:
             return [stage]
     raise ValueError(f"Unknown stage {selected}")
+
+
+def _resume_stages_from_existing_outputs(stages: list[Stage], args: argparse.Namespace) -> list[Stage]:
+    paths = output_paths(args.output_dir, args.start_sec, args.end_sec, args.range_label)
+    end_sec = resolve_end_sec(args.video_path, args.start_sec, args.end_sec)
+    by_name = {stage.name: stage for stage in stages}
+
+    combined_ok = _jsonl_complete_range(paths["combined_v1_1"], args.start_sec, end_sec)
+    scene_ok = _jsonl_complete_range(paths["scene"], args.start_sec, end_sec)
+    w_ok = _jsonl_complete_range(paths["w"], args.start_sec, end_sec)
+
+    if combined_ok:
+        print(f"Resume: reusing complete combined evidence: {paths['combined_v1_1']}")
+        return [by_name["l1_reasoner"], by_name["l1_postprocess"]]
+    if w_ok and scene_ok:
+        print("Resume: reusing complete W and scene outputs; starting at rolling_combined.")
+        return [by_name["rolling_combined"], by_name["l1_reasoner"], by_name["l1_postprocess"]]
+    if w_ok:
+        print("Resume: reusing complete W output; starting at w_scene without W regeneration.")
+        return [by_name["w_scene"], by_name["rolling_combined"], by_name["l1_reasoner"], by_name["l1_postprocess"]]
+    if not args.allow_w_regenerate:
+        raise RuntimeError(
+            "Resume requested, but W output is missing/incomplete and --allow-w-regenerate was not set. "
+            f"Expected complete W at {paths['w']}"
+        )
+    print("Resume: W output missing/incomplete, but --allow-w-regenerate is set; starting from w_scene.")
+    return stages
+
+
+def _jsonl_complete_range(path: Path, start_sec: float, end_sec: float) -> bool:
+    if not path.exists() or path.stat().st_size == 0:
+        return False
+    start_i = int(float(start_sec))
+    end_i = int(float(end_sec))
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            records = [json.loads(line) for line in f if line.strip()]
+        if len(records) != end_i - start_i:
+            return False
+        for offset, record in enumerate(records):
+            expected = start_i + offset
+            if int(record.get("window_idx", -999999)) != expected:
+                return False
+            if abs(float(record.get("t_start", -1.0)) - float(expected)) > 1e-6:
+                return False
+            if abs(float(record.get("t_end", -1.0)) - float(expected + 1)) > 1e-6:
+                return False
+        return True
+    except Exception:
+        return False
 
 
 def _check_inputs(paths: list[Path]) -> None:
@@ -386,8 +451,11 @@ def main(argv: Iterable[str] | None = None) -> int:
     parser.add_argument("--end-sec", type=float)
     parser.add_argument("--range-label")
     parser.add_argument("--python-executable")
+    parser.add_argument("--max-frames-per-segment", type=int, default=16)
     parser.add_argument("--stage", choices=("all", "w_scene", "rolling_combined", "l1_reasoner", "l1_postprocess"), default="all")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--resume-existing", action="store_true")
+    parser.add_argument("--allow-w-regenerate", action="store_true")
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args(argv)
