@@ -1,2 +1,15 @@
 /logs
 /runs
+__pycache__/
+*.py[cod]
+/.cache/
+/.runtime/
+/.venvs/
+/analysis/e0/
+/.pytest_cache/
+/.runtime457/
+/datasets/
+/evaluation/results/
+/.agents/
+/.aws/
+/.codex/
