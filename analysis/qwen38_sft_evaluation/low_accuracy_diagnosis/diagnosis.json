@@ -1,0 +1,965 @@
+{
+ "goal": {
+  "train_unique_labels": 507,
+  "val_unique_labels": 33,
+  "val_labels_seen_verbatim_in_training": 3,
+  "val_label_counts": [
+   [
+    "cook mushrooms with vegetable stock in another saucepan fry onions and garlic measure risotto rice",
+    32
+   ],
+   [
+    "prepare the dressing add lettuce sweetcorn and avocado once ready add the roasted sweet potato to salad and mix with the dressing",
+    18
+   ],
+   [
+    "tearing lettuce halving tomatoes chopping cucumber tearing olives and put all in bowl with crumbled blue cheese",
+    17
+   ],
+   [
+    "bake the chickpeas and wash lettuce leaves",
+    15
+   ],
+   [
+    "season add the rice and wine to the mushroom risotto",
+    15
+   ],
+   [
+    "prepare the cookies mix with butter banana egg yolk and flour fold the chocolate chips into the mix",
+    14
+   ],
+   [
+    "scoop the cookies and line up on parchment paper",
+    14
+   ],
+   [
+    "preheat the oven wash peel and chop sweet potatoes then roast",
+    12
+   ],
+   [
+    "finishing off the risotto add butter grated cheese and parsley leaves",
+    11
+   ],
+   [
+    "tidying up and wiping down sink tiles surfaces and cupboards",
+    10
+   ],
+   [
+    "wiping tiles surface and coffee machine",
+    9
+   ],
+   [
+    "tidy up clean wash up and wipe down surfaces",
+    7
+   ],
+   [
+    "washing up loading the dishwasher and tidying",
+    7
+   ],
+   [
+    "cleaning sink area including draining board tiles and surfaces",
+    5
+   ],
+   [
+    "unloading the dishwasher",
+    4
+   ],
+   [
+    "simmer the risotto adding stock and grate the cheese",
+    4
+   ],
+   [
+    "tidy up load the dishwasher and wash up",
+    4
+   ],
+   [
+    "freshly grind coffee and start preparing coffee using espresso machine",
+    4
+   ],
+   [
+    "prepare espresso coffee with freshly ground beans",
+    4
+   ],
+   [
+    "washing up and refilling dish soap bottle",
+    3
+   ],
+   [
+    "clean and clear put ingredients and equipment away",
+    3
+   ],
+   [
+    "cleaning surfaces",
+    3
+   ],
+   [
+    "wiping down sink and work surfaces",
+    2
+   ],
+   [
+    "preparing coffee",
+    2
+   ],
+   [
+    "tidying up",
+    1
+   ],
+   [
+    "remove chickpeas from oven removing burnt ones add to salad and mix",
+    1
+   ],
+   [
+    "tidying up and loading the dishwasher",
+    1
+   ],
+   [
+    "continue stirring the risotto and adding the remaining stock",
+    1
+   ],
+   [
+    "unloading the dishwasher putting dishes away",
+    1
+   ],
+   [
+    "line parchment paper on baking trays",
+    1
+   ],
+   [
+    "remove the baking trays with baked cookies from the oven",
+    1
+   ],
+   [
+    "washing up and loading the dishwasher",
+    1
+   ],
+   [
+    "clean and clear",
+    1
+   ]
+  ],
+  "models": {
+   "base": {
+    "labels": {
+     "partial": 43,
+     "incorrect": 178,
+     "correct": 2,
+     "null": 5
+    },
+    "unique_predictions": 178,
+    "prediction_equals_queried_action": 68,
+    "prediction_is_verbatim_training_goal_label": 15,
+    "memorized_by_source_participant": {
+     "P03": 9,
+     "P01/P03": 4,
+     "P02/P03": 1,
+     "P02": 1
+    },
+    "memorized_and_correct_or_partial": 5,
+    "contradiction_flags": 2,
+    "top_predictions": [
+     [
+      "stir rice",
+      7
+     ],
+     [
+      "",
+      5
+     ],
+     [
+      "stir mushrooms",
+      5
+     ],
+     [
+      "transfer cookie dough",
+      5
+     ],
+     [
+      "prepare coffee",
+      4
+     ],
+     [
+      "write on paper",
+      4
+     ],
+     [
+      "stir contents of saucepan",
+      4
+     ],
+     [
+      "load the dishwasher",
+      3
+     ],
+     [
+      "slice cucumber",
+      3
+     ],
+     [
+      "remove olive pit",
+      3
+     ],
+     [
+      "slice onion",
+      3
+     ],
+     [
+      "prepare food",
+      3
+     ]
+    ]
+   },
+   "epoch1": {
+    "labels": {
+     "incorrect": 128,
+     "correct": 8,
+     "partial": 92
+    },
+    "unique_predictions": 92,
+    "prediction_equals_queried_action": 0,
+    "prediction_is_verbatim_training_goal_label": 170,
+    "memorized_by_source_participant": {
+     "P02": 20,
+     "P01": 53,
+     "P03": 49,
+     "P01/P03": 6,
+     "P04": 21,
+     "P05": 7,
+     "P01/P04/P05/P06": 5,
+     "P03/P05": 9
+    },
+    "memorized_and_correct_or_partial": 64,
+    "contradiction_flags": 56,
+    "top_predictions": [
+     [
+      "weight biscuits prepare the chocolate sauce",
+      16
+     ],
+     [
+      "clean and put stuff away",
+      15
+     ],
+     [
+      "cook the meat",
+      12
+     ],
+     [
+      "prepare sauce",
+      10
+     ],
+     [
+      "load dishwasher",
+      9
+     ],
+     [
+      "prepare the dough balls as well as the mixture of meat with other ingredients",
+      8
+     ],
+     [
+      "prepare coffee",
+      6
+     ],
+     [
+      "clean and clear",
+      5
+     ],
+     [
+      "continue cooking beef stroganoff",
+      5
+     ],
+     [
+      "load dishwasher put stuff away",
+      4
+     ],
+     [
+      "drain sweetcorn",
+      4
+     ],
+     [
+      "preheat oven and prepare baking tray",
+      4
+     ]
+    ]
+   },
+   "epoch2": {
+    "labels": {
+     "incorrect": 133,
+     "correct": 11,
+     "partial": 84
+    },
+    "unique_predictions": 107,
+    "prediction_equals_queried_action": 2,
+    "prediction_is_verbatim_training_goal_label": 178,
+    "memorized_by_source_participant": {
+     "P02": 19,
+     "P01": 58,
+     "P03": 56,
+     "P01/P04/P05/P06": 12,
+     "P01/P03": 7,
+     "P04": 20,
+     "P02/P04": 1,
+     "P05": 4,
+     "P03/P05": 1
+    },
+    "memorized_and_correct_or_partial": 68,
+    "contradiction_flags": 66,
+    "top_predictions": [
+     [
+      "prepare the dough balls as well as the mixture of meat with other ingredients",
+      17
+     ],
+     [
+      "clean and clear",
+      12
+     ],
+     [
+      "prepare sauce",
+      11
+     ],
+     [
+      "continue cooking beef stroganoff",
+      9
+     ],
+     [
+      "weight biscuits prepare the chocolate sauce",
+      8
+     ],
+     [
+      "prepare coffee",
+      7
+     ],
+     [
+      "cook the meat",
+      7
+     ],
+     [
+      "preheat oven and prepare baking tray",
+      6
+     ],
+     [
+      "clear and clean",
+      6
+     ],
+     [
+      "clear the table put stuff away clean kitchen",
+      5
+     ],
+     [
+      "cook and season mushrooms",
+      4
+     ],
+     [
+      "wipe surfaces",
+      4
+     ]
+    ]
+   }
+  }
+ },
+ "why": {
+  "eligible": 226,
+  "train_explain_targets": 1403,
+  "train_unique_why": 1228,
+  "reference_words_median": 9,
+  "reference_type_counts": {
+   "so that": 218,
+   "because": 3,
+   "in order to": 5
+  },
+  "models": {
+   "base": {
+    "labels": {
+     "incorrect": 77,
+     "partial": 50,
+     "correct": 98,
+     "null": 1
+    },
+    "answer_words_median": 26,
+    "answer_words_max": 67,
+    "unique_answers": 223,
+    "verbatim_training_why": 0,
+    "answer_type_counts": {
+     "other": 151,
+     "to": 75
+    },
+    "correct_by_reference_type": {
+     "because": "0/3",
+     "in order to": "1/5",
+     "so that": "97/218"
+    },
+    "correct_by_answer_length_tercile": {
+     "short": {
+      "n": 75,
+      "median_words": 13,
+      "correct": 30,
+      "partial": 26
+     },
+     "mid": {
+      "n": 75,
+      "median_words": 26,
+      "correct": 34,
+      "partial": 15
+     },
+     "long": {
+      "n": 76,
+      "median_words": 42,
+      "correct": 34,
+      "partial": 9
+     }
+    },
+    "flags": {
+     "contradiction": 7,
+     "too_broad": 60,
+     "too_narrow": 0,
+     "unsupported_addition": 149
+    }
+   },
+   "epoch1": {
+    "labels": {
+     "incorrect": 97,
+     "partial": 54,
+     "correct": 75
+    },
+    "answer_words_median": 9,
+    "answer_words_max": 22,
+    "unique_answers": 190,
+    "verbatim_training_why": 23,
+    "answer_type_counts": {
+     "so that": 193,
+     "in order to": 26,
+     "because": 7
+    },
+    "correct_by_reference_type": {
+     "because": "2/3",
+     "in order to": "0/5",
+     "so that": "73/218"
+    },
+    "correct_by_answer_length_tercile": {
+     "short": {
+      "n": 75,
+      "median_words": 7,
+      "correct": 20,
+      "partial": 16
+     },
+     "mid": {
+      "n": 75,
+      "median_words": 9,
+      "correct": 22,
+      "partial": 24
+     },
+     "long": {
+      "n": 76,
+      "median_words": 12,
+      "correct": 33,
+      "partial": 14
+     }
+    },
+    "flags": {
+     "contradiction": 14,
+     "too_broad": 46,
+     "too_narrow": 7,
+     "unsupported_addition": 66
+    }
+   },
+   "epoch2": {
+    "labels": {
+     "incorrect": 93,
+     "partial": 52,
+     "correct": 81
+    },
+    "answer_words_median": 10,
+    "answer_words_max": 22,
+    "unique_answers": 201,
+    "verbatim_training_why": 14,
+    "answer_type_counts": {
+     "so that": 210,
+     "in order to": 11,
+     "because": 5
+    },
+    "correct_by_reference_type": {
+     "because": "0/3",
+     "in order to": "0/5",
+     "so that": "81/218"
+    },
+    "correct_by_answer_length_tercile": {
+     "short": {
+      "n": 75,
+      "median_words": 7,
+      "correct": 25,
+      "partial": 20
+     },
+     "mid": {
+      "n": 75,
+      "median_words": 9,
+      "correct": 15,
+      "partial": 20
+     },
+     "long": {
+      "n": 76,
+      "median_words": 14,
+      "correct": 41,
+      "partial": 12
+     }
+    },
+    "flags": {
+     "contradiction": 14,
+     "too_broad": 43,
+     "too_narrow": 7,
+     "unsupported_addition": 99
+    }
+   }
+  },
+  "base_to_epoch1": {
+   "lost": 50,
+   "gained": 27,
+   "lost_became": {
+    "partial": 20,
+    "incorrect": 30
+   },
+   "base_words_on_lost_median": 27,
+   "sft_words_on_lost_median": 8
+  },
+  "base_to_epoch2": {
+   "lost": 49,
+   "gained": 32,
+   "lost_became": {
+    "partial": 21,
+    "incorrect": 28
+   },
+   "base_words_on_lost_median": 28,
+   "sft_words_on_lost_median": 9
+  },
+  "oracle_any_model_correct": 135,
+  "no_model_correct": 91,
+  "no_model_correct_examples": [
+   {
+    "id": "P07-20240529-102652:explain:P07-20240529-102652-15",
+    "action": "move mug",
+    "reference": "so that it fits in the cupboard",
+    "epoch1": "so that it is easier to see the mugs"
+   },
+   {
+    "id": "P07-20240529-102652:explain:P07-20240529-102652-57",
+    "action": "pull bottom shelf of dishwasher",
+    "reference": "so that it can be emptied",
+    "epoch1": "in order to take out the pan"
+   },
+   {
+    "id": "P07-20240529-102652:explain:P07-20240529-102652-188",
+    "action": "tip big bottle of dishwashing liquid",
+    "reference": "so that it pours into the smaller bottle of dishwashing liquid that is in the sink",
+    "epoch1": "so that the dishwashing liquid flows into the measuring cup"
+   },
+   {
+    "id": "P07-20240529-102652:explain:P07-20240529-102652-271",
+    "action": "turn on tap",
+    "reference": "so that the water is now flowing into the small sink on the left hand side",
+    "epoch1": "so that the water is not too strong"
+   },
+   {
+    "id": "P07-20240529-131737:explain:P07-20240529-131737-29",
+    "action": "pick up saucepan lid",
+    "reference": "so that the colander underneath it can be picked up with the left hand",
+    "epoch1": "so that I can use it to cover the saucepan later"
+   },
+   {
+    "id": "P07-20240529-131737:explain:P07-20240529-131737-36",
+    "action": "tip can",
+    "reference": "so that the chickpeas go into the colander and the aquafaba drains out of the chickpeas",
+    "epoch1": "so that the chickpeas fall into the colander"
+   },
+   {
+    "id": "P07-20240529-131737:explain:P07-20240529-131737-141",
+    "action": "tip spoon",
+    "reference": "so that the last drop of olive oil goes onto the chickpeas",
+    "epoch1": "so that the oil is poured on the tray"
+   },
+   {
+    "id": "P07-20240529-131737:explain:P07-20240529-131737-155",
+    "action": "twist spice jar",
+    "reference": "so that the writing is the right way up and can be read",
+    "epoch1": "in order to open it"
+   },
+   {
+    "id": "P07-20240529-131737:explain:P07-20240529-131737-170",
+    "action": "tip spoon",
+    "reference": "so that all of the spices go onto the chickpeas on the tray",
+    "epoch1": "so that the remaining spices fall on the tray"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-68",
+    "action": "move drying rack",
+    "reference": "so that the stool behind it can be reached",
+    "epoch1": "so that it is easier to reach the bowl"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-140",
+    "action": "reposition tomato",
+    "reference": "so that it can be cut evenly",
+    "epoch1": "so that it can be cut in half"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-171",
+    "action": "turn cucumber",
+    "reference": "so that the knife is now cutting it across the long way",
+    "epoch1": "so that it can be cut in the middle"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-173",
+    "action": "rotate cucumber",
+    "reference": "so that it is still being cut lengthways, this time into quarters",
+    "epoch1": "so that it can be cut from the other side"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-174",
+    "action": "turn cucumber",
+    "reference": "so that it is now being cut along the short edge into small cubes",
+    "epoch1": "so that it can be cut from the other side"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-178",
+    "action": "hold of pieces of cucumber",
+    "reference": "so that they can all be cut at the same time",
+    "epoch1": "so that they don't get cut"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-193",
+    "action": "rotate other half of cucumber",
+    "reference": "so that it is flat side down",
+    "epoch1": "so that it can be cut into smaller pieces"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-207",
+    "action": "cover opening of jar",
+    "reference": "so that the olives don't fall out while tipping the jar and draining some of the brine into the sink",
+    "epoch1": "so that the olive juice doesn't spill"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-228",
+    "action": "squeeze olives",
+    "reference": "so that they are squashed and break into two parts",
+    "epoch1": "in order to get the pips out of them"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-232",
+    "action": "squeeze olives",
+    "reference": "so that they break into two parts",
+    "epoch1": "in order to get the pit out of it"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-240",
+    "action": "squeeze olives",
+    "reference": "so that they break into two parts",
+    "epoch1": "in order to get the pips out of them"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-291",
+    "action": "turn right thumb",
+    "reference": "so that it is facing up",
+    "epoch1": "so that the water can rinse it"
+   },
+   {
+    "id": "P07-20240529-134410:explain:P07-20240529-134410-351",
+    "action": "adjust wooden chopping board",
+    "reference": "so that it is flush against the back wall",
+    "epoch1": "so that it is aligned with the edge of the kitchen top"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-86",
+    "action": "place one half of brown onion",
+    "reference": "so that it doesn't roll around when chopping",
+    "epoch1": "so that it can be peeled"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-94",
+    "action": "place other half",
+    "reference": "so that it doesn't roll",
+    "epoch1": "so that it can be peeled"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-107",
+    "action": "hold onion",
+    "reference": "so that the slices don't fall apart",
+    "epoch1": "so that it is easier to cut"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-108",
+    "action": "turn onion",
+    "reference": "so that the onion is sliced into cubes",
+    "epoch1": "so that the other side can be cut"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-178",
+    "action": "tip spoon",
+    "reference": "so that the liquid drains back into the glass jar and the minced garlic remains on the spoon",
+    "epoch1": "so that the garlic falls into the bowl"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-179",
+    "action": "shake spoon",
+    "reference": "so that excess liquid drains back into the glass jar",
+    "epoch1": "so that the garlic falls into the bowl"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-317",
+    "action": "move plastic film",
+    "reference": "so that the piece of paper can be written on later",
+    "epoch1": "so that it doesn't get wet"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-355",
+    "action": "remove piece of paper",
+    "reference": "so that it is facing the edge of the worktop",
+    "epoch1": "so that the recipe can be read"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-373",
+    "action": "pour contents of glass jug",
+    "reference": "so that the water drains into the saucepan and the mushrooms stay in the colander",
+    "epoch1": "because I'm done with it"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-411",
+    "action": "stir mushroom broth",
+    "reference": "so that the stock cube is mixed in",
+    "epoch1": "so that the mushrooms are cooked evenly"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-433",
+    "action": "shake spoon",
+    "reference": "so that all of the oil goes into the large frying pan",
+    "epoch1": "so that the oil falls into the pan"
+   },
+   {
+    "id": "P07-20240529-191007:explain:P07-20240529-191007-444",
+    "action": "lift up large frying pan",
+    "reference": "so that the oil spreads evenly across the bottom of the pan",
+    "epoch1": "so that it is better aligned with the hob"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-22",
+    "action": "shake pepper grinder",
+    "reference": "so that all of the pepper goes into the pan",
+    "epoch1": "so that the pepper falls into the pan"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-54",
+    "action": "push pieces of mushroom",
+    "reference": "so that they don't burn",
+    "epoch1": "so that they are well cooked"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-67",
+    "action": "tip risotto rice",
+    "reference": "so that all of it goes into the frying pan from the bowl",
+    "epoch1": "so that it is evenly distributed"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-72",
+    "action": "stir rice",
+    "reference": "so that they don't spill",
+    "epoch1": "so that it is cooked evenly and doesn't get burnt or stuck to the pan"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-76",
+    "action": "push down pieces of rice",
+    "reference": "so that they don't burn",
+    "epoch1": "so that they are cooked evenly"
+   },
+   {
+    "id": "P07-20240529-194518:explain:P07-20240529-194518-80",
+    "action": "tap wooden spatula",
+    "reference": "so that the mushrooms and rice on the spatula fall back into the pan",
+    "epoch1": "so that the rice falls back into the pan"
+   }
+  ],
+  "completeness_detail_references": {
+   "n": 40,
+   "base": {
+    "correct": 18,
+    "partial": 15,
+    "incorrect": 6,
+    "null": 1
+   },
+   "epoch1": {
+    "partial": 17,
+    "incorrect": 12,
+    "correct": 11
+   },
+   "epoch2": {
+    "correct": 10,
+    "partial": 21,
+    "incorrect": 9
+   }
+  }
+ },
+ "next": {
+  "models": {
+   "base": {
+    "pos1": {
+     "verb": "58/228",
+     "noun": "83/228",
+     "action": "31/228"
+    },
+    "pos2": {
+     "verb": "30/228",
+     "noun": "54/228",
+     "action": "13/228"
+    },
+    "pos3": {
+     "verb": "32/228",
+     "noun": "45/228",
+     "action": "13/228"
+    },
+    "pooled_action": "57/684 (8.3%)",
+    "unmapped_slots": "10/684",
+    "slots_copying_history_or_query": "237/668",
+    "pred_slots_matching_any_gold_slot": "125/684",
+    "pos1_matching_any_gold_slot": "50/228",
+    "joint_by_gold_pair_train_frequency": {
+     "0_unseen": "4/100",
+     "1_rare_lt30": "8/199",
+     "2_mid_lt200": "22/175",
+     "3_freq_ge200": "23/210"
+    }
+   },
+   "epoch1": {
+    "pos1": {
+     "verb": "81/228",
+     "noun": "96/228",
+     "action": "51/228"
+    },
+    "pos2": {
+     "verb": "42/228",
+     "noun": "54/228",
+     "action": "17/228"
+    },
+    "pos3": {
+     "verb": "41/228",
+     "noun": "51/228",
+     "action": "10/228"
+    },
+    "pooled_action": "78/684 (11.4%)",
+    "unmapped_slots": "2/684",
+    "slots_copying_history_or_query": "141/684",
+    "pred_slots_matching_any_gold_slot": "156/684",
+    "pos1_matching_any_gold_slot": "74/228",
+    "joint_by_gold_pair_train_frequency": {
+     "0_unseen": "3/100",
+     "1_rare_lt30": "9/199",
+     "2_mid_lt200": "33/175",
+     "3_freq_ge200": "33/210"
+    }
+   },
+   "epoch2": {
+    "pos1": {
+     "verb": "76/228",
+     "noun": "92/228",
+     "action": "49/228"
+    },
+    "pos2": {
+     "verb": "30/228",
+     "noun": "55/228",
+     "action": "12/228"
+    },
+    "pos3": {
+     "verb": "33/228",
+     "noun": "45/228",
+     "action": "9/228"
+    },
+    "pooled_action": "70/684 (10.2%)",
+    "unmapped_slots": "5/684",
+    "slots_copying_history_or_query": "97/684",
+    "pred_slots_matching_any_gold_slot": "146/684",
+    "pos1_matching_any_gold_slot": "81/228",
+    "joint_by_gold_pair_train_frequency": {
+     "0_unseen": "5/100",
+     "1_rare_lt30": "7/199",
+     "2_mid_lt200": "23/175",
+     "3_freq_ge200": "35/210"
+    }
+   }
+  },
+  "baselines": {
+   "repeat_queried_action_x3": {
+    "pos1": {
+     "verb": "23/228",
+     "noun": "82/228",
+     "action": "15/228"
+    },
+    "pos2": {
+     "verb": "29/228",
+     "noun": "57/228",
+     "action": "21/228"
+    },
+    "pos3": {
+     "verb": "23/228",
+     "noun": "45/228",
+     "action": "4/228"
+    },
+    "pooled_action": "40/684 (5.8%)"
+   },
+   "train_markov_given_query_class": {
+    "pos1": {
+     "verb": "39/228",
+     "noun": "50/228",
+     "action": "19/228"
+    },
+    "pos2": {
+     "verb": "36/228",
+     "noun": "40/228",
+     "action": "8/228"
+    },
+    "pos3": {
+     "verb": "34/228",
+     "noun": "29/228",
+     "action": "7/228"
+    },
+    "pooled_action": "34/684 (5.0%)"
+   },
+   "train_markov_given_last_history_and_query": {
+    "pos1": {
+     "verb": "39/228",
+     "noun": "52/228",
+     "action": "20/228"
+    },
+    "pos2": {
+     "verb": "37/228",
+     "noun": "38/228",
+     "action": "8/228"
+    },
+    "pos3": {
+     "verb": "35/228",
+     "noun": "30/228",
+     "action": "6/228"
+    },
+    "pooled_action": "34/684 (5.0%)"
+   },
+   "history_continuation_then_markov": {
+    "pos1": {
+     "verb": "44/228",
+     "noun": "54/228",
+     "action": "21/228"
+    },
+    "pos2": {
+     "verb": "35/228",
+     "noun": "39/228",
+     "action": "7/228"
+    },
+    "pos3": {
+     "verb": "33/228",
+     "noun": "30/228",
+     "action": "7/228"
+    },
+    "pooled_action": "35/684 (5.1%)"
+   }
+  },
+  "reference_repetition": {
+   "pos1_equals_query": "16/228",
+   "pos1_in_query_or_history": "74/228",
+   "pos2_equals_query": "21/228",
+   "pos2_in_query_or_history": "58/228",
+   "pos3_equals_query": "4/228",
+   "pos3_in_query_or_history": "35/228"
+  },
+  "train_in_sample_top1_next_given_current_class": "5736/14543 (39.4%)"
+ }
+}

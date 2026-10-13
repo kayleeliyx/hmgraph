@@ -15,6 +15,8 @@ from typing import Any, Dict, List, Tuple
 
 PROMPT_ID = "w_atomic_v4"
 ADAPTIVE_CROPS_PROMPT_ID = PROMPT_ID + "_adaptive_crops"
+PARSER_VERSION = "w_json_repair_v2"
+ACTION_GATE_VERSION = "target_evidence_gate_v2"
 
 PROMPT = """You are analyzing a short egocentric cooking video clip.
 

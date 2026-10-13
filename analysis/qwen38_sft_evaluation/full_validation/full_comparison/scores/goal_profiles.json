@@ -1,0 +1,634 @@
+{
+  "Unloading the dishwasher": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Unloading the dishwasher",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:2"
+    ],
+    "required_units": [
+      "Unloading the dishwasher"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Washing up and refilling dish soap bottle": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Washing up and refilling dish soap bottle",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:4"
+    ],
+    "required_units": [
+      "Washing up and refilling dish soap bottle"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Wiping down sink and work surfaces": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Wiping down sink and work surfaces",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:5"
+    ],
+    "required_units": [
+      "Wiping down sink and work surfaces"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Preparing coffee": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Preparing coffee",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:6"
+    ],
+    "required_units": [
+      "Preparing coffee"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Bake the chickpeas and wash lettuce leaves": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Bake the chickpeas and wash lettuce leaves",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:7"
+    ],
+    "required_units": [
+      "Bake the chickpeas and wash lettuce leaves"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tearing lettuce, halving tomatoes, chopping cucumber tearing olives and put all in bowl with crumbled blue cheese": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tearing lettuce, halving tomatoes, chopping cucumber tearing olives and put all in bowl with crumbled blue cheese",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:8"
+    ],
+    "required_units": [
+      "Tearing lettuce, halving tomatoes, chopping cucumber tearing olives and put all in bowl with crumbled blue cheese"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tidying up": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tidying up",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:9"
+    ],
+    "required_units": [
+      "Tidying up"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Remove chickpeas from oven, removing burnt ones, add to salad and mix": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Remove chickpeas from oven, removing burnt ones, add to salad and mix",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:10"
+    ],
+    "required_units": [
+      "Remove chickpeas from oven, removing burnt ones, add to salad and mix"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Cook mushrooms with vegetable stock. In another saucepan, fry onions and garlic. Measure risotto rice": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Cook mushrooms with vegetable stock. In another saucepan, fry onions and garlic. Measure risotto rice",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:11"
+    ],
+    "required_units": [
+      "Cook mushrooms with vegetable stock.",
+      "In another saucepan, fry onions and garlic.",
+      "Measure risotto rice"
+    ],
+    "scope": "compound",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Season, add the rice and wine to the mushroom risotto": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Season, add the rice and wine to the mushroom risotto",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:12"
+    ],
+    "required_units": [
+      "Season, add the rice and wine to the mushroom risotto"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tidying up and loading the dishwasher": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tidying up and loading the dishwasher",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:13"
+    ],
+    "required_units": [
+      "Tidying up and loading the dishwasher"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Simmer the risotto, adding stock and grate the cheese": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Simmer the risotto, adding stock and grate the cheese",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:14"
+    ],
+    "required_units": [
+      "Simmer the risotto, adding stock and grate the cheese"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tidy up, clean, wash up and wipe down surfaces": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tidy up, clean, wash up and wipe down surfaces",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:15"
+    ],
+    "required_units": [
+      "Tidy up, clean, wash up and wipe down surfaces"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Continue stirring the risotto and adding the remaining stock": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Continue stirring the risotto and adding the remaining stock",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:16"
+    ],
+    "required_units": [
+      "Continue stirring the risotto and adding the remaining stock"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Finishing off the risotto, add butter, grated cheese and parsley leaves": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Finishing off the risotto, add butter, grated cheese and parsley leaves",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:19"
+    ],
+    "required_units": [
+      "Finishing off the risotto, add butter, grated cheese and parsley leaves"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Unloading the dishwasher - putting dishes away": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Unloading the dishwasher - putting dishes away",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:20"
+    ],
+    "required_units": [
+      "Unloading the dishwasher - putting dishes away"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Prepare the cookies mix with butter, banana, egg yolk and flour. Fold the chocolate chips into the mix": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Prepare the cookies mix with butter, banana, egg yolk and flour. Fold the chocolate chips into the mix",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:22"
+    ],
+    "required_units": [
+      "Prepare the cookies mix with butter, banana, egg yolk and flour.",
+      "Fold the chocolate chips into the mix"
+    ],
+    "scope": "compound",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tidy up - load the dishwasher and wash up": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tidy up - load the dishwasher and wash up",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:25"
+    ],
+    "required_units": [
+      "Tidy up - load the dishwasher and wash up"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Line parchment paper on baking trays": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Line parchment paper on baking trays",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:26"
+    ],
+    "required_units": [
+      "Line parchment paper on baking trays"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Freshly grind coffee and start preparing coffee using espresso machine": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Freshly grind coffee and start preparing coffee using espresso machine",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:27"
+    ],
+    "required_units": [
+      "Freshly grind coffee and start preparing coffee using espresso machine"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Scoop the cookies and line up on parchment paper": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Scoop the cookies and line up on parchment paper",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:30"
+    ],
+    "required_units": [
+      "Scoop the cookies and line up on parchment paper"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Remove the baking trays with baked cookies from the oven": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Remove the baking trays with baked cookies from the oven",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:31"
+    ],
+    "required_units": [
+      "Remove the baking trays with baked cookies from the oven"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Washing up and loading the dishwasher": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Washing up and loading the dishwasher",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:33"
+    ],
+    "required_units": [
+      "Washing up and loading the dishwasher"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Washing up, loading the dishwasher and tidying": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Washing up, loading the dishwasher and tidying",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:34"
+    ],
+    "required_units": [
+      "Washing up, loading the dishwasher and tidying"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Wiping tiles, surface and coffee machine": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Wiping tiles, surface and coffee machine",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:35"
+    ],
+    "required_units": [
+      "Wiping tiles, surface and coffee machine"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Cleaning sink area including draining board, tiles and surfaces": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Cleaning sink area including draining board, tiles and surfaces",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:36"
+    ],
+    "required_units": [
+      "Cleaning sink area including draining board, tiles and surfaces"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Tidying up and wiping down sink, tiles, surfaces and cupboards": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Tidying up and wiping down sink, tiles, surfaces and cupboards",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:38"
+    ],
+    "required_units": [
+      "Tidying up and wiping down sink, tiles, surfaces and cupboards"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Prepare espresso coffee with freshly ground beans": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Prepare espresso coffee with freshly ground beans",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:39"
+    ],
+    "required_units": [
+      "Prepare espresso coffee with freshly ground beans"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Preheat the oven. Wash, peel and chop sweet potatoes, then roast": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Preheat the oven. Wash, peel and chop sweet potatoes, then roast",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:40"
+    ],
+    "required_units": [
+      "Preheat the oven.",
+      "Wash, peel and chop sweet potatoes, then roast"
+    ],
+    "scope": "compound",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Clean and clear": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Clean and clear",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:41"
+    ],
+    "required_units": [
+      "Clean and clear"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Prepare the dressing, add lettuce, sweetcorn and avocado. Once ready, add the roasted sweet potato to salad and mix with the dressing": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Prepare the dressing, add lettuce, sweetcorn and avocado. Once ready, add the roasted sweet potato to salad and mix with the dressing",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:42"
+    ],
+    "required_units": [
+      "Prepare the dressing, add lettuce, sweetcorn and avocado.",
+      "Once ready, add the roasted sweet potato to salad and mix with the dressing"
+    ],
+    "scope": "compound",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Clean and clear - put ingredients and equipment away": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Clean and clear - put ingredients and equipment away",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:43"
+    ],
+    "required_units": [
+      "Clean and clear - put ingredients and equipment away"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": true,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  },
+  "Cleaning surfaces": {
+    "version": "hdepic_semantics_v1",
+    "original_label": "Cleaning surfaces",
+    "source_annotation_ids": [
+      "P07_recipe_timestamps.csv:46"
+    ],
+    "required_units": [
+      "Cleaning surfaces"
+    ],
+    "scope": "single",
+    "scope_level": "as_annotated",
+    "manual_scope_review_pending": false,
+    "provenance": {
+      "method": "conservative_literal_clause_rules_v1",
+      "author": "Codex assistant",
+      "human_validated": false,
+      "semantic_relabeling": false
+    }
+  }
+}

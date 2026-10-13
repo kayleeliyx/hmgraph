@@ -1,0 +1,410 @@
+{
+  "scope": {
+    "scope": "Exploratory paired comparison of completed epoch1 prefix only; not the complete validation benchmark",
+    "selected_query_ids": [
+      "P07-20240529-102652:explain:P07-20240529-102652-15",
+      "P07-20240529-102652:explain:P07-20240529-102652-57",
+      "P07-20240529-102652:explain:P07-20240529-102652-69",
+      "P07-20240529-102652:explain:P07-20240529-102652-88",
+      "P07-20240529-102652:explain:P07-20240529-102652-188",
+      "P07-20240529-102652:explain:P07-20240529-102652-196",
+      "P07-20240529-102652:explain:P07-20240529-102652-271",
+      "P07-20240529-102652:explain:P07-20240529-102652-292",
+      "P07-20240529-102652:explain:P07-20240529-102652-328",
+      "P07-20240529-102652:explain:P07-20240529-102652-365",
+      "P07-20240529-102652:explain:P07-20240529-102652-371",
+      "P07-20240529-131737:explain:P07-20240529-131737-8",
+      "P07-20240529-131737:explain:P07-20240529-131737-29",
+      "P07-20240529-131737:explain:P07-20240529-131737-36",
+      "P07-20240529-131737:explain:P07-20240529-131737-58",
+      "P07-20240529-131737:explain:P07-20240529-131737-71",
+      "P07-20240529-131737:explain:P07-20240529-131737-74",
+      "P07-20240529-131737:explain:P07-20240529-131737-120",
+      "P07-20240529-131737:explain:P07-20240529-131737-126",
+      "P07-20240529-131737:explain:P07-20240529-131737-139",
+      "P07-20240529-131737:explain:P07-20240529-131737-141",
+      "P07-20240529-131737:explain:P07-20240529-131737-155",
+      "P07-20240529-131737:explain:P07-20240529-131737-170",
+      "P07-20240529-131737:explain:P07-20240529-131737-173",
+      "P07-20240529-131737:explain:P07-20240529-131737-199",
+      "P07-20240529-131737:explain:P07-20240529-131737-234",
+      "P07-20240529-134410:explain:P07-20240529-134410-24",
+      "P07-20240529-134410:explain:P07-20240529-134410-68",
+      "P07-20240529-134410:explain:P07-20240529-134410-74",
+      "P07-20240529-134410:explain:P07-20240529-134410-109",
+      "P07-20240529-134410:explain:P07-20240529-134410-140",
+      "P07-20240529-134410:explain:P07-20240529-134410-171",
+      "P07-20240529-134410:explain:P07-20240529-134410-173",
+      "P07-20240529-134410:explain:P07-20240529-134410-174",
+      "P07-20240529-134410:explain:P07-20240529-134410-178",
+      "P07-20240529-134410:explain:P07-20240529-134410-182",
+      "P07-20240529-134410:explain:P07-20240529-134410-193",
+      "P07-20240529-134410:explain:P07-20240529-134410-207",
+      "P07-20240529-134410:explain:P07-20240529-134410-228",
+      "P07-20240529-134410:explain:P07-20240529-134410-232",
+      "P07-20240529-134410:explain:P07-20240529-134410-240",
+      "P07-20240529-134410:explain:P07-20240529-134410-291",
+      "P07-20240529-134410:explain:P07-20240529-134410-303",
+      "P07-20240529-134410:explain:P07-20240529-134410-351",
+      "P07-20240529-134410:explain:P07-20240529-134410-418",
+      "P07-20240529-191007:explain:P07-20240529-191007-32",
+      "P07-20240529-191007:explain:P07-20240529-191007-74"
+    ],
+    "selection": "All47 completed epoch1 generations at audit; existing chronological prefix, not a randomized sample",
+    "expected_explain_queries": 228,
+    "generated_epoch1_queries": 47,
+    "generated_epoch2_queries": 0,
+    "by_video": {
+      "P07-20240529-102652": 11,
+      "P07-20240529-131737": 15,
+      "P07-20240529-134410": 19,
+      "P07-20240529-191007": 2
+    },
+    "why_eligible": 46,
+    "goal_eligible": 47,
+    "prompt_hashes_match": 47,
+    "source_sha256": {
+      "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch1/generation.jsonl": "dca47b993ad1cf6e4ff2b242cf593d035384a1f722324e07062c3528a862e9eb",
+      "/data/yaxuanli/ActGround/runs/hdepic_qwen38_27b_baseline_v1/predictions/generation.jsonl": "b862e6a4c05b25b3185cd94078e60a9f67db347bc7d7127e50a7cf4089329be5",
+      "/data/yaxuanli/ActGround/evaluation/assets/references.jsonl": "5294c33fd47c9353b072e01b9a164ea7c87f8e3a4fbe877ce501ec94b0428584"
+    },
+    "rubric_judgments": "Fresh model-blind Codex assistant assessments on both models; provisional, not human validated",
+    "full_inference_blocker": "/data free899MiB below established3GiB GPU guard; no inference launched"
+  },
+  "training": {
+    "steps": 1818,
+    "epochs": 2,
+    "initial_sft_records": 14543,
+    "explain_records": 1403,
+    "track_records": 13140,
+    "explain_training_fraction": 0.09647252973939352,
+    "epoch1_mean_step_loss": 0.6286298703439165,
+    "epoch2_mean_step_loss": 0.33280993463641606,
+    "first100_mean_step_loss": 1.062837535738945,
+    "epoch1_last100_mean_step_loss": 0.4640892615914345,
+    "epoch2_last100_mean_step_loss": 0.30603661984205244,
+    "steps_gradient_norm_above_clip_threshold": 1775,
+    "maximum_unclipped_gradient_norm": 12.6533757132319,
+    "original_optimizer_launch_hours": 95.16070444444445,
+    "selected_checkpoint": "checkpoint-909 (epoch1)"
+  },
+  "validation": {
+    "explain": {
+      "count": 228,
+      "mean_nll": {
+        "base": 2.150666608099352,
+        "epoch1": 1.8163069549359774,
+        "epoch2": 1.998133324478802
+      },
+      "comparisons": {
+        "epoch1": {
+          "mean_delta": -0.3343596531633745,
+          "median_delta": -0.33574891090393066,
+          "relative_change_percent": -15.546791488005873,
+          "lower_nll_examples": 204,
+          "higher_nll_examples": 24
+        },
+        "epoch2": {
+          "mean_delta": -0.1525332836205499,
+          "median_delta": -0.16264808177947998,
+          "relative_change_percent": -7.092372339167485,
+          "lower_nll_examples": 166,
+          "higher_nll_examples": 62
+        }
+      }
+    },
+    "track": {
+      "count": 1981,
+      "mean_nll": {
+        "base": 1.8999154126926963,
+        "epoch1": 1.854643786061839,
+        "epoch2": 2.059131699610936
+      },
+      "comparisons": {
+        "epoch1": {
+          "mean_delta": -0.045271626630857216,
+          "median_delta": -0.020992755889892578,
+          "relative_change_percent": -2.382823273521162,
+          "lower_nll_examples": 1069,
+          "higher_nll_examples": 912
+        },
+        "epoch2": {
+          "mean_delta": 0.1592162869182396,
+          "median_delta": 0.18890202045440674,
+          "relative_change_percent": 8.380177657098287,
+          "lower_nll_examples": 540,
+          "higher_nll_examples": 1441
+        }
+      }
+    }
+  },
+  "by_video_validation": [
+    {
+      "video_id": "P07-20240529-102652",
+      "task": "explain",
+      "n": 11,
+      "base": 1.737260254946622,
+      "epoch1": 1.098549105904319,
+      "epoch2": 1.1904662305658513
+    },
+    {
+      "video_id": "P07-20240529-131737",
+      "task": "explain",
+      "n": 15,
+      "base": 1.995490837097168,
+      "epoch1": 1.6216756423314413,
+      "epoch2": 1.8064807097117106
+    },
+    {
+      "video_id": "P07-20240529-134410",
+      "task": "explain",
+      "n": 19,
+      "base": 2.6565295897032084,
+      "epoch1": 2.3827226099215055,
+      "epoch2": 2.5621451704125655
+    },
+    {
+      "video_id": "P07-20240529-191007",
+      "task": "explain",
+      "n": 32,
+      "base": 2.3731775991618633,
+      "epoch1": 2.073081336915493,
+      "epoch2": 2.2680951841175556
+    },
+    {
+      "video_id": "P07-20240529-194518",
+      "task": "explain",
+      "n": 39,
+      "base": 1.951198513691242,
+      "epoch1": 1.5666246521167266,
+      "epoch2": 1.6824671030044556
+    },
+    {
+      "video_id": "P07-20240530-102543",
+      "task": "explain",
+      "n": 38,
+      "base": 1.9872734703515704,
+      "epoch1": 1.7805472267301459,
+      "epoch2": 1.9946612652979399
+    },
+    {
+      "video_id": "P07-20240530-111344",
+      "task": "explain",
+      "n": 2,
+      "base": 1.9055752754211426,
+      "epoch1": 1.3261658549308777,
+      "epoch2": 1.44084632396698
+    },
+    {
+      "video_id": "P07-20240531-101357",
+      "task": "explain",
+      "n": 35,
+      "base": 2.221524851662772,
+      "epoch1": 1.7851630142756871,
+      "epoch2": 1.9817569766725813
+    },
+    {
+      "video_id": "P07-20240531-201703",
+      "task": "explain",
+      "n": 37,
+      "base": 2.2085503146455094,
+      "epoch1": 1.9515212242667739,
+      "epoch2": 2.1747492632350407
+    },
+    {
+      "video_id": "P07-20240529-102652",
+      "task": "track",
+      "n": 133,
+      "base": 1.5276920911961032,
+      "epoch1": 1.2806884924271948,
+      "epoch2": 1.391604022872179
+    },
+    {
+      "video_id": "P07-20240529-131737",
+      "task": "track",
+      "n": 91,
+      "base": 1.6549609310024387,
+      "epoch1": 1.6575063807623727,
+      "epoch2": 1.8837823147302146
+    },
+    {
+      "video_id": "P07-20240529-134410",
+      "task": "track",
+      "n": 156,
+      "base": 2.2116648845183544,
+      "epoch1": 2.212385744238511,
+      "epoch2": 2.4209399150732236
+    },
+    {
+      "video_id": "P07-20240529-191007",
+      "task": "track",
+      "n": 299,
+      "base": 2.1908102286699225,
+      "epoch1": 2.2012749894406882,
+      "epoch2": 2.413443251597044
+    },
+    {
+      "video_id": "P07-20240529-194518",
+      "task": "track",
+      "n": 281,
+      "base": 1.7165838076974997,
+      "epoch1": 1.6265078878487556,
+      "epoch2": 1.7609795527101835
+    },
+    {
+      "video_id": "P07-20240530-102543",
+      "task": "track",
+      "n": 326,
+      "base": 1.8468945212890766,
+      "epoch1": 1.8846477571806293,
+      "epoch2": 2.1066224571385996
+    },
+    {
+      "video_id": "P07-20240530-111344",
+      "task": "track",
+      "n": 24,
+      "base": 1.5771206120649974,
+      "epoch1": 1.367357204357783,
+      "epoch2": 1.5299507901072502
+    },
+    {
+      "video_id": "P07-20240531-101357",
+      "task": "track",
+      "n": 399,
+      "base": 1.8627218716126634,
+      "epoch1": 1.7444478258453215,
+      "epoch2": 1.9716640582359524
+    },
+    {
+      "video_id": "P07-20240531-201703",
+      "task": "track",
+      "n": 272,
+      "base": 2.001291816068046,
+      "epoch1": 2.01939761529074,
+      "epoch2": 2.2733060982735718
+    }
+  ],
+  "paired_transitions": {
+    "why": {
+      "n": 46,
+      "both_correct": 12,
+      "improved": 1,
+      "regressed": 10,
+      "both_not_correct": 23,
+      "label_transition_counts": {
+        "incorrect -> incorrect": 13,
+        "partial -> partial": 7,
+        "correct -> correct": 12,
+        "correct -> partial": 6,
+        "partial -> incorrect": 3,
+        "incorrect -> correct": 1,
+        "correct -> incorrect": 4
+      }
+    },
+    "goal": {
+      "n": 47,
+      "both_correct": 2,
+      "improved": 2,
+      "regressed": 0,
+      "both_not_correct": 43,
+      "label_transition_counts": {
+        "partial -> incorrect": 5,
+        "incorrect -> correct": 1,
+        "partial -> correct": 1,
+        "incorrect -> incorrect": 26,
+        "incorrect -> partial": 7,
+        "partial -> partial": 5,
+        "correct -> correct": 2
+      }
+    },
+    "next_1_verb": {
+      "n": 47,
+      "both_correct": 10,
+      "improved": 6,
+      "regressed": 7,
+      "both_not_correct": 24
+    },
+    "next_1_noun": {
+      "n": 47,
+      "both_correct": 13,
+      "improved": 3,
+      "regressed": 3,
+      "both_not_correct": 28
+    },
+    "next_1_action": {
+      "n": 47,
+      "both_correct": 5,
+      "improved": 5,
+      "regressed": 4,
+      "both_not_correct": 33
+    },
+    "next_2_verb": {
+      "n": 47,
+      "both_correct": 4,
+      "improved": 4,
+      "regressed": 3,
+      "both_not_correct": 36
+    },
+    "next_2_noun": {
+      "n": 47,
+      "both_correct": 7,
+      "improved": 6,
+      "regressed": 4,
+      "both_not_correct": 30
+    },
+    "next_2_action": {
+      "n": 47,
+      "both_correct": 3,
+      "improved": 1,
+      "regressed": 0,
+      "both_not_correct": 43
+    },
+    "next_3_verb": {
+      "n": 47,
+      "both_correct": 3,
+      "improved": 7,
+      "regressed": 8,
+      "both_not_correct": 29
+    },
+    "next_3_noun": {
+      "n": 47,
+      "both_correct": 7,
+      "improved": 7,
+      "regressed": 6,
+      "both_not_correct": 27
+    },
+    "next_3_action": {
+      "n": 47,
+      "both_correct": 1,
+      "improved": 2,
+      "regressed": 4,
+      "both_not_correct": 40
+    }
+  },
+  "generation_diagnostics": {
+    "base": {
+      "examples": 47,
+      "all_eos": true,
+      "generated_tokens_median": 67,
+      "generated_tokens_range": [
+        36,
+        141
+      ],
+      "unextractable_goal": 1,
+      "incomplete_next_sequences": 1
+    },
+    "epoch1": {
+      "examples": 47,
+      "all_eos": true,
+      "generated_tokens_median": 47,
+      "generated_tokens_range": [
+        39,
+        60
+      ],
+      "unextractable_goal": 0,
+      "incomplete_next_sequences": 0
+    }
+  },
+  "goal_profiles_requiring_scope_review": 40,
+  "semantic_status": "provisional assistant judgments, reference agreement only; no human or visual validation"
+}

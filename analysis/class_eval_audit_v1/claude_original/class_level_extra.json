@@ -1,0 +1,24 @@
+{
+ "current_action_on_base_extractable_subset": {
+  "n": 1050,
+  "base": 0.179,
+  "epoch1": 0.245
+ },
+ "paired_epoch1_minus_base": {
+  "current_action": [
+   0.15,
+   0.131,
+   0.17
+  ],
+  "next1_action": [
+   0.024,
+   0.01,
+   0.04
+  ],
+  "next1_action_vs_repeat_baseline": [
+   0.033,
+   0.017,
+   0.05
+  ]
+ }
+}

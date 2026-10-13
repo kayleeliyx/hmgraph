@@ -1,0 +1,31 @@
+{
+  "checkpoints": [
+    250,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750
+  ],
+  "allocated_gib": 12.204776763916016,
+  "protected_steps": [
+    909,
+    1818
+  ],
+  "execute": true,
+  "deleted_steps": [
+    250,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750
+  ],
+  "free_bytes_before": 927285248,
+  "free_bytes_after": 14027005952,
+  "free_gib_after": 13.063667297363281,
+  "protected_hashes_unchanged": true,
+  "completed_utc": "2026-10-11T21:13:28.035002+00:00"
+}

@@ -1,0 +1,316 @@
+{
+  "audit_type": "WHY semantic consistency corrections",
+  "assessment_status": "provisional_assistant_assessment",
+  "review_date": "2026-10-11",
+  "criterion": "Require material completeness where the purpose is clearing remaining contents. Accept semantic equivalents such as remaining contents, stuck residue, emptying, or none left; do not require the literal word all. Also require material spatial-fit purposes: placing or putting bowls away in a cupboard does not by itself express making them fit better.",
+  "corrections": [
+    {
+      "packet_id": "2bfa6b9afef8cc2d81a05eefe08148a92ed329c6a3c4ca5496d9e258ad16a489",
+      "prompt_sha256": "138d8867ec1689da892d5fcb72d7a35f30dee94522cfe28a70a49407ec57ca49",
+      "batch": "batch007",
+      "reference": "so that all of it goes into the frying pan from the bowl",
+      "prediction": "so that it is poured into the pan",
+      "before": {
+        "packet_id": "2bfa6b9afef8cc2d81a05eefe08148a92ed329c6a3c4ca5496d9e258ad16a489",
+        "prompt_sha256": "138d8867ec1689da892d5fcb72d7a35f30dee94522cfe28a70a49407ec57ca49",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Pouring the referenced rice into the pan captures transferring the bowl's rice contents to the stated destination.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "2bfa6b9afef8cc2d81a05eefe08148a92ed329c6a3c4ca5496d9e258ad16a489",
+        "prompt_sha256": "138d8867ec1689da892d5fcb72d7a35f30dee94522cfe28a70a49407ec57ca49",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures pouring rice into the pan but omits completing the transfer of all rice remaining in the bowl.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "The narration specifically explains continued tipping by getting all rice out. A generic pour into the pan does not entail finishing the transfer."
+    },
+    {
+      "packet_id": "f70962074d3d2268c165448eb85cf62bf23316445c58a52767a719f174642fc7",
+      "prompt_sha256": "195a8780b85516f6c4a30ef2203ca57e513c6a1ce736c9ac4005ca3602141517",
+      "batch": "batch007",
+      "reference": "so that all of the pepper goes into the pan",
+      "prediction": "so that the ground pepper falls into the frying pan",
+      "before": {
+        "packet_id": "f70962074d3d2268c165448eb85cf62bf23316445c58a52767a719f174642fc7",
+        "prompt_sha256": "195a8780b85516f6c4a30ef2203ca57e513c6a1ce736c9ac4005ca3602141517",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Captures dislodging the ground pepper into the pan; the definite pepper refers to the remaining ground contents.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "f70962074d3d2268c165448eb85cf62bf23316445c58a52767a719f174642fc7",
+        "prompt_sha256": "195a8780b85516f6c4a30ef2203ca57e513c6a1ce736c9ac4005ca3602141517",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures getting ground pepper into the pan but omits clearing all remaining pepper from the grinder.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "The purpose of the extra shake is complete transfer of the remaining ground pepper. Saying pepper falls into the pan leaves that completion unstated."
+    },
+    {
+      "packet_id": "0450bfbf10dd7a40a49b9d32153301cf02f763f0c18cfa5be193e1af83e60f39",
+      "prompt_sha256": "09bffee6eb8674d8f549c00fdf3d8ba3a07d308d35d5dce5ab8e201a0691cabc",
+      "batch": "batch004",
+      "reference": "so that all of the coffee granules fall into the coffee basket",
+      "prediction": "so that the ground coffee falls into the espresso basket",
+      "before": {
+        "packet_id": "0450bfbf10dd7a40a49b9d32153301cf02f763f0c18cfa5be193e1af83e60f39",
+        "prompt_sha256": "09bffee6eb8674d8f549c00fdf3d8ba3a07d308d35d5dce5ab8e201a0691cabc",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Captures dislodging the ground coffee into the espresso basket; the definite coffee refers to the spoon's contents.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "0450bfbf10dd7a40a49b9d32153301cf02f763f0c18cfa5be193e1af83e60f39",
+        "prompt_sha256": "09bffee6eb8674d8f549c00fdf3d8ba3a07d308d35d5dce5ab8e201a0691cabc",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures transferring ground coffee into the espresso basket but omits clearing all coffee granules remaining on the spoon.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "Tapping the coffee spoon is specifically explained by complete removal of its granules. Generic ground-coffee transfer identifies the destination but not completion."
+    },
+    {
+      "packet_id": "a1b00afa43b680480c72ee832c80f13d3c263d7907f3b8fec78c52c497df9702",
+      "prompt_sha256": "9b16bd76d421b4601614f592d13d10c134296c3a081c0e6dbb182cee691dc2c0",
+      "batch": "batch004",
+      "reference": "so that all of the yogurt falls off",
+      "prediction": "so that the yoghurt falls into the blender cup",
+      "before": {
+        "packet_id": "a1b00afa43b680480c72ee832c80f13d3c263d7907f3b8fec78c52c497df9702",
+        "prompt_sha256": "9b16bd76d421b4601614f592d13d10c134296c3a081c0e6dbb182cee691dc2c0",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Making the yoghurt fall off the spoon captures removal of its contents; identifying a blender cup as the destination is unsupported.",
+          "flags": {
+            "unsupported_addition": true,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "a1b00afa43b680480c72ee832c80f13d3c263d7907f3b8fec78c52c497df9702",
+        "prompt_sha256": "9b16bd76d421b4601614f592d13d10c134296c3a081c0e6dbb182cee691dc2c0",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures making yoghurt fall from the spoon but omits clearing all of it; the blender-cup destination is unsupported.",
+          "flags": {
+            "unsupported_addition": true,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "The narrated shaking purpose is complete removal of yoghurt from the spoon. Generic falling into a cup does not establish that the spoon is emptied; the destination remains an unsupported addition."
+    },
+    {
+      "packet_id": "cc067ff46300482ae9cb3b88d3aed6a15e9fcc8be53a6eaf0fb171e46737d289",
+      "prompt_sha256": "75ba5f87c51bf8b5b65a8ad5f14eee014d4c8e15ecefbf87da702d32b699a4c9",
+      "batch": "batch005",
+      "reference": "so that all of the spices come out of the spoon",
+      "prediction": "so that the spice falls off the spoon",
+      "before": {
+        "packet_id": "cc067ff46300482ae9cb3b88d3aed6a15e9fcc8be53a6eaf0fb171e46737d289",
+        "prompt_sha256": "75ba5f87c51bf8b5b65a8ad5f14eee014d4c8e15ecefbf87da702d32b699a4c9",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Making the spice fall off the spoon captures emptying its spice contents.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "cc067ff46300482ae9cb3b88d3aed6a15e9fcc8be53a6eaf0fb171e46737d289",
+        "prompt_sha256": "75ba5f87c51bf8b5b65a8ad5f14eee014d4c8e15ecefbf87da702d32b699a4c9",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures making spice fall off the spoon but omits clearing all spices remaining on it.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "The tap is explained by emptying the spoon of spices. Saying spice falls off describes transfer without the material completion endpoint."
+    },
+    {
+      "packet_id": "9b218fe359d4dc0504a7f6e85d4151de31300e70cce844abbbaaccdb0b07ff94",
+      "prompt_sha256": "c36b276349d588f3021311a71674a75a8387e46dc291a4b42f1ce5e9318b62e7",
+      "batch": "batch005",
+      "reference": "so that they fit better in the cupboard",
+      "prediction": "so that they can be placed in the cupboard",
+      "before": {
+        "packet_id": "9b218fe359d4dc0504a7f6e85d4151de31300e70cce844abbbaaccdb0b07ff94",
+        "prompt_sha256": "c36b276349d588f3021311a71674a75a8387e46dc291a4b42f1ce5e9318b62e7",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "correct",
+          "justification": "Enabling cupboard placement captures stacking the bowls so they fit there better.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": false,
+            "too_narrow": false
+          }
+        }
+      },
+      "after": {
+        "packet_id": "9b218fe359d4dc0504a7f6e85d4151de31300e70cce844abbbaaccdb0b07ff94",
+        "prompt_sha256": "c36b276349d588f3021311a71674a75a8387e46dc291a4b42f1ce5e9318b62e7",
+        "judge": "Codex assistant WHY review 2026-10-11",
+        "assessment_status": "provisional_assistant_assessment",
+        "judgment": {
+          "field": "why",
+          "label": "partial",
+          "justification": "Captures placing the bowls in the cupboard but omits stacking them to improve their fit and use of space.",
+          "flags": {
+            "unsupported_addition": false,
+            "contradiction": false,
+            "too_broad": true,
+            "too_narrow": false
+          }
+        }
+      },
+      "explanation": "Cupboard placement states the storage destination but omits the material purpose of making the stacked bowls fit better. It is semantically equivalent to putting them away in the cupboard and warrants partial for the same omitted fit detail."
+    }
+  ],
+  "batch_totals": {
+    "batch004": {
+      "before": {
+        "correct": 32,
+        "incorrect": 36,
+        "partial": 17
+      },
+      "after": {
+        "correct": 30,
+        "partial": 19,
+        "incorrect": 36
+      }
+    },
+    "batch005": {
+      "before": {
+        "incorrect": 11,
+        "partial": 9,
+        "correct": 10
+      },
+      "after": {
+        "incorrect": 11,
+        "partial": 11,
+        "correct": 8
+      }
+    },
+    "batch007": {
+      "before": {
+        "correct": 8,
+        "partial": 2,
+        "incorrect": 3
+      },
+      "after": {
+        "correct": 6,
+        "partial": 4,
+        "incorrect": 3
+      }
+    }
+  },
+  "totals": {
+    "correct_to_partial": 6,
+    "affected_batches": [
+      "batch004",
+      "batch005",
+      "batch007"
+    ],
+    "aggregate_before": {
+      "correct": 50,
+      "incorrect": 50,
+      "partial": 28
+    },
+    "aggregate_after": {
+      "correct": 44,
+      "partial": 34,
+      "incorrect": 50
+    }
+  }
+}

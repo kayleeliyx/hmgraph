@@ -1,0 +1,10 @@
+{
+  "title": "ActGround Review",
+  "evaluation_dir": "../evaluation/results",
+  "evaluation_config": "../evaluation/config.json",
+  "media_records": "../datasets/hdepic_sft_v2_repaired/text/validation.jsonl",
+  "video_inventory": "../datasets/hdepic_sft_v2_repaired/video_inventory.json",
+  "timeline_annotations": "assets/timeline_annotations.json.gz",
+  "timeline_video_inventory": "../datasets/hdepic_sft_v2_repaired/video_inventory.json",
+  "state_dir": "state"
+}

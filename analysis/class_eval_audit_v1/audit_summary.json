@@ -1,0 +1,2897 @@
+{
+  "scope": "CPU-only action-class audit; no WHY/goal semantic judgments, training, or inference",
+  "claude_source_sha256": "1546c9dd5c73d334598821d6b06492ee9349ea0198757bb5ca085ffda84ceff0",
+  "supplied_all_model_headline_metrics_reproduced": true,
+  "entire_supplied_summary_equal": false,
+  "entire_summary_difference": "one auxiliary oracle-bigram set-recall rounds to .084 here vs .085 supplied",
+  "original_current_action": {
+    "base": {
+      "n": 1981,
+      "verb": 0.171,
+      "noun": 0.203,
+      "action": 0.095
+    },
+    "epoch1": {
+      "n": 1981,
+      "verb": 0.384,
+      "noun": 0.481,
+      "action": 0.245
+    },
+    "epoch2": {
+      "n": 1981,
+      "verb": 0.375,
+      "noun": 0.468,
+      "action": 0.241
+    },
+    "baseline: copy last completed action (no video)": {
+      "n": 1981,
+      "verb": 0.141,
+      "noun": 0.354,
+      "action": 0.078
+    },
+    "baseline: most frequent follower of last completed action (no video)": {
+      "n": 1981,
+      "verb": 0.161,
+      "noun": 0.255,
+      "action": 0.069
+    },
+    "baseline: most frequent action in training": {
+      "n": 1981,
+      "verb": 0.02,
+      "noun": 0.032,
+      "action": 0.005
+    }
+  },
+  "original_next_actions": {
+    "all": {
+      "base": {
+        "n": 2209,
+        "next1_verb": 0.174,
+        "next1_noun": 0.306,
+        "next1_action": 0.101,
+        "set_recall_action": 0.106,
+        "ed_verb": 0.893,
+        "ed_noun": 0.814,
+        "ed_action": 0.95,
+        "all_three_same": 0.026
+      },
+      "epoch1": {
+        "n": 2209,
+        "next1_verb": 0.242,
+        "next1_noun": 0.305,
+        "next1_action": 0.126,
+        "set_recall_action": 0.137,
+        "ed_verb": 0.784,
+        "ed_noun": 0.758,
+        "ed_action": 0.919,
+        "all_three_same": 0.098
+      },
+      "epoch2": {
+        "n": 2209,
+        "next1_verb": 0.234,
+        "next1_noun": 0.318,
+        "next1_action": 0.125,
+        "set_recall_action": 0.139,
+        "ed_verb": 0.796,
+        "ed_noun": 0.754,
+        "ed_action": 0.92,
+        "all_three_same": 0.089
+      },
+      "baseline: repeat x three times (x = given action / last completed)": {
+        "n": 2209,
+        "next1_verb": 0.168,
+        "next1_noun": 0.306,
+        "next1_action": 0.093,
+        "set_recall_action": 0.07,
+        "ed_verb": 0.852,
+        "ed_noun": 0.735,
+        "ed_action": 0.93,
+        "all_three_same": 0.998
+      },
+      "baseline: bigram chain from x (no video)": {
+        "n": 2209,
+        "next1_verb": 0.123,
+        "next1_noun": 0.211,
+        "next1_action": 0.053,
+        "set_recall_action": 0.079,
+        "ed_verb": 0.846,
+        "ed_noun": 0.837,
+        "ed_action": 0.955,
+        "all_three_same": 0.075
+      }
+    },
+    "track": {
+      "base": {
+        "n": 1981,
+        "next1_verb": 0.169,
+        "next1_noun": 0.302,
+        "next1_action": 0.099,
+        "set_recall_action": 0.102,
+        "ed_verb": 0.899,
+        "ed_noun": 0.821,
+        "ed_action": 0.952,
+        "all_three_same": 0.027
+      },
+      "epoch1": {
+        "n": 1981,
+        "next1_verb": 0.23,
+        "next1_noun": 0.296,
+        "next1_action": 0.117,
+        "set_recall_action": 0.133,
+        "ed_verb": 0.785,
+        "ed_noun": 0.762,
+        "ed_action": 0.922,
+        "all_three_same": 0.1
+      },
+      "epoch2": {
+        "n": 1981,
+        "next1_verb": 0.224,
+        "next1_noun": 0.308,
+        "next1_action": 0.116,
+        "set_recall_action": 0.137,
+        "ed_verb": 0.798,
+        "ed_noun": 0.758,
+        "ed_action": 0.922,
+        "all_three_same": 0.09
+      },
+      "baseline: repeat x three times (x = given action / last completed)": {
+        "n": 1981,
+        "next1_verb": 0.176,
+        "next1_noun": 0.298,
+        "next1_action": 0.095,
+        "set_recall_action": 0.072,
+        "ed_verb": 0.848,
+        "ed_noun": 0.736,
+        "ed_action": 0.928,
+        "all_three_same": 0.998
+      },
+      "baseline: bigram chain from x (no video)": {
+        "n": 1981,
+        "next1_verb": 0.117,
+        "next1_noun": 0.208,
+        "next1_action": 0.048,
+        "set_recall_action": 0.078,
+        "ed_verb": 0.847,
+        "ed_noun": 0.837,
+        "ed_action": 0.956,
+        "all_three_same": 0.075
+      },
+      "oracle: bigram chain from TRUE current action": {
+        "n": 1981,
+        "next1_verb": 0.134,
+        "next1_noun": 0.226,
+        "next1_action": 0.053,
+        "set_recall_action": 0.084,
+        "ed_verb": 0.837,
+        "ed_noun": 0.834,
+        "ed_action": 0.954,
+        "all_three_same": 0.087
+      }
+    },
+    "explain": {
+      "base": {
+        "n": 228,
+        "next1_verb": 0.215,
+        "next1_noun": 0.333,
+        "next1_action": 0.123,
+        "set_recall_action": 0.136,
+        "ed_verb": 0.841,
+        "ed_noun": 0.756,
+        "ed_action": 0.93,
+        "all_three_same": 0.018
+      },
+      "epoch1": {
+        "n": 228,
+        "next1_verb": 0.342,
+        "next1_noun": 0.382,
+        "next1_action": 0.206,
+        "set_recall_action": 0.164,
+        "ed_verb": 0.768,
+        "ed_noun": 0.725,
+        "ed_action": 0.899,
+        "all_three_same": 0.083
+      },
+      "epoch2": {
+        "n": 228,
+        "next1_verb": 0.325,
+        "next1_noun": 0.399,
+        "next1_action": 0.202,
+        "set_recall_action": 0.158,
+        "ed_verb": 0.77,
+        "ed_noun": 0.721,
+        "ed_action": 0.901,
+        "all_three_same": 0.079
+      },
+      "baseline: repeat x three times (x = given action / last completed)": {
+        "n": 228,
+        "next1_verb": 0.101,
+        "next1_noun": 0.368,
+        "next1_action": 0.07,
+        "set_recall_action": 0.06,
+        "ed_verb": 0.89,
+        "ed_noun": 0.722,
+        "ed_action": 0.94,
+        "all_three_same": 1.0
+      },
+      "baseline: bigram chain from x (no video)": {
+        "n": 228,
+        "next1_verb": 0.18,
+        "next1_noun": 0.237,
+        "next1_action": 0.092,
+        "set_recall_action": 0.088,
+        "ed_verb": 0.836,
+        "ed_noun": 0.839,
+        "ed_action": 0.946,
+        "all_three_same": 0.07
+      }
+    }
+  },
+  "recovered_field_counts": {
+    "base": {
+      "current_recovered_unclosed": 931,
+      "multiple_next_blocks": 1203,
+      "fewer_than_three_recovered_next_actions": 1,
+      "more_than_three_recovered_next_actions": 0,
+      "current_closed": 1050
+    },
+    "epoch1": {
+      "current_closed": 1981,
+      "fewer_than_three_recovered_next_actions": 1,
+      "more_than_three_recovered_next_actions": 0
+    },
+    "epoch2": {
+      "current_closed": 1981,
+      "fewer_than_three_recovered_next_actions": 1,
+      "more_than_three_recovered_next_actions": 0
+    },
+    "qwen35": {
+      "fewer_than_three_recovered_next_actions": 0,
+      "more_than_three_recovered_next_actions": 0
+    },
+    "qwen38": {
+      "fewer_than_three_recovered_next_actions": 8,
+      "more_than_three_recovered_next_actions": 1,
+      "multiple_next_blocks": 5
+    }
+  },
+  "examples": [
+    {
+      "id": "P07-20240529-102652:track:10.000",
+      "raw": "<action> open dishwasher\n<goal> load dishwasher\n<next> place bowl in dishwasher\n<next> place spoon in dishwasher\n<next> close dishwasher",
+      "recovered_action": "open dishwasher"
+    },
+    {
+      "id": "P07-20240529-102652:track:20.000",
+      "raw": "<action> place mug\n<goal> put mugs in dishwasher\n<next>\n[19.630, 21.000] place mug\n[21.000, 22.000] close dishwasher\n[22.000, 23.000] walk away",
+      "recovered_action": "place mug"
+    },
+    {
+      "id": "P07-20240529-102652:track:40.000",
+      "raw": "<action> pick up tongs\n<goal> pick up tongs from drawer\n<next>\n[40.040, 40.500] close drawer\n[40.520, 41.000] move tongs\n[41.020, 41.500] put tongs",
+      "recovered_action": "pick up tongs"
+    },
+    {
+      "id": "P07-20240529-102652:track:45.000",
+      "raw": "<action> place bowl\n<goal> load dishwasher\n<next>\n[45.000, 45.500] close dishwasher\n[45.500, 46.000] open dishwasher\n[46.000, 46.500] put bowl",
+      "recovered_action": "place bowl"
+    },
+    {
+      "id": "P07-20240529-102652:track:60.000",
+      "raw": "<action> take tupperware container\n<goal> put tupperware container in dishwasher\n<next>\n[60.010, 61.000] place tupperware container in dishwasher\n[61.010, 62.000] close dishwasher\n[62.010, 63.000] walk away",
+      "recovered_action": "take tupperware container"
+    }
+  ],
+  "initial_sft_mapper_fit": {
+    "fit_videos": 102,
+    "fit_annotation_rows": 34758,
+    "verb_aliases": 1859,
+    "noun_aliases": 17449,
+    "policy": "initial-SFT videos plus official class definitions; no held-out narration mining"
+  },
+  "gold_class_differences": [],
+  "variants": {
+    "recovered_fields_with_original_all_participant_mapper": {
+      "base": {
+        "current_action_track": {
+          "verb": {
+            "correct": 588,
+            "denominator": 1981,
+            "rate": 0.2968197879858657,
+            "mapped_predictions": 1976
+          },
+          "noun": {
+            "correct": 856,
+            "denominator": 1981,
+            "rate": 0.4321049974760222,
+            "mapped_predictions": 1965
+          },
+          "action": {
+            "correct": 372,
+            "denominator": 1981,
+            "rate": 0.18778394750126198,
+            "mapped_predictions": 1965
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 384,
+                "denominator": 2209,
+                "rate": 0.1738343141693074,
+                "mapped_predictions": 2207
+              },
+              "noun": {
+                "correct": 675,
+                "denominator": 2209,
+                "rate": 0.3055681303757356,
+                "mapped_predictions": 2157
+              },
+              "action": {
+                "correct": 224,
+                "denominator": 2209,
+                "rate": 0.10140334993209597,
+                "mapped_predictions": 2157
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 312,
+                "denominator": 2209,
+                "rate": 0.14124038026256225,
+                "mapped_predictions": 2206
+              },
+              "noun": {
+                "correct": 471,
+                "denominator": 2209,
+                "rate": 0.21321865097329107,
+                "mapped_predictions": 2129
+              },
+              "action": {
+                "correct": 100,
+                "denominator": 2209,
+                "rate": 0.04526935264825713,
+                "mapped_predictions": 2129
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 223,
+                "denominator": 2209,
+                "rate": 0.1009506564056134,
+                "mapped_predictions": 2194
+              },
+              "noun": {
+                "correct": 386,
+                "denominator": 2208,
+                "rate": 0.17481884057971014,
+                "mapped_predictions": 2033
+              },
+              "action": {
+                "correct": 71,
+                "denominator": 2208,
+                "rate": 0.03215579710144927,
+                "mapped_predictions": 2033
+              }
+            },
+            "ordered_triple": {
+              "correct": 7,
+              "denominator": 2208,
+              "rate": 0.003170289855072464
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 335,
+                "denominator": 1981,
+                "rate": 0.1691065118626956,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 599,
+                "denominator": 1981,
+                "rate": 0.30237253912165574,
+                "mapped_predictions": 1934
+              },
+              "action": {
+                "correct": 196,
+                "denominator": 1981,
+                "rate": 0.0989399293286219,
+                "mapped_predictions": 1934
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 282,
+                "denominator": 1981,
+                "rate": 0.14235234729934376,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 425,
+                "denominator": 1981,
+                "rate": 0.21453811206461385,
+                "mapped_predictions": 1914
+              },
+              "action": {
+                "correct": 91,
+                "denominator": 1981,
+                "rate": 0.045936395759717315,
+                "mapped_predictions": 1914
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 201,
+                "denominator": 1981,
+                "rate": 0.10146390711761737,
+                "mapped_predictions": 1970
+              },
+              "noun": {
+                "correct": 345,
+                "denominator": 1980,
+                "rate": 0.17424242424242425,
+                "mapped_predictions": 1822
+              },
+              "action": {
+                "correct": 63,
+                "denominator": 1980,
+                "rate": 0.031818181818181815,
+                "mapped_predictions": 1822
+              }
+            },
+            "ordered_triple": {
+              "correct": 6,
+              "denominator": 1980,
+              "rate": 0.0030303030303030303
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 49,
+                "denominator": 228,
+                "rate": 0.2149122807017544,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 76,
+                "denominator": 228,
+                "rate": 0.3333333333333333,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 28,
+                "denominator": 228,
+                "rate": 0.12280701754385964,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 30,
+                "denominator": 228,
+                "rate": 0.13157894736842105,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 46,
+                "denominator": 228,
+                "rate": 0.20175438596491227,
+                "mapped_predictions": 215
+              },
+              "action": {
+                "correct": 9,
+                "denominator": 228,
+                "rate": 0.039473684210526314,
+                "mapped_predictions": 215
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 22,
+                "denominator": 228,
+                "rate": 0.09649122807017543,
+                "mapped_predictions": 224
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 211
+              },
+              "action": {
+                "correct": 8,
+                "denominator": 228,
+                "rate": 0.03508771929824561,
+                "mapped_predictions": 211
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 32,
+            "denominator": 133,
+            "rate": 0.24060150375939848,
+            "mapped_predictions": 132
+          },
+          "P07-20240529-131737": {
+            "correct": 19,
+            "denominator": 91,
+            "rate": 0.2087912087912088,
+            "mapped_predictions": 90
+          },
+          "P07-20240529-134410": {
+            "correct": 28,
+            "denominator": 156,
+            "rate": 0.1794871794871795,
+            "mapped_predictions": 155
+          },
+          "P07-20240529-191007": {
+            "correct": 46,
+            "denominator": 299,
+            "rate": 0.15384615384615385,
+            "mapped_predictions": 298
+          },
+          "P07-20240529-194518": {
+            "correct": 60,
+            "denominator": 281,
+            "rate": 0.21352313167259787,
+            "mapped_predictions": 278
+          },
+          "P07-20240530-102543": {
+            "correct": 63,
+            "denominator": 326,
+            "rate": 0.19325153374233128,
+            "mapped_predictions": 324
+          },
+          "P07-20240530-111344": {
+            "correct": 4,
+            "denominator": 24,
+            "rate": 0.16666666666666666,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 81,
+            "denominator": 399,
+            "rate": 0.20300751879699247,
+            "mapped_predictions": 397
+          },
+          "P07-20240531-201703": {
+            "correct": 39,
+            "denominator": 272,
+            "rate": 0.14338235294117646,
+            "mapped_predictions": 267
+          }
+        }
+      },
+      "epoch1": {
+        "current_action_track": {
+          "verb": {
+            "correct": 761,
+            "denominator": 1981,
+            "rate": 0.38414941948510856,
+            "mapped_predictions": 1981
+          },
+          "noun": {
+            "correct": 952,
+            "denominator": 1981,
+            "rate": 0.48056537102473496,
+            "mapped_predictions": 1981
+          },
+          "action": {
+            "correct": 486,
+            "denominator": 1981,
+            "rate": 0.2453306410903584,
+            "mapped_predictions": 1981
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 534,
+                "denominator": 2209,
+                "rate": 0.24173834314169307,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 674,
+                "denominator": 2209,
+                "rate": 0.3051154368492531,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 278,
+                "denominator": 2209,
+                "rate": 0.12584880036215482,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 426,
+                "denominator": 2209,
+                "rate": 0.19284744228157538,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 484,
+                "denominator": 2209,
+                "rate": 0.21910366681756452,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 143,
+                "denominator": 2209,
+                "rate": 0.0647351742870077,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 370,
+                "denominator": 2209,
+                "rate": 0.16749660479855139,
+                "mapped_predictions": 2208
+              },
+              "noun": {
+                "correct": 436,
+                "denominator": 2208,
+                "rate": 0.19746376811594202,
+                "mapped_predictions": 2207
+              },
+              "action": {
+                "correct": 94,
+                "denominator": 2208,
+                "rate": 0.042572463768115944,
+                "mapped_predictions": 2207
+              }
+            },
+            "ordered_triple": {
+              "correct": 5,
+              "denominator": 2208,
+              "rate": 0.0022644927536231885
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 456,
+                "denominator": 1981,
+                "rate": 0.23018677435638565,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 587,
+                "denominator": 1981,
+                "rate": 0.29631499242806664,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 231,
+                "denominator": 1981,
+                "rate": 0.1166077738515901,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 393,
+                "denominator": 1981,
+                "rate": 0.1983846542150429,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 434,
+                "denominator": 1981,
+                "rate": 0.21908127208480566,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 130,
+                "denominator": 1981,
+                "rate": 0.06562342251388188,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 335,
+                "denominator": 1981,
+                "rate": 0.1691065118626956,
+                "mapped_predictions": 1980
+              },
+              "noun": {
+                "correct": 385,
+                "denominator": 1980,
+                "rate": 0.19444444444444445,
+                "mapped_predictions": 1979
+              },
+              "action": {
+                "correct": 88,
+                "denominator": 1980,
+                "rate": 0.044444444444444446,
+                "mapped_predictions": 1979
+              }
+            },
+            "ordered_triple": {
+              "correct": 4,
+              "denominator": 1980,
+              "rate": 0.00202020202020202
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 78,
+                "denominator": 228,
+                "rate": 0.34210526315789475,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 87,
+                "denominator": 228,
+                "rate": 0.3815789473684211,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 33,
+                "denominator": 228,
+                "rate": 0.14473684210526316,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 228
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 35,
+                "denominator": 228,
+                "rate": 0.15350877192982457,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 51,
+                "denominator": 228,
+                "rate": 0.2236842105263158,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 228
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 41,
+            "denominator": 133,
+            "rate": 0.3082706766917293,
+            "mapped_predictions": 133
+          },
+          "P07-20240529-131737": {
+            "correct": 20,
+            "denominator": 91,
+            "rate": 0.21978021978021978,
+            "mapped_predictions": 91
+          },
+          "P07-20240529-134410": {
+            "correct": 39,
+            "denominator": 156,
+            "rate": 0.25,
+            "mapped_predictions": 156
+          },
+          "P07-20240529-191007": {
+            "correct": 71,
+            "denominator": 299,
+            "rate": 0.23745819397993312,
+            "mapped_predictions": 299
+          },
+          "P07-20240529-194518": {
+            "correct": 85,
+            "denominator": 281,
+            "rate": 0.302491103202847,
+            "mapped_predictions": 281
+          },
+          "P07-20240530-102543": {
+            "correct": 73,
+            "denominator": 326,
+            "rate": 0.22392638036809817,
+            "mapped_predictions": 326
+          },
+          "P07-20240530-111344": {
+            "correct": 11,
+            "denominator": 24,
+            "rate": 0.4583333333333333,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 94,
+            "denominator": 399,
+            "rate": 0.23558897243107768,
+            "mapped_predictions": 399
+          },
+          "P07-20240531-201703": {
+            "correct": 52,
+            "denominator": 272,
+            "rate": 0.19117647058823528,
+            "mapped_predictions": 272
+          }
+        }
+      },
+      "epoch2": {
+        "current_action_track": {
+          "verb": {
+            "correct": 743,
+            "denominator": 1981,
+            "rate": 0.3750630994447249,
+            "mapped_predictions": 1981
+          },
+          "noun": {
+            "correct": 927,
+            "denominator": 1981,
+            "rate": 0.4679454820797577,
+            "mapped_predictions": 1980
+          },
+          "action": {
+            "correct": 478,
+            "denominator": 1981,
+            "rate": 0.24129227662796568,
+            "mapped_predictions": 1980
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 518,
+                "denominator": 2209,
+                "rate": 0.23449524671797192,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 702,
+                "denominator": 2209,
+                "rate": 0.31779085559076503,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 276,
+                "denominator": 2209,
+                "rate": 0.12494341330918968,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 403,
+                "denominator": 2209,
+                "rate": 0.18243549117247623,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 506,
+                "denominator": 2209,
+                "rate": 0.22906292440018108,
+                "mapped_predictions": 2207
+              },
+              "action": {
+                "correct": 154,
+                "denominator": 2209,
+                "rate": 0.06971480307831598,
+                "mapped_predictions": 2207
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 352,
+                "denominator": 2209,
+                "rate": 0.1593481213218651,
+                "mapped_predictions": 2207
+              },
+              "noun": {
+                "correct": 415,
+                "denominator": 2208,
+                "rate": 0.18795289855072464,
+                "mapped_predictions": 2203
+              },
+              "action": {
+                "correct": 84,
+                "denominator": 2208,
+                "rate": 0.03804347826086957,
+                "mapped_predictions": 2203
+              }
+            },
+            "ordered_triple": {
+              "correct": 6,
+              "denominator": 2208,
+              "rate": 0.002717391304347826
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 444,
+                "denominator": 1981,
+                "rate": 0.22412922766279655,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 611,
+                "denominator": 1981,
+                "rate": 0.30843008581524484,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 230,
+                "denominator": 1981,
+                "rate": 0.11610297829379101,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 369,
+                "denominator": 1981,
+                "rate": 0.18626956082786472,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 456,
+                "denominator": 1981,
+                "rate": 0.23018677435638565,
+                "mapped_predictions": 1980
+              },
+              "action": {
+                "correct": 142,
+                "denominator": 1981,
+                "rate": 0.07168096920747097,
+                "mapped_predictions": 1980
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 314,
+                "denominator": 1981,
+                "rate": 0.15850580514891469,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 365,
+                "denominator": 1980,
+                "rate": 0.18434343434343434,
+                "mapped_predictions": 1976
+              },
+              "action": {
+                "correct": 77,
+                "denominator": 1980,
+                "rate": 0.03888888888888889,
+                "mapped_predictions": 1976
+              }
+            },
+            "ordered_triple": {
+              "correct": 5,
+              "denominator": 1980,
+              "rate": 0.0025252525252525255
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 74,
+                "denominator": 228,
+                "rate": 0.32456140350877194,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 91,
+                "denominator": 228,
+                "rate": 0.3991228070175439,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 46,
+                "denominator": 228,
+                "rate": 0.20175438596491227,
+                "mapped_predictions": 228
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 34,
+                "denominator": 228,
+                "rate": 0.14912280701754385,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 227
+              },
+              "action": {
+                "correct": 12,
+                "denominator": 228,
+                "rate": 0.05263157894736842,
+                "mapped_predictions": 227
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 38,
+                "denominator": 228,
+                "rate": 0.16666666666666666,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 227
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 227
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 38,
+            "denominator": 133,
+            "rate": 0.2857142857142857,
+            "mapped_predictions": 133
+          },
+          "P07-20240529-131737": {
+            "correct": 18,
+            "denominator": 91,
+            "rate": 0.1978021978021978,
+            "mapped_predictions": 91
+          },
+          "P07-20240529-134410": {
+            "correct": 39,
+            "denominator": 156,
+            "rate": 0.25,
+            "mapped_predictions": 156
+          },
+          "P07-20240529-191007": {
+            "correct": 76,
+            "denominator": 299,
+            "rate": 0.25418060200668896,
+            "mapped_predictions": 299
+          },
+          "P07-20240529-194518": {
+            "correct": 84,
+            "denominator": 281,
+            "rate": 0.298932384341637,
+            "mapped_predictions": 281
+          },
+          "P07-20240530-102543": {
+            "correct": 72,
+            "denominator": 326,
+            "rate": 0.22085889570552147,
+            "mapped_predictions": 326
+          },
+          "P07-20240530-111344": {
+            "correct": 9,
+            "denominator": 24,
+            "rate": 0.375,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 89,
+            "denominator": 399,
+            "rate": 0.22305764411027568,
+            "mapped_predictions": 399
+          },
+          "P07-20240531-201703": {
+            "correct": 53,
+            "denominator": 272,
+            "rate": 0.1948529411764706,
+            "mapped_predictions": 271
+          }
+        }
+      },
+      "qwen35": {
+        "current_action_track": {
+          "verb": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "noun": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "action": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 70,
+                "denominator": 228,
+                "rate": 0.30701754385964913,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 27,
+                "denominator": 228,
+                "rate": 0.11842105263157894,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 23,
+                "denominator": 228,
+                "rate": 0.10087719298245613,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 43,
+                "denominator": 228,
+                "rate": 0.18859649122807018,
+                "mapped_predictions": 218
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 218
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 15,
+                "denominator": 228,
+                "rate": 0.06578947368421052,
+                "mapped_predictions": 225
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 210
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 210
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 228,
+              "rate": 0.0
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 70,
+                "denominator": 228,
+                "rate": 0.30701754385964913,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 27,
+                "denominator": 228,
+                "rate": 0.11842105263157894,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 23,
+                "denominator": 228,
+                "rate": 0.10087719298245613,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 43,
+                "denominator": 228,
+                "rate": 0.18859649122807018,
+                "mapped_predictions": 218
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 218
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 15,
+                "denominator": 228,
+                "rate": 0.06578947368421052,
+                "mapped_predictions": 225
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 210
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 210
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 228,
+              "rate": 0.0
+            }
+          }
+        },
+        "current_action_by_video": {}
+      },
+      "qwen38": {
+        "current_action_track": {
+          "verb": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "noun": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "action": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 58,
+                "denominator": 228,
+                "rate": 0.2543859649122807,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 83,
+                "denominator": 228,
+                "rate": 0.36403508771929827,
+                "mapped_predictions": 225
+              },
+              "action": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 225
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 219
+              },
+              "noun": {
+                "correct": 55,
+                "denominator": 228,
+                "rate": 0.2412280701754386,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 14,
+                "denominator": 228,
+                "rate": 0.06140350877192982,
+                "mapped_predictions": 216
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 220
+              },
+              "noun": {
+                "correct": 45,
+                "denominator": 228,
+                "rate": 0.19736842105263158,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 216
+              }
+            },
+            "ordered_triple": {
+              "correct": 2,
+              "denominator": 228,
+              "rate": 0.008771929824561403
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 58,
+                "denominator": 228,
+                "rate": 0.2543859649122807,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 83,
+                "denominator": 228,
+                "rate": 0.36403508771929827,
+                "mapped_predictions": 225
+              },
+              "action": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 225
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 219
+              },
+              "noun": {
+                "correct": 55,
+                "denominator": 228,
+                "rate": 0.2412280701754386,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 14,
+                "denominator": 228,
+                "rate": 0.06140350877192982,
+                "mapped_predictions": 216
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 220
+              },
+              "noun": {
+                "correct": 45,
+                "denominator": 228,
+                "rate": 0.19736842105263158,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 216
+              }
+            },
+            "ordered_triple": {
+              "correct": 2,
+              "denominator": 228,
+              "rate": 0.008771929824561403
+            }
+          }
+        },
+        "current_action_by_video": {}
+      }
+    },
+    "recovered_fields_with_initial_sft_and_official_mapper": {
+      "base": {
+        "current_action_track": {
+          "verb": {
+            "correct": 588,
+            "denominator": 1981,
+            "rate": 0.2968197879858657,
+            "mapped_predictions": 1976
+          },
+          "noun": {
+            "correct": 856,
+            "denominator": 1981,
+            "rate": 0.4321049974760222,
+            "mapped_predictions": 1965
+          },
+          "action": {
+            "correct": 372,
+            "denominator": 1981,
+            "rate": 0.18778394750126198,
+            "mapped_predictions": 1965
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 384,
+                "denominator": 2209,
+                "rate": 0.1738343141693074,
+                "mapped_predictions": 2207
+              },
+              "noun": {
+                "correct": 675,
+                "denominator": 2209,
+                "rate": 0.3055681303757356,
+                "mapped_predictions": 2157
+              },
+              "action": {
+                "correct": 224,
+                "denominator": 2209,
+                "rate": 0.10140334993209597,
+                "mapped_predictions": 2157
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 312,
+                "denominator": 2209,
+                "rate": 0.14124038026256225,
+                "mapped_predictions": 2206
+              },
+              "noun": {
+                "correct": 471,
+                "denominator": 2209,
+                "rate": 0.21321865097329107,
+                "mapped_predictions": 2129
+              },
+              "action": {
+                "correct": 100,
+                "denominator": 2209,
+                "rate": 0.04526935264825713,
+                "mapped_predictions": 2129
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 223,
+                "denominator": 2209,
+                "rate": 0.1009506564056134,
+                "mapped_predictions": 2194
+              },
+              "noun": {
+                "correct": 386,
+                "denominator": 2208,
+                "rate": 0.17481884057971014,
+                "mapped_predictions": 2033
+              },
+              "action": {
+                "correct": 71,
+                "denominator": 2208,
+                "rate": 0.03215579710144927,
+                "mapped_predictions": 2033
+              }
+            },
+            "ordered_triple": {
+              "correct": 7,
+              "denominator": 2208,
+              "rate": 0.003170289855072464
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 335,
+                "denominator": 1981,
+                "rate": 0.1691065118626956,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 599,
+                "denominator": 1981,
+                "rate": 0.30237253912165574,
+                "mapped_predictions": 1934
+              },
+              "action": {
+                "correct": 196,
+                "denominator": 1981,
+                "rate": 0.0989399293286219,
+                "mapped_predictions": 1934
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 282,
+                "denominator": 1981,
+                "rate": 0.14235234729934376,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 425,
+                "denominator": 1981,
+                "rate": 0.21453811206461385,
+                "mapped_predictions": 1914
+              },
+              "action": {
+                "correct": 91,
+                "denominator": 1981,
+                "rate": 0.045936395759717315,
+                "mapped_predictions": 1914
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 201,
+                "denominator": 1981,
+                "rate": 0.10146390711761737,
+                "mapped_predictions": 1970
+              },
+              "noun": {
+                "correct": 345,
+                "denominator": 1980,
+                "rate": 0.17424242424242425,
+                "mapped_predictions": 1822
+              },
+              "action": {
+                "correct": 63,
+                "denominator": 1980,
+                "rate": 0.031818181818181815,
+                "mapped_predictions": 1822
+              }
+            },
+            "ordered_triple": {
+              "correct": 6,
+              "denominator": 1980,
+              "rate": 0.0030303030303030303
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 49,
+                "denominator": 228,
+                "rate": 0.2149122807017544,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 76,
+                "denominator": 228,
+                "rate": 0.3333333333333333,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 28,
+                "denominator": 228,
+                "rate": 0.12280701754385964,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 30,
+                "denominator": 228,
+                "rate": 0.13157894736842105,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 46,
+                "denominator": 228,
+                "rate": 0.20175438596491227,
+                "mapped_predictions": 215
+              },
+              "action": {
+                "correct": 9,
+                "denominator": 228,
+                "rate": 0.039473684210526314,
+                "mapped_predictions": 215
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 22,
+                "denominator": 228,
+                "rate": 0.09649122807017543,
+                "mapped_predictions": 224
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 211
+              },
+              "action": {
+                "correct": 8,
+                "denominator": 228,
+                "rate": 0.03508771929824561,
+                "mapped_predictions": 211
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 32,
+            "denominator": 133,
+            "rate": 0.24060150375939848,
+            "mapped_predictions": 132
+          },
+          "P07-20240529-131737": {
+            "correct": 19,
+            "denominator": 91,
+            "rate": 0.2087912087912088,
+            "mapped_predictions": 90
+          },
+          "P07-20240529-134410": {
+            "correct": 28,
+            "denominator": 156,
+            "rate": 0.1794871794871795,
+            "mapped_predictions": 155
+          },
+          "P07-20240529-191007": {
+            "correct": 46,
+            "denominator": 299,
+            "rate": 0.15384615384615385,
+            "mapped_predictions": 298
+          },
+          "P07-20240529-194518": {
+            "correct": 60,
+            "denominator": 281,
+            "rate": 0.21352313167259787,
+            "mapped_predictions": 278
+          },
+          "P07-20240530-102543": {
+            "correct": 63,
+            "denominator": 326,
+            "rate": 0.19325153374233128,
+            "mapped_predictions": 324
+          },
+          "P07-20240530-111344": {
+            "correct": 4,
+            "denominator": 24,
+            "rate": 0.16666666666666666,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 81,
+            "denominator": 399,
+            "rate": 0.20300751879699247,
+            "mapped_predictions": 397
+          },
+          "P07-20240531-201703": {
+            "correct": 39,
+            "denominator": 272,
+            "rate": 0.14338235294117646,
+            "mapped_predictions": 267
+          }
+        }
+      },
+      "epoch1": {
+        "current_action_track": {
+          "verb": {
+            "correct": 761,
+            "denominator": 1981,
+            "rate": 0.38414941948510856,
+            "mapped_predictions": 1981
+          },
+          "noun": {
+            "correct": 952,
+            "denominator": 1981,
+            "rate": 0.48056537102473496,
+            "mapped_predictions": 1981
+          },
+          "action": {
+            "correct": 486,
+            "denominator": 1981,
+            "rate": 0.2453306410903584,
+            "mapped_predictions": 1981
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 534,
+                "denominator": 2209,
+                "rate": 0.24173834314169307,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 674,
+                "denominator": 2209,
+                "rate": 0.3051154368492531,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 278,
+                "denominator": 2209,
+                "rate": 0.12584880036215482,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 426,
+                "denominator": 2209,
+                "rate": 0.19284744228157538,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 484,
+                "denominator": 2209,
+                "rate": 0.21910366681756452,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 143,
+                "denominator": 2209,
+                "rate": 0.0647351742870077,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 370,
+                "denominator": 2209,
+                "rate": 0.16749660479855139,
+                "mapped_predictions": 2208
+              },
+              "noun": {
+                "correct": 436,
+                "denominator": 2208,
+                "rate": 0.19746376811594202,
+                "mapped_predictions": 2207
+              },
+              "action": {
+                "correct": 94,
+                "denominator": 2208,
+                "rate": 0.042572463768115944,
+                "mapped_predictions": 2207
+              }
+            },
+            "ordered_triple": {
+              "correct": 5,
+              "denominator": 2208,
+              "rate": 0.0022644927536231885
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 456,
+                "denominator": 1981,
+                "rate": 0.23018677435638565,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 587,
+                "denominator": 1981,
+                "rate": 0.29631499242806664,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 231,
+                "denominator": 1981,
+                "rate": 0.1166077738515901,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 393,
+                "denominator": 1981,
+                "rate": 0.1983846542150429,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 434,
+                "denominator": 1981,
+                "rate": 0.21908127208480566,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 130,
+                "denominator": 1981,
+                "rate": 0.06562342251388188,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 335,
+                "denominator": 1981,
+                "rate": 0.1691065118626956,
+                "mapped_predictions": 1980
+              },
+              "noun": {
+                "correct": 385,
+                "denominator": 1980,
+                "rate": 0.19444444444444445,
+                "mapped_predictions": 1979
+              },
+              "action": {
+                "correct": 88,
+                "denominator": 1980,
+                "rate": 0.044444444444444446,
+                "mapped_predictions": 1979
+              }
+            },
+            "ordered_triple": {
+              "correct": 4,
+              "denominator": 1980,
+              "rate": 0.00202020202020202
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 78,
+                "denominator": 228,
+                "rate": 0.34210526315789475,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 87,
+                "denominator": 228,
+                "rate": 0.3815789473684211,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 33,
+                "denominator": 228,
+                "rate": 0.14473684210526316,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 228
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 35,
+                "denominator": 228,
+                "rate": 0.15350877192982457,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 51,
+                "denominator": 228,
+                "rate": 0.2236842105263158,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 228
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 41,
+            "denominator": 133,
+            "rate": 0.3082706766917293,
+            "mapped_predictions": 133
+          },
+          "P07-20240529-131737": {
+            "correct": 20,
+            "denominator": 91,
+            "rate": 0.21978021978021978,
+            "mapped_predictions": 91
+          },
+          "P07-20240529-134410": {
+            "correct": 39,
+            "denominator": 156,
+            "rate": 0.25,
+            "mapped_predictions": 156
+          },
+          "P07-20240529-191007": {
+            "correct": 71,
+            "denominator": 299,
+            "rate": 0.23745819397993312,
+            "mapped_predictions": 299
+          },
+          "P07-20240529-194518": {
+            "correct": 85,
+            "denominator": 281,
+            "rate": 0.302491103202847,
+            "mapped_predictions": 281
+          },
+          "P07-20240530-102543": {
+            "correct": 73,
+            "denominator": 326,
+            "rate": 0.22392638036809817,
+            "mapped_predictions": 326
+          },
+          "P07-20240530-111344": {
+            "correct": 11,
+            "denominator": 24,
+            "rate": 0.4583333333333333,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 94,
+            "denominator": 399,
+            "rate": 0.23558897243107768,
+            "mapped_predictions": 399
+          },
+          "P07-20240531-201703": {
+            "correct": 52,
+            "denominator": 272,
+            "rate": 0.19117647058823528,
+            "mapped_predictions": 272
+          }
+        }
+      },
+      "epoch2": {
+        "current_action_track": {
+          "verb": {
+            "correct": 743,
+            "denominator": 1981,
+            "rate": 0.3750630994447249,
+            "mapped_predictions": 1981
+          },
+          "noun": {
+            "correct": 927,
+            "denominator": 1981,
+            "rate": 0.4679454820797577,
+            "mapped_predictions": 1980
+          },
+          "action": {
+            "correct": 478,
+            "denominator": 1981,
+            "rate": 0.24129227662796568,
+            "mapped_predictions": 1980
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 518,
+                "denominator": 2209,
+                "rate": 0.23449524671797192,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 702,
+                "denominator": 2209,
+                "rate": 0.31779085559076503,
+                "mapped_predictions": 2209
+              },
+              "action": {
+                "correct": 276,
+                "denominator": 2209,
+                "rate": 0.12494341330918968,
+                "mapped_predictions": 2209
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 403,
+                "denominator": 2209,
+                "rate": 0.18243549117247623,
+                "mapped_predictions": 2209
+              },
+              "noun": {
+                "correct": 506,
+                "denominator": 2209,
+                "rate": 0.22906292440018108,
+                "mapped_predictions": 2207
+              },
+              "action": {
+                "correct": 154,
+                "denominator": 2209,
+                "rate": 0.06971480307831598,
+                "mapped_predictions": 2207
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 352,
+                "denominator": 2209,
+                "rate": 0.1593481213218651,
+                "mapped_predictions": 2207
+              },
+              "noun": {
+                "correct": 415,
+                "denominator": 2208,
+                "rate": 0.18795289855072464,
+                "mapped_predictions": 2203
+              },
+              "action": {
+                "correct": 84,
+                "denominator": 2208,
+                "rate": 0.03804347826086957,
+                "mapped_predictions": 2203
+              }
+            },
+            "ordered_triple": {
+              "correct": 6,
+              "denominator": 2208,
+              "rate": 0.002717391304347826
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 444,
+                "denominator": 1981,
+                "rate": 0.22412922766279655,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 611,
+                "denominator": 1981,
+                "rate": 0.30843008581524484,
+                "mapped_predictions": 1981
+              },
+              "action": {
+                "correct": 230,
+                "denominator": 1981,
+                "rate": 0.11610297829379101,
+                "mapped_predictions": 1981
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 369,
+                "denominator": 1981,
+                "rate": 0.18626956082786472,
+                "mapped_predictions": 1981
+              },
+              "noun": {
+                "correct": 456,
+                "denominator": 1981,
+                "rate": 0.23018677435638565,
+                "mapped_predictions": 1980
+              },
+              "action": {
+                "correct": 142,
+                "denominator": 1981,
+                "rate": 0.07168096920747097,
+                "mapped_predictions": 1980
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 314,
+                "denominator": 1981,
+                "rate": 0.15850580514891469,
+                "mapped_predictions": 1979
+              },
+              "noun": {
+                "correct": 365,
+                "denominator": 1980,
+                "rate": 0.18434343434343434,
+                "mapped_predictions": 1976
+              },
+              "action": {
+                "correct": 77,
+                "denominator": 1980,
+                "rate": 0.03888888888888889,
+                "mapped_predictions": 1976
+              }
+            },
+            "ordered_triple": {
+              "correct": 5,
+              "denominator": 1980,
+              "rate": 0.0025252525252525255
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 74,
+                "denominator": 228,
+                "rate": 0.32456140350877194,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 91,
+                "denominator": 228,
+                "rate": 0.3991228070175439,
+                "mapped_predictions": 228
+              },
+              "action": {
+                "correct": 46,
+                "denominator": 228,
+                "rate": 0.20175438596491227,
+                "mapped_predictions": 228
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 34,
+                "denominator": 228,
+                "rate": 0.14912280701754385,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 227
+              },
+              "action": {
+                "correct": 12,
+                "denominator": 228,
+                "rate": 0.05263157894736842,
+                "mapped_predictions": 227
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 38,
+                "denominator": 228,
+                "rate": 0.16666666666666666,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 50,
+                "denominator": 228,
+                "rate": 0.21929824561403508,
+                "mapped_predictions": 227
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 227
+              }
+            },
+            "ordered_triple": {
+              "correct": 1,
+              "denominator": 228,
+              "rate": 0.0043859649122807015
+            }
+          }
+        },
+        "current_action_by_video": {
+          "P07-20240529-102652": {
+            "correct": 38,
+            "denominator": 133,
+            "rate": 0.2857142857142857,
+            "mapped_predictions": 133
+          },
+          "P07-20240529-131737": {
+            "correct": 18,
+            "denominator": 91,
+            "rate": 0.1978021978021978,
+            "mapped_predictions": 91
+          },
+          "P07-20240529-134410": {
+            "correct": 39,
+            "denominator": 156,
+            "rate": 0.25,
+            "mapped_predictions": 156
+          },
+          "P07-20240529-191007": {
+            "correct": 76,
+            "denominator": 299,
+            "rate": 0.25418060200668896,
+            "mapped_predictions": 299
+          },
+          "P07-20240529-194518": {
+            "correct": 84,
+            "denominator": 281,
+            "rate": 0.298932384341637,
+            "mapped_predictions": 281
+          },
+          "P07-20240530-102543": {
+            "correct": 72,
+            "denominator": 326,
+            "rate": 0.22085889570552147,
+            "mapped_predictions": 326
+          },
+          "P07-20240530-111344": {
+            "correct": 9,
+            "denominator": 24,
+            "rate": 0.375,
+            "mapped_predictions": 24
+          },
+          "P07-20240531-101357": {
+            "correct": 89,
+            "denominator": 399,
+            "rate": 0.22305764411027568,
+            "mapped_predictions": 399
+          },
+          "P07-20240531-201703": {
+            "correct": 53,
+            "denominator": 272,
+            "rate": 0.1948529411764706,
+            "mapped_predictions": 271
+          }
+        }
+      },
+      "qwen35": {
+        "current_action_track": {
+          "verb": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "noun": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "action": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 70,
+                "denominator": 228,
+                "rate": 0.30701754385964913,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 27,
+                "denominator": 228,
+                "rate": 0.11842105263157894,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 23,
+                "denominator": 228,
+                "rate": 0.10087719298245613,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 43,
+                "denominator": 228,
+                "rate": 0.18859649122807018,
+                "mapped_predictions": 218
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 218
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 15,
+                "denominator": 228,
+                "rate": 0.06578947368421052,
+                "mapped_predictions": 225
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 210
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 210
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 228,
+              "rate": 0.0
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 47,
+                "denominator": 228,
+                "rate": 0.20614035087719298,
+                "mapped_predictions": 228
+              },
+              "noun": {
+                "correct": 70,
+                "denominator": 228,
+                "rate": 0.30701754385964913,
+                "mapped_predictions": 223
+              },
+              "action": {
+                "correct": 27,
+                "denominator": 228,
+                "rate": 0.11842105263157894,
+                "mapped_predictions": 223
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 23,
+                "denominator": 228,
+                "rate": 0.10087719298245613,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 43,
+                "denominator": 228,
+                "rate": 0.18859649122807018,
+                "mapped_predictions": 218
+              },
+              "action": {
+                "correct": 7,
+                "denominator": 228,
+                "rate": 0.03070175438596491,
+                "mapped_predictions": 218
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 15,
+                "denominator": 228,
+                "rate": 0.06578947368421052,
+                "mapped_predictions": 225
+              },
+              "noun": {
+                "correct": 41,
+                "denominator": 228,
+                "rate": 0.17982456140350878,
+                "mapped_predictions": 210
+              },
+              "action": {
+                "correct": 6,
+                "denominator": 228,
+                "rate": 0.02631578947368421,
+                "mapped_predictions": 210
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 228,
+              "rate": 0.0
+            }
+          }
+        },
+        "current_action_by_video": {}
+      },
+      "qwen38": {
+        "current_action_track": {
+          "verb": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "noun": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          },
+          "action": {
+            "correct": 0,
+            "denominator": 0,
+            "rate": null,
+            "mapped_predictions": 0
+          }
+        },
+        "next_actions": {
+          "all": {
+            "position_1": {
+              "verb": {
+                "correct": 58,
+                "denominator": 228,
+                "rate": 0.2543859649122807,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 83,
+                "denominator": 228,
+                "rate": 0.36403508771929827,
+                "mapped_predictions": 225
+              },
+              "action": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 225
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 219
+              },
+              "noun": {
+                "correct": 55,
+                "denominator": 228,
+                "rate": 0.2412280701754386,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 14,
+                "denominator": 228,
+                "rate": 0.06140350877192982,
+                "mapped_predictions": 216
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 32,
+                "denominator": 228,
+                "rate": 0.14035087719298245,
+                "mapped_predictions": 220
+              },
+              "noun": {
+                "correct": 45,
+                "denominator": 228,
+                "rate": 0.19736842105263158,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 216
+              }
+            },
+            "ordered_triple": {
+              "correct": 2,
+              "denominator": 228,
+              "rate": 0.008771929824561403
+            }
+          },
+          "track": {
+            "position_1": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "noun": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              },
+              "action": {
+                "correct": 0,
+                "denominator": 0,
+                "rate": null,
+                "mapped_predictions": 0
+              }
+            },
+            "ordered_triple": {
+              "correct": 0,
+              "denominator": 0,
+              "rate": null
+            }
+          },
+          "explain": {
+            "position_1": {
+              "verb": {
+                "correct": 58,
+                "denominator": 228,
+                "rate": 0.2543859649122807,
+                "mapped_predictions": 227
+              },
+              "noun": {
+                "correct": 83,
+                "denominator": 228,
+                "rate": 0.36403508771929827,
+                "mapped_predictions": 225
+              },
+              "action": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 225
+              }
+            },
+            "position_2": {
+              "verb": {
+                "correct": 31,
+                "denominator": 228,
+                "rate": 0.13596491228070176,
+                "mapped_predictions": 219
+              },
+              "noun": {
+                "correct": 55,
+                "denominator": 228,
+                "rate": 0.2412280701754386,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 14,
+                "denominator": 228,
+                "rate": 0.06140350877192982,
+                "mapped_predictions": 216
+              }
+            },
+            "position_3": {
+              "verb": {
+                "correct": 32,
+                "denominator": 228,
+                "rate": 0.14035087719298245,
+                "mapped_predictions": 220
+              },
+              "noun": {
+                "correct": 45,
+                "denominator": 228,
+                "rate": 0.19736842105263158,
+                "mapped_predictions": 216
+              },
+              "action": {
+                "correct": 13,
+                "denominator": 228,
+                "rate": 0.05701754385964912,
+                "mapped_predictions": 216
+              }
+            },
+            "ordered_triple": {
+              "correct": 2,
+              "denominator": 228,
+              "rate": 0.008771929824561403
+            }
+          }
+        },
+        "current_action_by_video": {}
+      }
+    }
+  },
+  "limitations": [
+    "The retained free-text mapper is heuristic and unvalidated on model paraphrases.",
+    "Category agreement does not isolate video understanding from action history.",
+    "All validation cases are P07; related examples share nine videos.",
+    "Original row-wise bootstrap intervals should not be treated as video-cluster uncertainty.",
+    "The audit does not change frozen predictions, checkpoint selection, or original reports."
+  ],
+  "main_evaluation_replaced": false,
+  "self_checks_passed": true
+}

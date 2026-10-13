@@ -1,0 +1,45 @@
+{
+  "video_id": "P01-20240202-110250",
+  "protocol": "ravu_style_hmgraph_v1_mpnet_ablation",
+  "graph_only": true,
+  "embedder": {
+    "model_id": "sentence-transformers/all-mpnet-base-v2",
+    "revision": "12e86a3c702fc3c50205a8db88f0ec7c0b6b94a0",
+    "pooling": "mean",
+    "query_instruction": null,
+    "max_length": 384,
+    "batch_size": 64,
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "local_files_only": true
+  },
+  "reranker": {
+    "model_id": "Qwen/Qwen3-Reranker-4B",
+    "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+    "instruction": "Given a web search query, retrieve relevant passages that answer the query",
+    "max_length": 2048,
+    "batch_size": 8,
+    "device": "cuda:1",
+    "dtype": "bfloat16",
+    "local_files_only": true
+  },
+  "answerer": {
+    "model_id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+    "revision": "9c4b90e1e4ba969fd3b5378b57d966d725f1b86c",
+    "device": "cuda:0",
+    "dtype": "bfloat16",
+    "local_files_only": true,
+    "max_evidence_characters": 18000,
+    "trust_remote_code": true
+  },
+  "retrieval": {
+    "dense_top_k_per_view": 24,
+    "rerank_top_k": 32,
+    "seed_top_k": 10,
+    "final_top_k": 18,
+    "reciprocal_rank_constant": 20,
+    "traversal_decay": 0.78,
+    "max_expanded_nodes": 64,
+    "similarity_device": "cuda:0"
+  }
+}

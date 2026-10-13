@@ -1,0 +1,11 @@
+{
+  "sample_size": 46,
+  "label_agreements": 46,
+  "label_disagreements": [],
+  "stratified_sample_not_population_accuracy": true,
+  "independent_reviewer_received_model_labels": false,
+  "human_validation": false,
+  "prior_reviews_changed": false,
+  "independent_judgments_sha256": "03378196800cc4a9ecea57debdd4ccf2b8d9e1fce835d7b72452b352fe4c6631",
+  "compared_with_current_primary_judgments": true
+}

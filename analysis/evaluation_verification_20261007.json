@@ -1,0 +1,93 @@
+{
+  "verification": "reaggregation_and_input_identity_checks_only; no_new_semantic_judgments_or_model_inference",
+  "source_judgments": "/data/yaxuanli/ActGround/runs/hdepic_why_semantic_comparison_v2/assistant/all_five_models.csv",
+  "saved_report": "/data/yaxuanli/ActGround/runs/hdepic_why_semantic_comparison_v2/comparison.json",
+  "verified_model_counts": {
+    "base": {
+      "examples": 228,
+      "correct": 72,
+      "partial": 62,
+      "incorrect": 92,
+      "unjudgeable": 2,
+      "judgeable": 226,
+      "correct_rate_percent": 31.86
+    },
+    "epoch1": {
+      "examples": 228,
+      "correct": 72,
+      "partial": 49,
+      "incorrect": 105,
+      "unjudgeable": 2,
+      "judgeable": 226,
+      "correct_rate_percent": 31.86
+    },
+    "epoch2": {
+      "examples": 228,
+      "correct": 74,
+      "partial": 37,
+      "incorrect": 115,
+      "unjudgeable": 2,
+      "judgeable": 226,
+      "correct_rate_percent": 32.74
+    },
+    "qwen35": {
+      "examples": 228,
+      "correct": 91,
+      "partial": 46,
+      "incorrect": 89,
+      "unjudgeable": 2,
+      "judgeable": 226,
+      "correct_rate_percent": 40.27
+    },
+    "qwen38": {
+      "examples": 228,
+      "correct": 101,
+      "partial": 41,
+      "incorrect": 84,
+      "unjudgeable": 2,
+      "judgeable": 226,
+      "correct_rate_percent": 44.69
+    }
+  },
+  "same_228_ids_all_models": true,
+  "same_two_unjudgeable_sources_all_models": [
+    "P07-20240529-134410:explain:P07-20240529-134410-418",
+    "P07-20240529-191007:explain:P07-20240529-191007-76"
+  ],
+  "all_684_original_8b_labels_and_why_text_preserved": true,
+  "larger_model_prediction_and_prompt_checks": {
+    "qwen35": {
+      "completed_predictions": 228,
+      "input_text_and_images_equal_original_8b_explain_prompts": true,
+      "same_ids_as_semantic_review": true,
+      "no_assistant_targets_in_input": true,
+      "reviewed_why_equal_saved_extracted_answer": true,
+      "prompt_sha256": "214d527631c685609404fdcd1d708d918115e3b2d4f1f40a2388b9100c5eb217",
+      "why_extraction_statuses": {
+        "extracted": 228
+      }
+    },
+    "qwen38": {
+      "completed_predictions": 228,
+      "input_text_and_images_equal_original_8b_explain_prompts": true,
+      "same_ids_as_semantic_review": true,
+      "no_assistant_targets_in_input": true,
+      "reviewed_why_equal_saved_extracted_answer": true,
+      "prompt_sha256": "214d527631c685609404fdcd1d708d918115e3b2d4f1f40a2388b9100c5eb217",
+      "why_extraction_statuses": {
+        "extracted": 223,
+        "ambiguous": 5
+      }
+    }
+  },
+  "semantic_scope": "WHY agreement with narrated purpose only; existing assistant labels remain provisional",
+  "claude_action_and_forecasting_scores": {
+    "uploaded_scorer_model_headlines_reproduced": true,
+    "audit": "/data/yaxuanli/ActGround/analysis/class_eval_audit_v1/audit_summary.json",
+    "corrected_current_action_base_epoch1": "372/1981 (18.78%) -> 486/1981 (24.53%)",
+    "corrected_first_next_all_base_epoch1": "224/2209 (10.14%) -> 278/2209 (12.58%)",
+    "mapper_status": "heuristic; not independently validated on generated paraphrases"
+  },
+  "evaluation_code_modified_by_this_audit": false,
+  "separate_class_audit_added": true
+}

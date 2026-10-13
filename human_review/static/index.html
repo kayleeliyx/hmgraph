@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ActGround · Human review</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="ActGround review home"><span class="brand-mark">A</span><span>ActGround <small>REVIEW WORKSPACE</small></span></a>
+    <nav class="workspace-switch" aria-label="Workspace"><a href="/" class="active" aria-current="page">Human review</a><a id="timeline-workspace-link" href="/timeline">Video timeline</a></nav>
+    <div class="top-actions">
+      <label class="reviewer-label" for="reviewer">Reviewer <input id="reviewer" autocomplete="name" placeholder="Your name" maxlength="100"></label>
+      <span id="save-status" class="save-status" role="status" aria-live="polite">Ready</span>
+      <button id="help-button" class="button subtle">Rubric & shortcuts</button>
+      <button id="export-button" class="button subtle">Export</button>
+    </div>
+  </header>
+  <div id="global-error" class="global-error" role="alert" hidden></div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Examples">
+      <div class="sidebar-heading"><h1>Examples</h1><span id="example-count" class="count">—</span></div>
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search action or video" aria-label="Search examples"></label>
+      <div class="filter-grid">
+        <select id="task-filter" aria-label="Filter by task"><option value="">All tasks</option></select>
+        <select id="status-filter" aria-label="Filter by review status"><option value="">All statuses</option><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="uncertain">Uncertain</option><option value="mappingerror">Mapping issue</option></select>
+      </div>
+      <select id="video-filter" aria-label="Filter by video"><option value="">All videos</option></select>
+      <div class="sidebar-progress"><div><span id="progress-label">Loading examples…</span><span id="progress-percent"></span></div><div class="progress-track"><div id="progress-fill"></div></div></div>
+      <div id="example-list" class="example-list" role="list" aria-live="polite"><p class="empty-state">Loading examples…</p></div>
+      <div class="sidebar-footer"><span class="keycap">J</span> / <span class="keycap">K</span> previous / next</div>
+    </aside>
+    <main id="workspace" class="workspace" aria-busy="true">
+      <div id="loading-state" class="workspace-placeholder"><span class="spinner"></span><h2>Loading your workspace</h2><p>Preparing saved outputs and evidence.</p></div>
+      <div id="review-workspace" hidden>
+        <div class="example-header"><div><div class="eyebrow"><span id="task-badge">EXPLAIN</span><span id="video-label"></span><span id="query-label"></span></div><h2 id="question-heading"></h2><p id="example-id" class="metadata"></p></div><div class="navigation"><button id="previous-button" class="button subtle" aria-label="Previous example">←</button><button id="next-button" class="button primary">Save & next <span aria-hidden="true">→</span></button></div></div>
+        <div id="warnings" class="warnings" hidden></div>
+        <section class="evidence-card card" aria-labelledby="evidence-heading">
+          <div class="card-heading"><div><h3 id="evidence-heading">Evidence</h3><p id="evidence-description">The model’s observed window ends at the query.</p></div><div class="evidence-actions"><button id="future-toggle" class="button subtle" aria-pressed="false">Show future</button><button id="frames-toggle" class="button subtle" aria-expanded="false">Input frames</button></div></div>
+          <div class="evidence-layout"><div class="video-area"><video id="evidence-video" preload="metadata" playsinline aria-label="Observed evidence video"></video><div id="video-unavailable" class="video-unavailable" hidden><span>Video unavailable</span><p>Use the saved input frames below.</p></div><div class="video-caption"><span id="evidence-badge" class="pill">OBSERVED</span><span id="playback-time">0:00.00</span></div></div><div class="timeline-area"><h4>Time context</h4><p class="quiet">Click an event to seek. Future evidence opens only when explicitly enabled.</p><div id="timeline-events" class="timeline-events"></div><details id="history-details"><summary>Completed action history <span id="history-count"></span></summary><ol id="history-list" class="history-list"></ol></details></div></div>
+          <div class="playback-controls"><button id="play-button" class="button subtle" aria-label="Play observed clip">▶ Play observed</button><input id="video-scrubber" type="range" min="0" max="1" step="0.01" value="0" aria-label="Seek within allowed evidence"><span id="window-label" class="quiet"></span></div>
+          <div id="frames-panel" hidden><div class="filmstrip-heading"><h4>Actual model input</h4><span class="quiet">Select a frame to enlarge</span></div><div id="filmstrip" class="filmstrip"></div></div>
+        </section>
+        <div class="review-toolbar"><div id="field-tabs" class="field-tabs" role="tablist" aria-label="Evaluation field"><button class="field-tab" data-field="why" role="tab">WHY</button><button class="field-tab" data-field="goal" role="tab">GOAL</button><button class="field-tab" data-field="current" role="tab">Current action</button><button class="field-tab" data-field="next" role="tab">NEXT</button></div><div class="view-controls"><label class="toggle-label"><input id="blind-toggle" type="checkbox">Blind names</label><label class="toggle-label"><input id="auto-toggle" type="checkbox">Show auto scores</label><label class="toggle-label"><input id="compare-toggle" type="checkbox">Compare</label></div></div>
+        <div class="review-grid"><section class="reference-card card"><div class="card-heading"><div><div class="eyebrow">ANNOTATION REFERENCE</div><h3 id="reference-title">Stated purpose</h3></div><button id="field-help" class="icon-button" aria-label="Open field rubric">?</button></div><div id="reference-content"></div><div class="reference-footnote">Judge meaning against the annotation. Equivalent wording is acceptable.</div></section><section class="prediction-card card"><div class="card-heading"><div><div class="eyebrow">MODEL OUTPUT</div><h3>Assess the answer</h3></div><select id="model-select" aria-label="Active model"></select></div><div id="prediction-content"></div><div id="comparison-content" hidden></div></section></div>
+        <div class="workspace-footer"><span id="review-progress-text" class="quiet"></span><span class="quiet">Human labels are separate from automated scores.</span></div>
+      </div>
+    </main>
+  </div>
+  <dialog id="modal"><div class="modal-heading"><h2 id="modal-title"></h2><button id="modal-close" class="icon-button" aria-label="Close dialog">×</button></div><div id="modal-content"></div></dialog>
+</body>
+</html>

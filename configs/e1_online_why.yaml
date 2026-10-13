@@ -1,0 +1,46 @@
+experiment:
+  name: hd_epic_why_dev100_action_end_contact_sheet_v1
+  development_sample_size: 100
+
+reference:
+  e0_split: runs/e0/hd_epic_why_pilot/splits/dev100.json
+  e0_reserved_ids: runs/e0/hd_epic_why_pilot/splits/reserved_ids.json
+  e0_c1_predictions: runs/e0/hd_epic_why_pilot/predictions/C1.jsonl
+
+dataset:
+  video_root: /data/kailaic/HDEPIC/data
+
+outputs:
+  run_root: runs/e1_online_why/hd_epic_why_dev100_action_end_contact_sheet_v1
+
+frames:
+  count: 16
+  image_detail: high
+  transport: four_2x2_timestamped_contact_sheets
+  preprocessing:
+    max_edge: 1280
+    jpeg_quality: 90
+    colorspace: RGB
+    resize: preserve_aspect_ratio_lanczos_if_needed
+    jpeg_subsampling: 0
+
+online:
+  initial_lookback_seconds: 5.0
+  max_additional_reads: 3
+
+model:
+  provider: openai_chat_completions
+  identifier: azure/gpt-5.6-sol
+  base_url: http://messi.eecs.umich.edu:8080/v1
+  credential_environment_variable: ACTGROUND_E0_API_KEY
+
+answer:
+  prompt_version: e1_online_why_loop_contact_sheet_v1
+  reasoning_effort: medium
+  max_output_tokens: 4096
+  image_detail: high
+
+execution:
+  concurrency: 2
+  request_timeout_seconds: 300
+  max_retries: 2

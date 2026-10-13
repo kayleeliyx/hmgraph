@@ -14,7 +14,7 @@ This project builds a **hierarchical, action-centric graph memory system** for e
 - 4x NVIDIA RTX 6000 GPUs
 - HD-EPIC data at `/data2/yaxuanli/HD-EPIC/Videos/` (participants P01-P09)
 - AVA repo at `/data/yaxuanli/AVA/` (treat as read-only; do not modify)
-- Project working directory: `/data2/yaxuanli/hmgraph/` (all new code, logs, and experiment outputs)
+- Project working directory: `/data2/yaxuanli/hmgraph_codex/` (all new code, logs, and experiment outputs)
 - Conda environments:
   - `ava` → Qwen2.5-VL-7B-Instruct-AWQ (4-bit quantized, ~4GB weights)
   - `avagemma` → Gemma multimodal model (currently default for L1 generation)
@@ -321,7 +321,7 @@ The system uses pre-trained models as components only:
 
 ## 9. Implementation Plan
 
-**Base code:** AVA codebase at `/data/yaxuanli/AVA/` (read-only). All new code, logs, and outputs under `/data2/yaxuanli/hmgraph/`.
+**Base code:** AVA codebase at `/data/yaxuanli/AVA/` (read-only). All new code, logs, and outputs under `/data2/yaxuanli/hmgraph_codex/`.
 
 **Changes from AVA:**
 
@@ -350,10 +350,10 @@ def answer(question, graph):
 
 **Why simpler retrieval is a contribution:** 2-5 seconds vs AVA's 101-174 seconds. Enables mobile deployment.
 
-### Code Layout (under /data2/yaxuanli/hmgraph/)
+### Code Layout (under /data2/yaxuanli/hmgraph_codex/)
 
 ```
-/data2/yaxuanli/hmgraph/
+/data2/yaxuanli/hmgraph_codex/
   project_notes.md
   code/
     __init__.py
@@ -386,7 +386,7 @@ def answer(question, graph):
 ```
 
 **Rules:**
-- `/data/yaxuanli/AVA/` is read-only. All new code under `/data2/yaxuanli/hmgraph/code/`.
+- `/data/yaxuanli/AVA/` is read-only. All new code under `/data2/yaxuanli/hmgraph_codex/code/`.
 - W must be saved verbatim — never overwrite during consolidation.
 - Every script: argparse CLI, no hardcoded paths inside functions, importable.
 - Stamp `prompt_id` and `model_id` on every W record so prompt drift is traceable.

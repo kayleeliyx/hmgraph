@@ -1,0 +1,248 @@
+{
+  "created_utc": "2026-10-11T23:47:14.775151+00:00",
+  "model": "epoch2",
+  "batch": "batch009",
+  "source_status": {
+    "folder": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress",
+    "source_completion": {
+      "epoch2": {
+        "completed": 138,
+        "expected": 228,
+        "failed": 0,
+        "in_progress": 0,
+        "missing_prediction_records": 90,
+        "pending_generation": 90,
+        "incomplete_total": 90,
+        "recorded_status_counts": {
+          "completed": 138
+        }
+      }
+    },
+    "evaluated_examples_per_model": 138,
+    "pending_semantic_packets": 33,
+    "pending_by_field": {
+      "why": 17,
+      "goal": 16
+    },
+    "judgments_available": 1044,
+    "config": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress/config.json"
+  },
+  "snapshot_cohort_sha256": "feef52b2a87af4eed5c6f6c4999a7bc6244a4449049687696d8db757e088acbc",
+  "review_collection": {
+    "created_utc": "2026-10-11T23:47:14.349106+00:00",
+    "original_judgments_automatically_loaded_by_prepare": {
+      "path": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/semantic_review/judgments.jsonl",
+      "sha256": "a8185182c4fbd8b0fbc3d8e1289aaf953c5428e39669531bf5524ec2d8d9daa3",
+      "count": 184
+    },
+    "additional_completed_judgments": 860,
+    "assigned_packet_count": 860,
+    "merged_additional_file": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/completed_review_judgments.jsonl",
+    "merged_additional_sha256": "7398ba768c6899ebb5681bc9b5abd2ce048d5226e221f52409015e8809e31f57",
+    "sources": [
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/why_packets.jsonl",
+        "packets_sha256": "9ea656749d79f1f7d7f33b0ec846e001b4f4f7f60adf1812e113b0b751222b63",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/why_judgments.jsonl",
+        "expected_packets": 179,
+        "judgments_sha256": "d49ca91b52a7d4f16c343b43573c0960803a035295ec90dcbeea136f0bc7b063",
+        "judgment_bytes": 99323,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 179
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/goal_packets.jsonl",
+        "packets_sha256": "60cf7e3b9c1e634dd37f4944b0006e1f249ffb78fffeb9396b8594dad0a93af3",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/goal_judgments.jsonl",
+        "expected_packets": 177,
+        "judgments_sha256": "a31bcdbc4b6c0b3f699b92f89533ed69eb17ea65d0d36dfe939f960930045bd3",
+        "judgment_bytes": 96863,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 177
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/why_packets.jsonl",
+        "packets_sha256": "34a4b6ec8bb17b4e548dd0bde3c40c99b857c6edafc605977c314dce4314399e",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/why_judgments.jsonl",
+        "expected_packets": 28,
+        "judgments_sha256": "bf69e277dea1cd2cfe2be52b7d1d4288e038929baea988ddd888c46eddab705f",
+        "judgment_bytes": 15084,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 28
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/goal_packets.jsonl",
+        "packets_sha256": "33b94d32e1c6c7870734d1527f9c763e9d9804f6214519302d20c0a12cf46969",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/goal_judgments.jsonl",
+        "expected_packets": 32,
+        "judgments_sha256": "51dd168b56b80010a43b4e62ffb963f504aecfec1025066c4410a2ff28a5c337",
+        "judgment_bytes": 17935,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 32
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/why_packets.jsonl",
+        "packets_sha256": "3991f91b509edad6dbcca3ab20607ce6c7f6a5ec4fd717b838f364beb8292932",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/why_judgments.jsonl",
+        "expected_packets": 32,
+        "judgments_sha256": "f17dd89418bb6a0962691aa4c7d838ec8fbe3b5adb020cb940508ac441b8d0d3",
+        "judgment_bytes": 17371,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 32
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/goal_packets.jsonl",
+        "packets_sha256": "b960b0f28d202aa95b17c44c8bb07ccafd5fa8d574e4addfd1b190624ae87df5",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/goal_judgments.jsonl",
+        "expected_packets": 33,
+        "judgments_sha256": "66e198e4810ef953be2368f8968d296971be8f80dbb0e22b140ba61d3195b6e5",
+        "judgment_bytes": 18449,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 33
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch003/why_packets.jsonl",
+        "packets_sha256": "567db45f40a5051203a7dda087bd7f34c3586fbd98820a97b5ebbf4ef752cdf5",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch003/why_judgments.jsonl",
+        "expected_packets": 30,
+        "judgments_sha256": "1d3a61f1df3c5784d6adaa67194c306a953f23b1a05fee0e016b64b090f45ffd",
+        "judgment_bytes": 16537,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 30
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch003/goal_packets.jsonl",
+        "packets_sha256": "1c68e3ec7f7b2b73ee380c338833d1e603e9ca9e3ddda3a5697ffef633f117b8",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch003/goal_judgments.jsonl",
+        "expected_packets": 30,
+        "judgments_sha256": "85b0c53928a49fc585006614b6f4a6a74568d5b9eb40f3542278433a1794be00",
+        "judgment_bytes": 16751,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 30
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch004/why_packets.jsonl",
+        "packets_sha256": "699bab9fbfa5b1a9ca38e6eb2ee8c0088b1a4a0e6d032b9eec8c949d282bdc22",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch004/why_judgments.jsonl",
+        "expected_packets": 85,
+        "judgments_sha256": "9e959c7e7c7d7be8b25a33b7f8c2f477a5199a5da42d56cbd02b065e271d32c1",
+        "judgment_bytes": 46432,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 85
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch004/goal_packets.jsonl",
+        "packets_sha256": "a8912453b88e1030c6e1963ad4a0fcb17e0c92c759e92d12747fe087070ad410",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch004/goal_judgments.jsonl",
+        "expected_packets": 86,
+        "judgments_sha256": "8a700218075fbe5a911e3ceb9206be0c53c49c07e6e3085bb90141e8fe974c8c",
+        "judgment_bytes": 48158,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 86
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch005/why_packets.jsonl",
+        "packets_sha256": "37a721502b44f92e027b97487cade539da26870704b9b81d0dc18c6188df8016",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch005/why_judgments.jsonl",
+        "expected_packets": 30,
+        "judgments_sha256": "52d1b31f3aad30e0cd791d6f87dc047511f828fe92cf9513518da6f3b3f7a23f",
+        "judgment_bytes": 16439,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 30
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch005/goal_packets.jsonl",
+        "packets_sha256": "44fe6f19fd0d985d49dd90bd0afe294407ebf8a7ca8e95a15bb4ac00f98bf4d4",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch005/goal_judgments.jsonl",
+        "expected_packets": 24,
+        "judgments_sha256": "7fe23875000c9ce564cb8fbcdc721d448452d49ec8285bf084558ddb0d0b43a6",
+        "judgment_bytes": 13678,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 24
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch006/why_packets.jsonl",
+        "packets_sha256": "b7a30e4d091004cb0f92e9a18f97309c0f9909d1564e0bac36c33db426396fd6",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch006/why_judgments.jsonl",
+        "expected_packets": 19,
+        "judgments_sha256": "045bd94f72f8f76b2f8eaae949bef54738ad16228d39ec4934cd24dad6c94b68",
+        "judgment_bytes": 10495,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 19
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch006/goal_packets.jsonl",
+        "packets_sha256": "7952250a2f413b39087b709b98bfc02317c266ca6173f716dfca3be19fc3728d",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch006/goal_judgments.jsonl",
+        "expected_packets": 19,
+        "judgments_sha256": "02629dc5db0b7c915031a6aee16142886b090cb1802b299229f72a56e17364d3",
+        "judgment_bytes": 11153,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 19
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch007/why_packets.jsonl",
+        "packets_sha256": "b3f4c1c34e84be4d4098c3bd6b6ab625cec22da6fad58cacbdc57f2f60d77cdb",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch007/why_judgments.jsonl",
+        "expected_packets": 13,
+        "judgments_sha256": "038d5fa1f82953427e98c25be04a5ab9eb1762c7e39f870a4bc1a5883d64d173",
+        "judgment_bytes": 7139,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 13
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch007/goal_packets.jsonl",
+        "packets_sha256": "6096282814f5899fd45e054da8a6b0de209132a4e69c61060ba6c0149000e43e",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch007/goal_judgments.jsonl",
+        "expected_packets": 17,
+        "judgments_sha256": "2ad6b986ecc83444fce4ef6c0091b79e5f1f9808e3b54996cec749ebdf40428a",
+        "judgment_bytes": 9586,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 17
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch008/why_packets.jsonl",
+        "packets_sha256": "d881121c9d6ca7a88d160a0e86d95a88d877f89dcea5242be407270e63c397d7",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch008/why_judgments.jsonl",
+        "expected_packets": 13,
+        "judgments_sha256": "1a659ae9b97c4bf687ae5933398294f5bb3762b84b60d2bb51dfce537eaf2a59",
+        "judgment_bytes": 7310,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 13
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch008/goal_packets.jsonl",
+        "packets_sha256": "3969794cb16eb3eda5c5ad5d28e4a640134cbb4d15a847edc51033a931524a7f",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch008/goal_judgments.jsonl",
+        "expected_packets": 13,
+        "judgments_sha256": "933b9348b9e6e7ec5eb463d4bfdf235ffee08376e85bddbff557122b4eedb701",
+        "judgment_bytes": 7397,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 13
+      }
+    ],
+    "source_states": {
+      "complete_exact_id_and_hash_coverage": 18
+    },
+    "independent_qa_imported": false
+  },
+  "packet_counts": {
+    "why": 17,
+    "goal": 16
+  },
+  "packet_file_sha256": {
+    "why": "88f1cfad8cd43ed1e87d3775570dd84f3b089d9646dd752894adaa1b2dafa27d",
+    "goal": "33db3d6f580a4894fad86a3ccfd1ecfdcd835b096c43a39882b0162e2924966d"
+  },
+  "pending_before_assignment": {
+    "why": 17,
+    "goal": 16
+  },
+  "already_assigned_pending": {
+    "why": 0,
+    "goal": 0
+  },
+  "max_per_field": 40,
+  "immutable_packet_assignment": true,
+  "assistant_review_status": "provisional; identical frozen rubric and packets omit model names; not a fully blinded study"
+}

@@ -1,0 +1,44 @@
+P07-20240529-102652:track:10.000	pred='pick up bowl' -> take/bowl	gold='pull out top drawer of dishwasher' -> pull/drawer
+P07-20240529-102652:track:65.000	pred='pull dishwasher top rack' -> pull/rack:drying	gold='pick up small grey bowl' -> take/bowl
+P07-20240529-102652:track:160.000	pred='close middle drawer' -> close/drawer	gold='take knife' -> take/knife
+P07-20240529-102652:track:205.000	pred='pick up mug' -> take/cup	gold='pick up yellow mug' -> take/cup
+P07-20240529-102652:track:265.000	pred='open cupboard' -> open/cupboard	gold='transfer plug' -> move/plug
+P07-20240529-102652:track:320.000	pred='pour dishwashing liquid' -> pour/liquid	gold='put dishwashing liquid bottle' -> put/bottle
+P07-20240529-102652:track:370.000	pred='pick up big bottle' -> take/bottle	gold='pick up bottle' -> take/bottle
+P07-20240529-102652:track:420.000	pred='clean tongs' -> wash/tongs	gold='rinse tongs' -> wash/tongs
+P07-20240529-102652:track:470.000	pred='clean saucepan' -> wash/pan	gold='dip scourer' -> coat/sponge
+P07-20240529-102652:track:520.000	pred='pick up sponge' -> take/sponge	gold='remove plug' -> remove/plug
+P07-20240529-102652:track:575.000	pred='wipe kitchen top' -> wash/top	gold='wipe around whole sink' -> wash/sink
+P07-20240529-102652:track:620.000	pred='wipe down chopping board' -> wash/board:chopping	gold='scoop crumbs' -> scoop/breadcrumb
+P07-20240529-102652:track:675.000	pred='pick up cloth' -> take/cloth	gold='close cupboard' -> close/cupboard
+P07-20240529-102652:track:720.000	pred='wipe work surface' -> wash/top	gold='wipe down side of cabinet' -> wash/cupboard
+P07-20240529-102652:track:765.000	pred='wipe down surface of countertop' -> wash/top	gold='clean work surface' -> wash/top
+P07-20240529-102652:track:810.000	pred='turn off tap' -> turn-off/tap	gold='turn off tap' -> turn-off/tap
+P07-20240529-102652:track:845.000	pred='put down spoon' -> put/spoon	gold='tap coffee' -> pat/coffee
+P07-20240529-131737:track:5.000	pred='press button' -> press/button	gold='turn dial' -> turn/knob
+P07-20240529-131737:track:50.000	pred='press button' -> press/button	gold='readjust can opener' -> adjust/can
+P07-20240529-131737:track:80.000	pred='place can' -> put/can	gold='rinse out can' -> wash/can
+P07-20240529-131737:track:130.000	pred='pull out roll of kitchen towel' -> pull/towel	gold='take sheet of kitchen paper' -> take/paper
+P07-20240529-131737:track:170.000	pred='pick up loose skin' -> take/skin	gold='pick up chickpea' -> take/lentil
+P07-20240529-131737:track:310.000	pred='pick up spice jar' -> take/jar	gold='tap top of spice jars' -> pat/top
+P07-20240529-131737:track:395.000	pred='tip spoon' -> put/spoon	gold='take spoonful of spice' -> take/spice
+P07-20240529-131737:track:440.000	pred='stir chickpeas' -> mix/lentil	gold='stir chickpeas' -> mix/lentil
+P07-20240529-131737:track:490.000	pred='place lettuce' -> put/lettuce	gold='discard plastic sleeve' -> throw/package
+P07-20240529-131737:track:530.000	pred='tear off leaf' -> rip/leaf	gold='tear off leaf' -> rip/leaf
+P07-20240529-131737:track:585.000	pred='pick up lettuce leaves' -> take/lettuce	gold='shake colander' -> shake/colander
+P07-20240529-134410:track:55.000	pred='pick up bowl' -> take/bowl	gold='pick up plate' -> take/plate
+P07-20240529-134410:track:105.000	pred='pick up two lettuce leaves' -> take/lettuce	gold='tear lettuce leaves' -> rip/lettuce
+P07-20240529-134410:track:160.000	pred='pick up two bowls' -> take/bowl	gold='move drying rack' -> move/rack:drying
+P07-20240529-134410:track:200.000	pred='pick up cardboard box' -> take/box	gold='move cardboard packaging' -> move/package
+P07-20240529-134410:track:245.000	pred='take another tomato' -> take/tomato	gold='take two tomatoes' -> take/tomato
+P07-20240529-134410:track:305.000	pred='place empty bowl' -> put/bowl	gold='replace bowl' -> put/bowl
+P07-20240529-134410:track:340.000	pred='rotate cucumber' -> turn/cucumber	gold='adjust grip' -> adjust/glove
+P07-20240529-134410:track:370.000	pred='pick up bowl' -> take/bowl	gold='pick up remaining cucumber' -> take/cucumber
+P07-20240529-134410:track:455.000	pred='pick up olive' -> take/olive	gold='pick up olive' -> take/olive
+P07-20240529-134410:track:485.000	pred='pick up olive' -> take/olive	gold='pick up pen' -> take/pen
+P07-20240529-134410:track:540.000	pred='open drawer' -> open/drawer	gold='tear single piece of kitchen roll' -> rip/kitchen
+P07-20240529-134410:track:585.000	pred='crumble cheese' -> sprinkle/cheese	gold='break off small pieces of cheese' -> break/cheese
+P07-20240529-134410:track:665.000	pred='mix lettuce' -> mix/lettuce	gold='mix ingredients' -> mix/recipe
+P07-20240529-134410:track:710.000	pred='open food waste packaging' -> open/package	gold='pull plastic packaging' -> pull/package
+P07-20240529-134410:track:765.000	pred='place kitchen towel' -> put/towel	gold='adjust wooden chopping board' -> adjust/board:chopping
+P07-20240529-134410:track:810.000	pred='transfer some of chickpeas' -> move/lentil	gold='place bowl' -> put/bowl

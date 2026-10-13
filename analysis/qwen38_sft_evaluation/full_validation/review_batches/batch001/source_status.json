@@ -1,0 +1,18 @@
+{
+  "folder": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress",
+  "source_completion": {
+    "epoch1": {
+      "completed": 79,
+      "expected": 228,
+      "pending": 149
+    }
+  },
+  "evaluated_examples_per_model": 79,
+  "pending_semantic_packets": 60,
+  "pending_by_field": {
+    "goal": 32,
+    "why": 28
+  },
+  "judgments_available": 540,
+  "config": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress/config.json"
+}

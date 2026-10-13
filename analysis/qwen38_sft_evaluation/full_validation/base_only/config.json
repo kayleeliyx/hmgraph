@@ -1,0 +1,16 @@
+{
+  "references": "references.jsonl",
+  "reference_format": "prepared",
+  "mapper": "/data/yaxuanli/ActGround/evaluation/assets/mapper.json",
+  "output": "scores",
+  "models": [
+    {
+      "name": "base",
+      "tasks": [
+        "explain"
+      ],
+      "predictions": "base.jsonl"
+    }
+  ],
+  "comparisons": []
+}

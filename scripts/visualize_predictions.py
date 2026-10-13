@@ -154,11 +154,13 @@ def render_panel(frame_h, t, w_lines, l1_lines, gt_lines, font):
 def main():
     parser = argparse.ArgumentParser(description="Overlay W/L1 predictions on video")
     parser.add_argument("--video", default="/data2/yaxuanli/HD-EPIC/Videos/P01/P01-20240202-110250.mp4")
-    parser.add_argument("--w-jsonl", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/full/w_outputs.jsonl")
-    parser.add_argument("--l1-jsonl", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/full/l1_candidates.jsonl")
+    parser.add_argument("--w-jsonl", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/gemma/w_outputs.jsonl")
+    parser.add_argument("--l1-jsonl", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/gemma/l1_candidates.jsonl")
     parser.add_argument("--gt-jsonl", default=None)
-    parser.add_argument("--out", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/full/overlay_1fps.mp4")
+    parser.add_argument("--out", default="/data2/yaxuanli/hmgraph_codex/runs/P01-20240202-110250/gemma/overlay_1fps.mp4")
     parser.add_argument("--out-fps", type=float, default=1.0)
+    parser.add_argument("--start-sec", type=float, default=0.0)
+    parser.add_argument("--end-sec", type=float, default=None)
     args = parser.parse_args()
 
     w_windows = load_jsonl(args.w_jsonl)
@@ -174,9 +176,18 @@ def main():
     duration = frame_count / vid_fps
     frame_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    n_seconds = int(math.floor(duration)) + 1
+    first_second = max(0, int(math.floor(args.start_sec)))
+    last_exclusive = int(math.floor(duration)) + 1
+    if args.end_sec is not None:
+        last_exclusive = min(last_exclusive, int(math.ceil(args.end_sec)))
+    seconds = list(range(first_second, last_exclusive))
+    n_seconds = len(seconds)
+    if not seconds:
+        raise ValueError(
+            f"No integer-second frames in requested range [{args.start_sec}, {args.end_sec})"
+        )
     print(f"Video: {frame_w}x{frame_h} @ {vid_fps} fps, {frame_count:.0f} frames, {duration:.2f}s")
-    print(f"Will render {n_seconds} seconds (t=0..{n_seconds-1})")
+    print(f"Will render {n_seconds} seconds (t={seconds[0]}..{seconds[-1]})")
     print(f"W windows loaded: {len(w_windows)}, L1 events: {len(l1_events)}", end="")
     if gt_events is not None:
         print(f", GT events: {len(gt_events)}")
@@ -192,10 +203,14 @@ def main():
         raise RuntimeError(f"Cannot open VideoWriter for: {args.out}")
 
     font = try_load_font(FONT_SIZE)
-    example_seconds = [0, n_seconds // 3, 2 * n_seconds // 3]
+    example_seconds = [
+        seconds[0],
+        seconds[len(seconds) // 3],
+        seconds[2 * len(seconds) // 3],
+    ]
     examples = {}
 
-    for t in range(n_seconds):
+    for output_idx, t in enumerate(seconds):
         cap.set(cv2.CAP_PROP_POS_MSEC, t * 1000)
         ret, frame = cap.read()
         if not ret or frame is None:
@@ -216,14 +231,17 @@ def main():
         if t in example_seconds:
             examples[t] = {"w": w_lines, "l1": l1_lines}
 
-        if t % 50 == 0:
-            print(f"  rendered t={t}/{n_seconds-1}")
+        if output_idx % 50 == 0:
+            print(f"  rendered frame={output_idx}/{n_seconds-1}, source_t={t}s")
 
     writer.release()
     cap.release()
 
     print(f"\n=== ACCEPTANCE CHECK ===")
-    print(f"Seconds rendered: {n_seconds} (expected floor({duration:.2f})+1 = {n_seconds})")
+    print(
+        f"Seconds rendered: {n_seconds} "
+        f"(requested source times {seconds[0]}..{seconds[-1]})"
+    )
 
     for t in sorted(examples):
         print(f"\n--- t={t}s ---")

@@ -8,11 +8,11 @@ Outputs:
 
 from pathlib import Path
 
-HMGRAPH_ROOT = Path("/data2/yaxuanli/hmgraph_codex")
+HMGRAPH_ROOT = Path(__file__).resolve().parents[2]
 CODE_DIR = HMGRAPH_ROOT / "code"
-HD_EPIC_ROOT = Path("/data2/yaxuanli/HD-EPIC")
+HD_EPIC_ROOT = Path("/data/kailaic/HDEPIC/data/HD-EPIC")
 HD_EPIC_VIDEO_ROOT = HD_EPIC_ROOT / "Videos"
-HD_EPIC_ANNOTATION_ROOT = HD_EPIC_ROOT / "hd-epic-annotations"
+HD_EPIC_ANNOTATION_ROOT = Path("/data/kailaic/HDEPIC/data/hd-epic-annotations")
 HD_EPIC_NARRATIONS = (
     HD_EPIC_ANNOTATION_ROOT
     / "narrations-and-action-segments"
@@ -28,10 +28,7 @@ HD_EPIC_NOUN_CLASSES = (
     / "narrations-and-action-segments"
     / "HD_EPIC_noun_classes.csv"
 )
-DEFAULT_MODEL_ID = (
-    "/home/yaxuanli/.cache/huggingface/hub/models--google--gemma-4-26B-A4B-it/"
-    "snapshots/47b6801b24d15ff9bcd8c96dfaea0be9ed3a0301"
-)
+DEFAULT_MODEL_ID = "Qwen/Qwen3-VL-30B-A3B-Instruct"
 DEFAULT_VIDEO_PATH = HD_EPIC_VIDEO_ROOT / "P01" / "P01-20240202-110250.mp4"
 DEFAULT_VIDEO_ID = "P01-20240202-110250"
 DEFAULT_OUTPUT_DIR = HMGRAPH_ROOT / "week1_validation" / DEFAULT_VIDEO_ID

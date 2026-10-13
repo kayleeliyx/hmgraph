@@ -1,0 +1,60 @@
+experiment:
+  name: qwen3_vl_30b_a3b_vllm023_tp2_256_dev100_v19
+  development_sample_size: 100
+
+reference:
+  e0_split: runs/e0/hd_epic_why_pilot/splits/dev100.json
+  e0_reserved_ids: runs/e0/hd_epic_why_pilot/splits/reserved_ids.json
+  e0_action_frame_index: runs/e0/hd_epic_why_pilot/cache/frames/index.json
+
+dataset:
+  video_root: /data/kailaic/HDEPIC/data
+
+outputs:
+  run_root: runs/e1_local_why/qwen3_vl_30b_a3b_vllm023_tp2_256_dev100_v19
+
+model:
+  identifier: Qwen/Qwen3-VL-30B-A3B-Instruct
+  local_path: /data/yaxuanli/ActGround/.cache/huggingface/hub/models--Qwen--Qwen3-VL-30B-A3B-Instruct/snapshots/9c4b90e1e4ba969fd3b5378b57d966d725f1b86c
+  snapshot: 9c4b90e1e4ba969fd3b5378b57d966d725f1b86c
+  precision: bfloat16
+  quantization: none
+  backend: vllm_0.23.0_tensor_parallel
+  local_files_only: true
+  physical_gpus: [2, 3]
+  tensor_parallel_size: 2
+  max_model_len: 8192
+  max_images_per_prompt: 64
+  gpu_memory_utilization: 0.90
+  enforce_eager: true
+
+preprocessing:
+  policy: preserve_aspect_ratio_lanczos_then_center_pad
+  canvas_size: 256
+  pad_rgb: [0, 0, 0]
+  colorspace: RGB
+
+frames:
+  count: 16
+  transport: individual_timestamp_associated_images
+  extraction_preprocessing:
+    max_edge: 1280
+    jpeg_quality: 90
+    colorspace: RGB
+    resize: preserve_aspect_ratio_lanczos_if_needed
+    jpeg_subsampling: 0
+
+online:
+  initial_lookback_seconds: 5.0
+  max_additional_reads: 3
+
+generation:
+  seed: 0
+  do_sample: false
+  max_new_tokens: 64
+  use_cache: true
+
+execution:
+  physical_gpus: [2, 3]
+  visible_gpus: [0, 1]
+  concurrency: 1

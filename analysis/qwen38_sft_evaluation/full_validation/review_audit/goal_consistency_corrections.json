@@ -1,0 +1,226 @@
+{
+  "assessment_status": "provisional_assistant_assessment",
+  "reviewer": "Codex assistant GOAL review 2026-10-11",
+  "date": "2026-10-11",
+  "purpose": "Resolve text-identical GOAL reference/prediction inconsistencies against the frozen rubric and existing matched-47 decisions.",
+  "rubric_path": "/data/yaxuanli/ActGround/evaluation/docs/goal.md",
+  "changed_judgment_count": 5,
+  "changes_by_label": {
+    "partial_to_incorrect": 5
+  },
+  "original_matched47_preserved": true,
+  "strict_correctness_changed": false,
+  "file_checks": [
+    {
+      "path": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch004/goal_judgments.jsonl",
+      "sha256_before": "cb85282c4d24d8df583ab3f30080a2ff97600788863067de84e1ca6ac8bef37d",
+      "sha256_after": "8a700218075fbe5a911e3ceb9206be0c53c49c07e6e3085bb90141e8fe974c8c",
+      "changed_packet_count": 4,
+      "validated_unchanged_other_rows": true,
+      "validated_exact_ids_and_prompt_hashes": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch005/goal_judgments.jsonl",
+      "sha256_before": "8355be4430b3ce63be36bae1e06eee7d7c6f7f80cbdfaa9d68f17477f31acab7",
+      "sha256_after": "7fe23875000c9ce564cb8fbcdc721d448452d49ec8285bf084558ddb0d0b43a6",
+      "changed_packet_count": 1,
+      "validated_unchanged_other_rows": true,
+      "validated_exact_ids_and_prompt_hashes": true
+    }
+  ],
+  "corrections": [
+    {
+      "packet_id": "3ca4e02af3f0447a11e1a10410953ae2a23b02996236384a48fc454550c71d65",
+      "prompt_sha256": "5ebd7fb71e755254d4ea6dcd382d396158f5cb976b848995d34531317e8e8437",
+      "batch": "batch004",
+      "reference": "Scoop the cookies and line up on parchment paper",
+      "prediction": "Prepare the dough balls as well as the mixture of meat with other ingredients",
+      "before": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Dough-ball preparation captures portioning but omits arranging cookies; the separately added meat mixture is unsupported.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "after": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "The coequal meat-mixture task changes the asserted central preparation from portioning and arranging cookies to a different food preparation; this contradiction overrides the dough fragment.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": true,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "reason": "The meat-mixture task is asserted as a coequal core activity alongside dough preparation, changing the central food preparation beyond the annotated cookie portioning and arranging. The frozen rubric makes a central contradiction incorrect. The supplied action histories describe cookie dough and do not establish a materially different interpretation from the existing decision.",
+      "existing_review_anchor": {
+        "packet_id_prefixes": [
+          "2b7b24ef"
+        ],
+        "label": "incorrect",
+        "provenance": "Original matched-47 comparison details supplied by the parent reviewer; original judgment files were not edited."
+      },
+      "context_materially_changes_interpretation": false
+    },
+    {
+      "packet_id": "6508e69ffbaae9004acb09555a1350ef15782a1531734f60a2089acade983b5e",
+      "prompt_sha256": "5e4d1fddaece0ffb3d9e82b063af9dc40c5a1059478664811d7c9183cf56cdcb",
+      "batch": "batch004",
+      "reference": "Scoop the cookies and line up on parchment paper",
+      "prediction": "Prepare the dough balls as well as the mixture of meat with other ingredients",
+      "before": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Preparing dough balls captures portioning but not arranging cookies; the separate meat-mixture activity is unsupported.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "after": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "The coequal meat-mixture task changes the asserted central preparation from portioning and arranging cookies to a different food preparation; this contradiction overrides the dough fragment.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": true,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "reason": "The meat-mixture task is asserted as a coequal core activity alongside dough preparation, changing the central food preparation beyond the annotated cookie portioning and arranging. The frozen rubric makes a central contradiction incorrect. The supplied action histories describe cookie dough and do not establish a materially different interpretation from the existing decision.",
+      "existing_review_anchor": {
+        "packet_id_prefixes": [
+          "2b7b24ef"
+        ],
+        "label": "incorrect",
+        "provenance": "Original matched-47 comparison details supplied by the parent reviewer; original judgment files were not edited."
+      },
+      "context_materially_changes_interpretation": false
+    },
+    {
+      "packet_id": "942c08e4c4354c3441f6af3e44aa96b8f8a9d466536eb911d96a66286ce1fbe3",
+      "prompt_sha256": "4ecb8ce2f8694c2bdf8f881cee9e2514060d41716b74c15c32b7ff43f65693cc",
+      "batch": "batch004",
+      "reference": "Scoop the cookies and line up on parchment paper",
+      "prediction": "Prepare the dough balls as well as the mixture of meat with other ingredients",
+      "before": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Dough-ball preparation covers portioning but omits arranging cookies; the additional meat mixture is unsupported.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "after": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "The coequal meat-mixture task changes the asserted central preparation from portioning and arranging cookies to a different food preparation; this contradiction overrides the dough fragment.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": true,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "reason": "The meat-mixture task is asserted as a coequal core activity alongside dough preparation, changing the central food preparation beyond the annotated cookie portioning and arranging. The frozen rubric makes a central contradiction incorrect. The supplied action histories describe cookie dough and do not establish a materially different interpretation from the existing decision.",
+      "existing_review_anchor": {
+        "packet_id_prefixes": [
+          "2b7b24ef"
+        ],
+        "label": "incorrect",
+        "provenance": "Original matched-47 comparison details supplied by the parent reviewer; original judgment files were not edited."
+      },
+      "context_materially_changes_interpretation": false
+    },
+    {
+      "packet_id": "983e52fc27ea405d5d5f51d8e402d617bf77e3267a7a814f6a3d59be90866b81",
+      "prompt_sha256": "67b9e9f04722438759b808ed5b72f73698be2558ed97c8a75de56ece9b6ff223",
+      "batch": "batch004",
+      "reference": "Scoop the cookies and line up on parchment paper",
+      "prediction": "Prepare the dough balls as well as the mixture of meat with other ingredients",
+      "before": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Preparing dough balls captures part of cookie portioning but omits arranging them; meat-mixture preparation is unsupported.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "after": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "The coequal meat-mixture task changes the asserted central preparation from portioning and arranging cookies to a different food preparation; this contradiction overrides the dough fragment.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": true,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "reason": "The meat-mixture task is asserted as a coequal core activity alongside dough preparation, changing the central food preparation beyond the annotated cookie portioning and arranging. The frozen rubric makes a central contradiction incorrect. The supplied action histories describe cookie dough and do not establish a materially different interpretation from the existing decision.",
+      "existing_review_anchor": {
+        "packet_id_prefixes": [
+          "2b7b24ef"
+        ],
+        "label": "incorrect",
+        "provenance": "Original matched-47 comparison details supplied by the parent reviewer; original judgment files were not edited."
+      },
+      "context_materially_changes_interpretation": false
+    },
+    {
+      "packet_id": "2fb90ab06374888ef287f5925c4bd38c332414c8d62af58702e6298386f617e5",
+      "prompt_sha256": "c272b38c373cb72ae7e5d2104b2f27694a22330ed6f4d5a74817fbe49c74986e",
+      "batch": "batch005",
+      "reference": "Bake the chickpeas and wash lettuce leaves",
+      "prediction": "Preheat oven and prepare baking tray",
+      "before": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Preheating and preparing a baking tray describe genuine oven-preparation tasks, but do not cover baking chickpeas or washing lettuce.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "after": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "Oven preheating and tray setup alone do not identify either annotated activity, baking chickpeas or washing lettuce; supporting preparation steps are insufficient.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "reason": "Oven preheating and tray setup are supporting preparation steps but do not express either annotated activity: baking chickpeas or washing lettuce. The supplied history about spices does not change what the answer asserts. The existing incorrect decision is therefore applied consistently.",
+      "existing_review_anchor": {
+        "packet_id_prefixes": [
+          "467d95f",
+          "b9da43dd",
+          "d0ec6bc9",
+          "d27c7f4f"
+        ],
+        "label": "incorrect",
+        "provenance": "Original matched-47 comparison details supplied by the parent reviewer; original judgment files were not edited."
+      },
+      "context_materially_changes_interpretation": false
+    }
+  ]
+}

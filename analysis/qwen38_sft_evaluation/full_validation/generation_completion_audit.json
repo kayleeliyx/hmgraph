@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-12T00:02:47.074437+00:00",
+  "models": {
+    "base": {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_qwen38_27b_baseline_v1/predictions/generation.jsonl",
+      "sha256": "b862e6a4c05b25b3185cd94078e60a9f67db347bc7d7127e50a7cf4089329be5",
+      "examples": 228,
+      "status_counts": {
+        "completed": 228
+      },
+      "finish_reasons": {
+        "eos": 228
+      }
+    },
+    "epoch1": {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch1/generation.jsonl",
+      "sha256": "f2b2a5bc5ffcacdf6c1e1abaeab8c95d49b378cc0b826939108698ca0940299c",
+      "examples": 228,
+      "status_counts": {
+        "completed": 228
+      },
+      "finish_reasons": {
+        "eos": 228
+      }
+    },
+    "epoch2": {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch2/generation.jsonl",
+      "sha256": "f81df87338e109b17d0fdb7dc053c7b3dd4acac01dc3da8d58038493c7b9fc68",
+      "examples": 228,
+      "status_counts": {
+        "completed": 228
+      },
+      "finish_reasons": {
+        "eos": 228
+      }
+    }
+  },
+  "identical_query_ids": true,
+  "free_GiB": 13.037540435791016
+}

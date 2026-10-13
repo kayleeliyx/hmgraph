@@ -1,0 +1,62 @@
+{
+  "references": "assets/references.jsonl",
+  "legacy_why_judgments": "assets/why_judgments.jsonl",
+  "models": [
+    {
+      "name": "8b_base",
+      "tasks": [
+        "explain",
+        "track"
+      ],
+      "predictions": "../runs/hdepic_sft_8b_v1/predictions/base/generation.jsonl",
+      "legacy_model": "base"
+    },
+    {
+      "name": "8b_epoch1",
+      "tasks": [
+        "explain",
+        "track"
+      ],
+      "predictions": "../runs/hdepic_sft_8b_v1/predictions/epoch1/generation.jsonl",
+      "legacy_model": "epoch1"
+    },
+    {
+      "name": "8b_epoch2",
+      "tasks": [
+        "explain",
+        "track"
+      ],
+      "predictions": "../runs/hdepic_sft_8b_v1/predictions/epoch2/generation.jsonl",
+      "legacy_model": "epoch2"
+    },
+    {
+      "name": "35b_base",
+      "tasks": [
+        "explain"
+      ],
+      "predictions": "../runs/hdepic_qwen35_35b_baseline_v1/predictions/generation.jsonl",
+      "legacy_model": "qwen35"
+    },
+    {
+      "name": "27b_base",
+      "tasks": [
+        "explain"
+      ],
+      "predictions": "../runs/hdepic_qwen38_27b_baseline_v1/predictions/generation.jsonl",
+      "legacy_model": "qwen38"
+    }
+  ],
+  "comparisons": [
+    [
+      "8b_base",
+      "8b_epoch1"
+    ],
+    [
+      "8b_base",
+      "8b_epoch2"
+    ]
+  ],
+  "reference_format": "prepared",
+  "mapper": "assets/mapper.json",
+  "output": "results"
+}

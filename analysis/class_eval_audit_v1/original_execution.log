@@ -1,0 +1,260 @@
+{
+ "queries": 2209,
+ "reference_next_triples_aligned_to_annotations": "2208/2209",
+ "track_reference_aligned_to_annotations": "1981/1981",
+ "mapper_on_reference_next_phrases": {
+  "verb": 1.0,
+  "noun": 0.989
+ },
+ "mapper_on_reference_current_phrases": {
+  "verb": 0.999,
+  "noun": 0.989
+ },
+ "current_action_track": {
+  "base": {
+   "n": 1981,
+   "verb": 0.171,
+   "noun": 0.203,
+   "action": 0.095
+  },
+  "epoch1": {
+   "n": 1981,
+   "verb": 0.384,
+   "noun": 0.481,
+   "action": 0.245
+  },
+  "epoch2": {
+   "n": 1981,
+   "verb": 0.375,
+   "noun": 0.468,
+   "action": 0.241
+  },
+  "baseline: copy last completed action (no video)": {
+   "n": 1981,
+   "verb": 0.141,
+   "noun": 0.354,
+   "action": 0.078
+  },
+  "baseline: most frequent follower of last completed action (no video)": {
+   "n": 1981,
+   "verb": 0.161,
+   "noun": 0.255,
+   "action": 0.069
+  },
+  "baseline: most frequent action in training": {
+   "n": 1981,
+   "verb": 0.02,
+   "noun": 0.032,
+   "action": 0.005
+  }
+ },
+ "next_actions": {
+  "all": {
+   "base": {
+    "n": 2209,
+    "next1_verb": 0.174,
+    "next1_noun": 0.306,
+    "next1_action": 0.101,
+    "set_recall_action": 0.106,
+    "ed_verb": 0.893,
+    "ed_noun": 0.814,
+    "ed_action": 0.95,
+    "all_three_same": 0.026
+   },
+   "epoch1": {
+    "n": 2209,
+    "next1_verb": 0.242,
+    "next1_noun": 0.305,
+    "next1_action": 0.126,
+    "set_recall_action": 0.137,
+    "ed_verb": 0.784,
+    "ed_noun": 0.758,
+    "ed_action": 0.919,
+    "all_three_same": 0.098
+   },
+   "epoch2": {
+    "n": 2209,
+    "next1_verb": 0.234,
+    "next1_noun": 0.318,
+    "next1_action": 0.125,
+    "set_recall_action": 0.139,
+    "ed_verb": 0.796,
+    "ed_noun": 0.754,
+    "ed_action": 0.92,
+    "all_three_same": 0.089
+   },
+   "baseline: repeat x three times (x = given action / last completed)": {
+    "n": 2209,
+    "next1_verb": 0.168,
+    "next1_noun": 0.306,
+    "next1_action": 0.093,
+    "set_recall_action": 0.07,
+    "ed_verb": 0.852,
+    "ed_noun": 0.735,
+    "ed_action": 0.93,
+    "all_three_same": 0.998
+   },
+   "baseline: bigram chain from x (no video)": {
+    "n": 2209,
+    "next1_verb": 0.123,
+    "next1_noun": 0.211,
+    "next1_action": 0.053,
+    "set_recall_action": 0.079,
+    "ed_verb": 0.846,
+    "ed_noun": 0.837,
+    "ed_action": 0.955,
+    "all_three_same": 0.075
+   }
+  },
+  "track": {
+   "base": {
+    "n": 1981,
+    "next1_verb": 0.169,
+    "next1_noun": 0.302,
+    "next1_action": 0.099,
+    "set_recall_action": 0.102,
+    "ed_verb": 0.899,
+    "ed_noun": 0.821,
+    "ed_action": 0.952,
+    "all_three_same": 0.027
+   },
+   "epoch1": {
+    "n": 1981,
+    "next1_verb": 0.23,
+    "next1_noun": 0.296,
+    "next1_action": 0.117,
+    "set_recall_action": 0.133,
+    "ed_verb": 0.785,
+    "ed_noun": 0.762,
+    "ed_action": 0.922,
+    "all_three_same": 0.1
+   },
+   "epoch2": {
+    "n": 1981,
+    "next1_verb": 0.224,
+    "next1_noun": 0.308,
+    "next1_action": 0.116,
+    "set_recall_action": 0.137,
+    "ed_verb": 0.798,
+    "ed_noun": 0.758,
+    "ed_action": 0.922,
+    "all_three_same": 0.09
+   },
+   "baseline: repeat x three times (x = given action / last completed)": {
+    "n": 1981,
+    "next1_verb": 0.176,
+    "next1_noun": 0.298,
+    "next1_action": 0.095,
+    "set_recall_action": 0.072,
+    "ed_verb": 0.848,
+    "ed_noun": 0.736,
+    "ed_action": 0.928,
+    "all_three_same": 0.998
+   },
+   "baseline: bigram chain from x (no video)": {
+    "n": 1981,
+    "next1_verb": 0.117,
+    "next1_noun": 0.208,
+    "next1_action": 0.048,
+    "set_recall_action": 0.078,
+    "ed_verb": 0.847,
+    "ed_noun": 0.837,
+    "ed_action": 0.956,
+    "all_three_same": 0.075
+   },
+   "oracle: bigram chain from TRUE current action": {
+    "n": 1981,
+    "next1_verb": 0.134,
+    "next1_noun": 0.226,
+    "next1_action": 0.053,
+    "set_recall_action": 0.084,
+    "ed_verb": 0.837,
+    "ed_noun": 0.834,
+    "ed_action": 0.954,
+    "all_three_same": 0.087
+   }
+  },
+  "explain": {
+   "base": {
+    "n": 228,
+    "next1_verb": 0.215,
+    "next1_noun": 0.333,
+    "next1_action": 0.123,
+    "set_recall_action": 0.136,
+    "ed_verb": 0.841,
+    "ed_noun": 0.756,
+    "ed_action": 0.93,
+    "all_three_same": 0.018
+   },
+   "epoch1": {
+    "n": 228,
+    "next1_verb": 0.342,
+    "next1_noun": 0.382,
+    "next1_action": 0.206,
+    "set_recall_action": 0.164,
+    "ed_verb": 0.768,
+    "ed_noun": 0.725,
+    "ed_action": 0.899,
+    "all_three_same": 0.083
+   },
+   "epoch2": {
+    "n": 228,
+    "next1_verb": 0.325,
+    "next1_noun": 0.399,
+    "next1_action": 0.202,
+    "set_recall_action": 0.158,
+    "ed_verb": 0.77,
+    "ed_noun": 0.721,
+    "ed_action": 0.901,
+    "all_three_same": 0.079
+   },
+   "baseline: repeat x three times (x = given action / last completed)": {
+    "n": 228,
+    "next1_verb": 0.101,
+    "next1_noun": 0.368,
+    "next1_action": 0.07,
+    "set_recall_action": 0.06,
+    "ed_verb": 0.89,
+    "ed_noun": 0.722,
+    "ed_action": 0.94,
+    "all_three_same": 1.0
+   },
+   "baseline: bigram chain from x (no video)": {
+    "n": 228,
+    "next1_verb": 0.18,
+    "next1_noun": 0.237,
+    "next1_action": 0.092,
+    "set_recall_action": 0.088,
+    "ed_verb": 0.836,
+    "ed_noun": 0.839,
+    "ed_action": 0.946,
+    "all_three_same": 0.07
+   }
+  }
+ },
+ "majority_action": "close cupboard"
+}
+{
+ "current_action_on_base_extractable_subset": {
+  "n": 1050,
+  "base": 0.179,
+  "epoch1": 0.245
+ },
+ "paired_epoch1_minus_base": {
+  "current_action": [
+   0.15,
+   0.131,
+   0.17
+  ],
+  "next1_action": [
+   0.024,
+   0.01,
+   0.04
+  ],
+  "next1_action_vs_repeat_baseline": [
+   0.033,
+   0.017,
+   0.05
+  ]
+ }
+}

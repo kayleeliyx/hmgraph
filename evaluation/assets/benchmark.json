@@ -1,0 +1,17 @@
+{
+  "name": "HD-EPIC validation",
+  "protocol": "hdepic_field_evaluation_v1",
+  "examples": 2209,
+  "tasks": {
+    "explain": 228,
+    "track": 1981
+  },
+  "eligible_why": 226,
+  "eligible_goal": 2209,
+  "asset_sha256": {
+    "references.jsonl": "5294c33fd47c9353b072e01b9a164ea7c87f8e3a4fbe877ce501ec94b0428584",
+    "why_judgments.jsonl": "7ee888343d3e74e1825882feba05e3353248dbb69908896221a5410b47e33ab1",
+    "mapper.json": "4cbd5e54b49d6d3f93c4b954780613046ecebdf9079136d4ac3017acf1398def"
+  },
+  "source_note": "Frozen source decisions and initial-SFT/official class mapper; human checks deferred."
+}

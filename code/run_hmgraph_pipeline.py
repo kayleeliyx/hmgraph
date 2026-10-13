@@ -47,7 +47,7 @@ def output_paths(
 
     Filenames are intentionally not versioned or time-range-tagged.
     Put each run in its own output directory, e.g.:
-    runs/<video_id>/full
+    runs/<video_id>/gemma
     runs/<video_id>/0_60
     """
     out = Path(output_dir)

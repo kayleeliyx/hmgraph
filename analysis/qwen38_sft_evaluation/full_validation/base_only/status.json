@@ -1,0 +1,25 @@
+{
+  "folder": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only",
+  "source_completion": {
+    "base": {
+      "completed": 228,
+      "expected": 228,
+      "failed": 0,
+      "in_progress": 0,
+      "missing_prediction_records": 0,
+      "pending_generation": 0,
+      "incomplete_total": 0,
+      "recorded_status_counts": {
+        "completed": 228
+      }
+    }
+  },
+  "evaluated_examples_per_model": 228,
+  "pending_semantic_packets": 356,
+  "pending_by_field": {
+    "goal": 177,
+    "why": 179
+  },
+  "judgments_available": 184,
+  "config": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/config.json"
+}

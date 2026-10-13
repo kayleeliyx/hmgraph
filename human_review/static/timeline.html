@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ActGround · Video timeline</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <link rel="stylesheet" href="/static/timeline.css">
+  <script type="module" src="/static/timeline.js"></script>
+</head>
+<body class="timeline-page">
+  <header class="topbar">
+    <a class="brand" href="/timeline"><span class="brand-mark">A</span><span>ActGround <small>VIDEO EXPLORER</small></span></a>
+    <nav class="workspace-nav" aria-label="Workspace"><a href="/">Human review</a><a href="/timeline" aria-current="page">Video timeline</a></nav>
+    <div class="top-actions"><label class="reviewer-label" for="timeline-reviewer">Reviewer <input id="timeline-reviewer" placeholder="Your name" maxlength="100" autocomplete="name"></label></div>
+  </header>
+  <div id="timeline-error" class="global-error" role="alert" hidden></div>
+  <div class="timeline-layout">
+    <aside class="timeline-sidebar" aria-label="Video library">
+      <div class="sidebar-heading"><h1>Video library</h1><span id="timeline-video-count" class="count">—</span></div>
+      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="timeline-video-filter" type="search" placeholder="Search video or participant" aria-label="Search videos"></label>
+      <div class="timeline-library-filters"><select id="timeline-partition-filter" aria-label="Filter partition"><option value="">All partitions</option></select><select id="timeline-task-filter" aria-label="Filter query task"><option value="">All query coverage</option><option value="evaluated">With evaluated queries</option><option value="unevaluated">Without evaluated queries</option><option value="explain">Explain coverage</option><option value="track">Track coverage</option></select></div>
+      <div id="timeline-library-note" class="timeline-library-note"></div>
+      <div id="timeline-video-list" class="timeline-video-list" role="list"><p class="empty-state">Loading video library…</p></div>
+      <div class="timeline-library-footer">Source annotations and sampled evaluation queries are displayed separately.</div>
+    </aside>
+    <main class="timeline-main" id="timeline-main" aria-busy="true">
+      <div id="timeline-loading" class="workspace-placeholder"><span class="spinner"></span><h2>Loading video timelines</h2><p>Reading annotations and saved review outcomes.</p></div>
+      <div id="timeline-workspace" hidden>
+        <div class="timeline-heading"><div><div class="eyebrow"><span id="timeline-participant"></span><span id="timeline-partition"></span><span class="timeline-full-badge">FULL VIDEO</span></div><h1 id="timeline-video-title"></h1><p id="timeline-source-note"></p></div><div class="timeline-duration"><strong id="timeline-duration"></strong><span>video duration</span></div></div>
+        <div id="timeline-warnings" class="warnings" hidden></div>
+        <div id="timeline-counts" class="timeline-counts" aria-label="Source and evaluation counts"></div>
+        <div class="timeline-upper"><section class="card timeline-player-card"><div class="card-heading"><div><h3>Full-video playback</h3><p>Explore the recording from beginning to end.</p></div><span id="timeline-current-time" class="timeline-current-time">0:00.00</span></div><div class="timeline-video-area"><video id="timeline-video" controls playsinline preload="metadata" aria-label="Full video"></video><div id="timeline-no-video" class="video-unavailable" hidden><span>Video unavailable</span><p>The annotation timeline remains available.</p></div></div><div class="timeline-playback-note">This view includes future footage. Human-review links retain that evidence context.</div></section><aside id="timeline-detail" class="card timeline-detail-card" aria-live="polite"><div class="card-heading"><div><div class="eyebrow">SELECTED EVENT</div><h3>Inspect an annotation</h3></div></div><p class="empty-state">Select an event in the timeline to see its source, timing and related evaluation queries.</p></aside></div>
+        <section class="card timeline-chart-card" aria-labelledby="timeline-chart-title"><div class="card-heading"><div><h3 id="timeline-chart-title">Annotation timeline</h3><p>Source activity intervals, fine-grained actions and sampled queries.</p></div><div class="timeline-zoom-controls"><button id="timeline-zoom-out" class="button subtle" aria-label="Zoom out">−</button><button id="timeline-zoom-in" class="button subtle" aria-label="Zoom in">+</button><button id="timeline-fit" class="button subtle">Fit full video</button><button id="timeline-svg-export" class="button subtle">Export SVG</button></div></div><div class="timeline-lane-controls"><div class="timeline-legend"><span><i class="legend-goal"></i>GOAL</span><span><i class="legend-action"></i>Actions</span><span><i class="legend-why"></i>WHY candidates</span><span><i class="legend-query"></i>Queries</span><span><i class="legend-human"></i>Human labels</span></div><div class="timeline-review-controls"><select id="timeline-why-status-select" aria-label="WHY candidate source status"><option value="accepted">Accepted WHY candidates</option><option value="all">All WHY candidates</option></select><select id="timeline-model-select" aria-label="Human-review model"></select><select id="timeline-field-select" aria-label="Human-review field"><option value="">All review fields</option><option value="why">WHY</option><option value="goal">GOAL</option><option value="current">Current action</option><option value="next_1">NEXT 1</option><option value="next_2">NEXT 2</option><option value="next_3">NEXT 3</option></select></div></div><div id="timeline-active-filter" class="timeline-active-filter" hidden><span id="timeline-filter-label"></span><button id="timeline-clear-filter" class="button subtle">Clear filter</button></div><div id="timeline-human-summary" class="timeline-human-summary"></div><div class="timeline-svg-wrap"><svg id="timeline-svg" role="img" aria-label="Zoomable annotation timeline"></svg></div><div class="timeline-range-label"><span id="timeline-range-start"></span><strong id="timeline-range-span"></strong><span id="timeline-range-end"></span></div><div class="timeline-overview"><svg id="timeline-overview-svg" role="img" aria-label="Full-video overview and visible range"></svg><input id="timeline-pan" type="range" min="0" max="1" step="0.01" value="0" aria-label="Pan the visible timeline window"></div><div class="timeline-chart-footnote"><span>WHY candidates are pipeline-derived. Bars align to source actions; they do not represent intention duration.</span><span id="timeline-human-note"></span></div><details class="timeline-source-list"><summary>Source actions in this view <span id="timeline-action-list-count"></span></summary><div id="timeline-action-list"></div></details></section>
+        <section class="card timeline-statistics-card"><div class="card-heading"><div><h3>Annotation distribution</h3><p id="timeline-statistics-description">Frequency of source action classes in this video.</p></div><div class="timeline-statistics-controls"><select id="timeline-category-select" aria-label="Distribution category"><option value="verb">Verb classes</option><option value="noun">Noun classes</option><option value="goal">Activities</option></select><select id="timeline-measure-select" aria-label="Distribution measure"><option value="frequency">Frequency</option><option value="duration">Covered time (seconds)</option></select></div></div><div id="timeline-statistics" class="timeline-statistics"></div><div class="timeline-statistics-footnote">Select a category to filter source intervals. Counts use annotations, not predictions. Covered time merges overlapping intervals within each category; different categories can still overlap. Invalid intervals remain in source counts and are excluded from coverage.</div></section>
+      </div>
+    </main>
+  </div>
+  <div id="timeline-tooltip" class="timeline-tooltip" role="tooltip" hidden></div>
+</body>
+</html>

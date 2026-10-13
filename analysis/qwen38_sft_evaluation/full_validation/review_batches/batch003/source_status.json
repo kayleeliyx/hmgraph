@@ -1,0 +1,128 @@
+{
+  "created_utc": "2026-10-11T21:28:40.458340+00:00",
+  "model": "epoch1",
+  "batch": "batch003",
+  "source_status": {
+    "folder": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress",
+    "source_completion": {
+      "epoch1": {
+        "completed": 142,
+        "expected": 228,
+        "failed": 0,
+        "in_progress": 0,
+        "missing_prediction_records": 86,
+        "pending_generation": 86,
+        "incomplete_total": 86,
+        "recorded_status_counts": {
+          "completed": 142
+        }
+      }
+    },
+    "evaluated_examples_per_model": 142,
+    "pending_semantic_packets": 60,
+    "pending_by_field": {
+      "goal": 30,
+      "why": 30
+    },
+    "judgments_available": 665,
+    "config": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/in_progress/config.json"
+  },
+  "snapshot_cohort_sha256": "42520a5f1b25c2a94a2ab6016cad8a88b46590f2718b2fd82e7b480fc39eec49",
+  "review_collection": {
+    "created_utc": "2026-10-11T21:28:40.035439+00:00",
+    "original_judgments_automatically_loaded_by_prepare": {
+      "path": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/semantic_review/judgments.jsonl",
+      "sha256": "a8185182c4fbd8b0fbc3d8e1289aaf953c5428e39669531bf5524ec2d8d9daa3",
+      "count": 184
+    },
+    "additional_completed_judgments": 481,
+    "assigned_packet_count": 481,
+    "merged_additional_file": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/completed_review_judgments.jsonl",
+    "merged_additional_sha256": "d1325c5aeeb2b35d8738950781b018b37ad2ed637254ce437ac761a843f421a6",
+    "sources": [
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/why_packets.jsonl",
+        "packets_sha256": "9ea656749d79f1f7d7f33b0ec846e001b4f4f7f60adf1812e113b0b751222b63",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/why_judgments.jsonl",
+        "expected_packets": 179,
+        "judgments_sha256": "d49ca91b52a7d4f16c343b43573c0960803a035295ec90dcbeea136f0bc7b063",
+        "judgment_bytes": 99323,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 179
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/goal_packets.jsonl",
+        "packets_sha256": "60cf7e3b9c1e634dd37f4944b0006e1f249ffb78fffeb9396b8594dad0a93af3",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/goal_judgments.jsonl",
+        "expected_packets": 177,
+        "judgments_sha256": "a31bcdbc4b6c0b3f699b92f89533ed69eb17ea65d0d36dfe939f960930045bd3",
+        "judgment_bytes": 96863,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 177
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/why_packets.jsonl",
+        "packets_sha256": "34a4b6ec8bb17b4e548dd0bde3c40c99b857c6edafc605977c314dce4314399e",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/why_judgments.jsonl",
+        "expected_packets": 28,
+        "judgments_sha256": "bf69e277dea1cd2cfe2be52b7d1d4288e038929baea988ddd888c46eddab705f",
+        "judgment_bytes": 15084,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 28
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/goal_packets.jsonl",
+        "packets_sha256": "33b94d32e1c6c7870734d1527f9c763e9d9804f6214519302d20c0a12cf46969",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch001/goal_judgments.jsonl",
+        "expected_packets": 32,
+        "judgments_sha256": "51dd168b56b80010a43b4e62ffb963f504aecfec1025066c4410a2ff28a5c337",
+        "judgment_bytes": 17935,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 32
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/why_packets.jsonl",
+        "packets_sha256": "3991f91b509edad6dbcca3ab20607ce6c7f6a5ec4fd717b838f364beb8292932",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/why_judgments.jsonl",
+        "expected_packets": 32,
+        "judgments_sha256": "f17dd89418bb6a0962691aa4c7d838ec8fbe3b5adb020cb940508ac441b8d0d3",
+        "judgment_bytes": 17371,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 32
+      },
+      {
+        "packets": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/goal_packets.jsonl",
+        "packets_sha256": "b960b0f28d202aa95b17c44c8bb07ccafd5fa8d574e4addfd1b190624ae87df5",
+        "judgments": "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/review_batches/batch002/goal_judgments.jsonl",
+        "expected_packets": 33,
+        "judgments_sha256": "66e198e4810ef953be2368f8968d296971be8f80dbb0e22b140ba61d3195b6e5",
+        "judgment_bytes": 18449,
+        "state": "complete_exact_id_and_hash_coverage",
+        "accepted_judgments": 33
+      }
+    ],
+    "source_states": {
+      "complete_exact_id_and_hash_coverage": 6
+    },
+    "independent_qa_imported": false
+  },
+  "packet_counts": {
+    "why": 30,
+    "goal": 30
+  },
+  "packet_file_sha256": {
+    "why": "567db45f40a5051203a7dda087bd7f34c3586fbd98820a97b5ebbf4ef752cdf5",
+    "goal": "1c68e3ec7f7b2b73ee380c338833d1e603e9ca9e3ddda3a5697ffef633f117b8"
+  },
+  "pending_before_assignment": {
+    "why": 30,
+    "goal": 30
+  },
+  "already_assigned_pending": {
+    "why": 0,
+    "goal": 0
+  },
+  "max_per_field": 40,
+  "immutable_packet_assignment": true,
+  "assistant_review_status": "provisional; identical frozen rubric and packets omit model names; not a fully blinded study"
+}

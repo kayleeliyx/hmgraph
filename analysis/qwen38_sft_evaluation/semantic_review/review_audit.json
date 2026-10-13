@@ -1,0 +1,10 @@
+{
+  "standalone_evaluator_cpu_tests_passed": 65,
+  "judge_packets": 184,
+  "duplicate_judgments": 0,
+  "hash_and_schema_validation": "passed",
+  "root_review": "Inspected all6 GOAL correct judgments, all10 reported GOAL scope boundaries, and11 WHY borderline decisions without model labels; retained decisions under existing rubrics. Borderline partial-credit interpretations remain provisional.",
+  "changed_judgments": 0,
+  "human_validation": false,
+  "visual_support_assessed": false
+}

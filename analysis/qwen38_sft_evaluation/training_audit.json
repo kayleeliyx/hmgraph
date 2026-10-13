@@ -1,0 +1,1028 @@
+{
+  "version": "qwen38_sft_training_audit_v1",
+  "created_utc": "2026-10-11T20:36:28.546770+00:00",
+  "run": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1",
+  "all_artifact_writes_under_data": true,
+  "scope": "CPU/read-only audit of existing training, validation and checkpoint evidence; this audit JSON is the only task artifact written.",
+  "training_completed": true,
+  "expected_optimizer_steps": 1818,
+  "steps_per_epoch": 909,
+  "ranks": {
+    "0": {
+      "count": 1818,
+      "contiguous_steps_1_through_1818": true,
+      "all_losses_finite": true,
+      "all_gradient_norms_finite": true,
+      "all_steps_have_992_finite_gradient_tensors": true,
+      "first_step_loss": 1.5863568782806396,
+      "last_step_loss": 0.3253820240497589,
+      "optimizer_log_sha256": "3177025c56bdd8ce942dc24f93b7a867df1568a00722024ccb7f8c571d9f2750",
+      "median_step_seconds": 180.65111899853218,
+      "sum_optimizer_step_seconds": 329210.04302880826
+    },
+    "1": {
+      "count": 1818,
+      "contiguous_steps_1_through_1818": true,
+      "all_losses_finite": true,
+      "all_gradient_norms_finite": true,
+      "all_steps_have_992_finite_gradient_tensors": true,
+      "first_step_loss": 1.5863568782806396,
+      "last_step_loss": 0.3253820240497589,
+      "optimizer_log_sha256": "ed053851eeb2c74d57d162cbf990a2ba6406d089ac14a465bf149712ed3948d9",
+      "median_step_seconds": 180.64926211896818,
+      "sum_optimizer_step_seconds": 329207.91905187786
+    }
+  },
+  "samplers": {
+    "1": {
+      "source_records": 14543,
+      "rank_records": [
+        7272,
+        7272
+      ],
+      "global_draws": 14544,
+      "unique_source_indices": 14543,
+      "all_source_indices_covered": true,
+      "extra_padding_draws": 1,
+      "explicit_padding_id": "P04-20240414-072251:track:845.000"
+    },
+    "2": {
+      "source_records": 14543,
+      "rank_records": [
+        7272,
+        7272
+      ],
+      "global_draws": 14544,
+      "unique_source_indices": 14543,
+      "all_source_indices_covered": true,
+      "extra_padding_draws": 1,
+      "explicit_padding_id": "P04-20240414-170520:track:75.000"
+    }
+  },
+  "checkpoints": {
+    "909": {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909",
+      "passed_marker": true,
+      "step": 909,
+      "trainable_tensors": 992,
+      "files": {
+        "rank-00000.pt": {
+          "sha256": "426194496fe8c7293b96f19a16d86f70578e25f7a6db6133528785e38957a97b",
+          "bytes": 702215962,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "rank-00001.pt": {
+          "sha256": "10cd6f15e22af12193f7e01c6b9cc09f231db5beed47323ef6953443ed94b925",
+          "bytes": 702215962,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "adapter_model.safetensors": {
+          "sha256": "20dfb23614497e16a79c11b175f5c783f8599a9bb9cf24058fa1d72992028345",
+          "bytes": 467062560,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "adapter_config.json": {
+          "sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+          "bytes": 1220,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        }
+      },
+      "verification_note": "All four files for each checkpoint were fully rehashed and matched recorded SHA256 during this audit before writing this artifact; no GPU or tensor loading was used."
+    },
+    "1818": {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818",
+      "passed_marker": true,
+      "step": 1818,
+      "trainable_tensors": 992,
+      "files": {
+        "rank-00000.pt": {
+          "sha256": "68c321c9dc15a5d62da5adffffbfb55b152a9a02ea38662cfe2fed0da8453e38",
+          "bytes": 702215962,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "rank-00001.pt": {
+          "sha256": "61c3d161bed509e59fd3b5663d43e964204ee1ec6c0c1207b7a6bfa90899ada6",
+          "bytes": 702215962,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "adapter_model.safetensors": {
+          "sha256": "c9e47c87ca50f1afdc84826a42e555f253e1f60f34f8bac9be534c7c66bc9547",
+          "bytes": 467062560,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        },
+        "adapter_config.json": {
+          "sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+          "bytes": 1220,
+          "full_sha256_verified_this_session": true,
+          "current_size_matches": true
+        }
+      },
+      "verification_note": "All four files for each checkpoint were fully rehashed and matched recorded SHA256 during this audit before writing this artifact; no GPU or tensor loading was used."
+    }
+  },
+  "validation": {
+    "base": {
+      "rows": 2209,
+      "unique_ids": 2209,
+      "all_finite": true,
+      "loss_sha256": "6187f45b640023dd1e996534ff9a44a39f2c1ca74c3f72a417517e6c8aeb5e7a",
+      "loss_hash_matches_marker": true,
+      "marker_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/validation/base/completed.json",
+      "by_task": {
+        "explain": {
+          "count": 228,
+          "mean_per_example_nll": 2.150666608099352
+        },
+        "track": {
+          "count": 1981,
+          "mean_per_example_nll": 1.8999154126926963
+        }
+      },
+      "by_video": {
+        "P07-20240529-102652": {
+          "explain": {
+            "count": 11,
+            "mean_per_example_nll": 1.737260254946622
+          },
+          "track": {
+            "count": 133,
+            "mean_per_example_nll": 1.5276920911961032
+          }
+        },
+        "P07-20240529-131737": {
+          "explain": {
+            "count": 15,
+            "mean_per_example_nll": 1.995490837097168
+          },
+          "track": {
+            "count": 91,
+            "mean_per_example_nll": 1.6549609310024387
+          }
+        },
+        "P07-20240529-134410": {
+          "explain": {
+            "count": 19,
+            "mean_per_example_nll": 2.6565295897032084
+          },
+          "track": {
+            "count": 156,
+            "mean_per_example_nll": 2.2116648845183544
+          }
+        },
+        "P07-20240529-191007": {
+          "explain": {
+            "count": 32,
+            "mean_per_example_nll": 2.3731775991618633
+          },
+          "track": {
+            "count": 299,
+            "mean_per_example_nll": 2.1908102286699225
+          }
+        },
+        "P07-20240529-194518": {
+          "explain": {
+            "count": 39,
+            "mean_per_example_nll": 1.951198513691242
+          },
+          "track": {
+            "count": 281,
+            "mean_per_example_nll": 1.7165838076974997
+          }
+        },
+        "P07-20240530-102543": {
+          "explain": {
+            "count": 38,
+            "mean_per_example_nll": 1.9872734703515704
+          },
+          "track": {
+            "count": 326,
+            "mean_per_example_nll": 1.8468945212890766
+          }
+        },
+        "P07-20240530-111344": {
+          "explain": {
+            "count": 2,
+            "mean_per_example_nll": 1.9055752754211426
+          },
+          "track": {
+            "count": 24,
+            "mean_per_example_nll": 1.5771206120649974
+          }
+        },
+        "P07-20240531-101357": {
+          "explain": {
+            "count": 35,
+            "mean_per_example_nll": 2.221524851662772
+          },
+          "track": {
+            "count": 399,
+            "mean_per_example_nll": 1.8627218716126634
+          }
+        },
+        "P07-20240531-201703": {
+          "explain": {
+            "count": 37,
+            "mean_per_example_nll": 2.2085503146455094
+          },
+          "track": {
+            "count": 272,
+            "mean_per_example_nll": 2.001291816068046
+          }
+        }
+      }
+    },
+    "epoch1": {
+      "rows": 2209,
+      "unique_ids": 2209,
+      "all_finite": true,
+      "loss_sha256": "f94ae161c8319a6bf29134409807b03864b1dd9135f6b452154c0be60e168e00",
+      "loss_hash_matches_marker": true,
+      "marker_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/validation/epoch1/completed.json",
+      "by_task": {
+        "explain": {
+          "count": 228,
+          "mean_per_example_nll": 1.8163069549359774
+        },
+        "track": {
+          "count": 1981,
+          "mean_per_example_nll": 1.854643786061839
+        }
+      },
+      "by_video": {
+        "P07-20240529-102652": {
+          "explain": {
+            "count": 11,
+            "mean_per_example_nll": 1.098549105904319
+          },
+          "track": {
+            "count": 133,
+            "mean_per_example_nll": 1.2806884924271948
+          }
+        },
+        "P07-20240529-131737": {
+          "explain": {
+            "count": 15,
+            "mean_per_example_nll": 1.6216756423314413
+          },
+          "track": {
+            "count": 91,
+            "mean_per_example_nll": 1.6575063807623727
+          }
+        },
+        "P07-20240529-134410": {
+          "explain": {
+            "count": 19,
+            "mean_per_example_nll": 2.3827226099215055
+          },
+          "track": {
+            "count": 156,
+            "mean_per_example_nll": 2.212385744238511
+          }
+        },
+        "P07-20240529-191007": {
+          "explain": {
+            "count": 32,
+            "mean_per_example_nll": 2.073081336915493
+          },
+          "track": {
+            "count": 299,
+            "mean_per_example_nll": 2.2012749894406882
+          }
+        },
+        "P07-20240529-194518": {
+          "explain": {
+            "count": 39,
+            "mean_per_example_nll": 1.5666246521167266
+          },
+          "track": {
+            "count": 281,
+            "mean_per_example_nll": 1.6265078878487556
+          }
+        },
+        "P07-20240530-102543": {
+          "explain": {
+            "count": 38,
+            "mean_per_example_nll": 1.7805472267301459
+          },
+          "track": {
+            "count": 326,
+            "mean_per_example_nll": 1.8846477571806293
+          }
+        },
+        "P07-20240530-111344": {
+          "explain": {
+            "count": 2,
+            "mean_per_example_nll": 1.3261658549308777
+          },
+          "track": {
+            "count": 24,
+            "mean_per_example_nll": 1.367357204357783
+          }
+        },
+        "P07-20240531-101357": {
+          "explain": {
+            "count": 35,
+            "mean_per_example_nll": 1.7851630142756871
+          },
+          "track": {
+            "count": 399,
+            "mean_per_example_nll": 1.7444478258453215
+          }
+        },
+        "P07-20240531-201703": {
+          "explain": {
+            "count": 37,
+            "mean_per_example_nll": 1.9515212242667739
+          },
+          "track": {
+            "count": 272,
+            "mean_per_example_nll": 2.01939761529074
+          }
+        }
+      }
+    },
+    "epoch2": {
+      "rows": 2209,
+      "unique_ids": 2209,
+      "all_finite": true,
+      "loss_sha256": "e44ae2f9388488ed59f022798b5af91ed0059b15ee701c148427d86acc67f264",
+      "loss_hash_matches_marker": true,
+      "marker_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/validation/epoch2/completed.json",
+      "by_task": {
+        "explain": {
+          "count": 228,
+          "mean_per_example_nll": 1.998133324478802
+        },
+        "track": {
+          "count": 1981,
+          "mean_per_example_nll": 2.059131699610936
+        }
+      },
+      "by_video": {
+        "P07-20240529-102652": {
+          "explain": {
+            "count": 11,
+            "mean_per_example_nll": 1.1904662305658513
+          },
+          "track": {
+            "count": 133,
+            "mean_per_example_nll": 1.391604022872179
+          }
+        },
+        "P07-20240529-131737": {
+          "explain": {
+            "count": 15,
+            "mean_per_example_nll": 1.8064807097117106
+          },
+          "track": {
+            "count": 91,
+            "mean_per_example_nll": 1.8837823147302146
+          }
+        },
+        "P07-20240529-134410": {
+          "explain": {
+            "count": 19,
+            "mean_per_example_nll": 2.5621451704125655
+          },
+          "track": {
+            "count": 156,
+            "mean_per_example_nll": 2.4209399150732236
+          }
+        },
+        "P07-20240529-191007": {
+          "explain": {
+            "count": 32,
+            "mean_per_example_nll": 2.2680951841175556
+          },
+          "track": {
+            "count": 299,
+            "mean_per_example_nll": 2.413443251597044
+          }
+        },
+        "P07-20240529-194518": {
+          "explain": {
+            "count": 39,
+            "mean_per_example_nll": 1.6824671030044556
+          },
+          "track": {
+            "count": 281,
+            "mean_per_example_nll": 1.7609795527101835
+          }
+        },
+        "P07-20240530-102543": {
+          "explain": {
+            "count": 38,
+            "mean_per_example_nll": 1.9946612652979399
+          },
+          "track": {
+            "count": 326,
+            "mean_per_example_nll": 2.1066224571385996
+          }
+        },
+        "P07-20240530-111344": {
+          "explain": {
+            "count": 2,
+            "mean_per_example_nll": 1.44084632396698
+          },
+          "track": {
+            "count": 24,
+            "mean_per_example_nll": 1.5299507901072502
+          }
+        },
+        "P07-20240531-101357": {
+          "explain": {
+            "count": 35,
+            "mean_per_example_nll": 1.9817569766725813
+          },
+          "track": {
+            "count": 399,
+            "mean_per_example_nll": 1.9716640582359524
+          }
+        },
+        "P07-20240531-201703": {
+          "explain": {
+            "count": 37,
+            "mean_per_example_nll": 2.1747492632350407
+          },
+          "track": {
+            "count": 272,
+            "mean_per_example_nll": 2.2733060982735718
+          }
+        }
+      }
+    }
+  },
+  "paired_change_vs_base": {
+    "epoch1": {
+      "by_task": {
+        "explain": {
+          "count": 228,
+          "mean_nll_change": -0.3343596531633745,
+          "improved": 204,
+          "worse": 24,
+          "tied": 0
+        },
+        "track": {
+          "count": 1981,
+          "mean_nll_change": -0.045271626630857216,
+          "improved": 1069,
+          "worse": 912,
+          "tied": 0
+        }
+      },
+      "by_video": {
+        "P07-20240529-102652": {
+          "explain": {
+            "count": 11,
+            "mean_nll_change": -0.6387111490423029,
+            "improved": 11,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 133,
+            "mean_nll_change": -0.2470035987689083,
+            "improved": 102,
+            "worse": 31,
+            "tied": 0
+          }
+        },
+        "P07-20240529-131737": {
+          "explain": {
+            "count": 15,
+            "mean_nll_change": -0.3738151947657267,
+            "improved": 15,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 91,
+            "mean_nll_change": 0.0025454497599339747,
+            "improved": 47,
+            "worse": 44,
+            "tied": 0
+          }
+        },
+        "P07-20240529-134410": {
+          "explain": {
+            "count": 19,
+            "mean_nll_change": -0.27380697978170293,
+            "improved": 16,
+            "worse": 3,
+            "tied": 0
+          },
+          "track": {
+            "count": 156,
+            "mean_nll_change": 0.000720859720156743,
+            "improved": 67,
+            "worse": 89,
+            "tied": 0
+          }
+        },
+        "P07-20240529-191007": {
+          "explain": {
+            "count": 32,
+            "mean_nll_change": -0.3000962622463703,
+            "improved": 32,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 299,
+            "mean_nll_change": 0.010464760770765835,
+            "improved": 136,
+            "worse": 163,
+            "tied": 0
+          }
+        },
+        "P07-20240529-194518": {
+          "explain": {
+            "count": 39,
+            "mean_nll_change": -0.38457386157451534,
+            "improved": 37,
+            "worse": 2,
+            "tied": 0
+          },
+          "track": {
+            "count": 281,
+            "mean_nll_change": -0.09007591984874413,
+            "improved": 194,
+            "worse": 87,
+            "tied": 0
+          }
+        },
+        "P07-20240530-102543": {
+          "explain": {
+            "count": 38,
+            "mean_nll_change": -0.20672624362142464,
+            "improved": 24,
+            "worse": 14,
+            "tied": 0
+          },
+          "track": {
+            "count": 326,
+            "mean_nll_change": 0.03775323589155279,
+            "improved": 137,
+            "worse": 189,
+            "tied": 0
+          }
+        },
+        "P07-20240530-111344": {
+          "explain": {
+            "count": 2,
+            "mean_nll_change": -0.5794094204902649,
+            "improved": 2,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 24,
+            "mean_nll_change": -0.20976340770721436,
+            "improved": 18,
+            "worse": 6,
+            "tied": 0
+          }
+        },
+        "P07-20240531-101357": {
+          "explain": {
+            "count": 35,
+            "mean_nll_change": -0.43636183738708495,
+            "improved": 35,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 399,
+            "mean_nll_change": -0.11827404576734193,
+            "improved": 281,
+            "worse": 118,
+            "tied": 0
+          }
+        },
+        "P07-20240531-201703": {
+          "explain": {
+            "count": 37,
+            "mean_nll_change": -0.2570290903787355,
+            "improved": 32,
+            "worse": 5,
+            "tied": 0
+          },
+          "track": {
+            "count": 272,
+            "mean_nll_change": 0.018105799222693723,
+            "improved": 87,
+            "worse": 185,
+            "tied": 0
+          }
+        }
+      }
+    },
+    "epoch2": {
+      "by_task": {
+        "explain": {
+          "count": 228,
+          "mean_nll_change": -0.1525332836205499,
+          "improved": 166,
+          "worse": 62,
+          "tied": 0
+        },
+        "track": {
+          "count": 1981,
+          "mean_nll_change": 0.1592162869182396,
+          "improved": 540,
+          "worse": 1441,
+          "tied": 0
+        }
+      },
+      "by_video": {
+        "P07-20240529-102652": {
+          "explain": {
+            "count": 11,
+            "mean_nll_change": -0.5467940243807706,
+            "improved": 11,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 133,
+            "mean_nll_change": -0.13608806832392412,
+            "improved": 86,
+            "worse": 47,
+            "tied": 0
+          }
+        },
+        "P07-20240529-131737": {
+          "explain": {
+            "count": 15,
+            "mean_nll_change": -0.18901012738545736,
+            "improved": 14,
+            "worse": 1,
+            "tied": 0
+          },
+          "track": {
+            "count": 91,
+            "mean_nll_change": 0.22882138372777583,
+            "improved": 12,
+            "worse": 79,
+            "tied": 0
+          }
+        },
+        "P07-20240529-134410": {
+          "explain": {
+            "count": 19,
+            "mean_nll_change": -0.09438441929064299,
+            "improved": 15,
+            "worse": 4,
+            "tied": 0
+          },
+          "track": {
+            "count": 156,
+            "mean_nll_change": 0.20927503055486923,
+            "improved": 29,
+            "worse": 127,
+            "tied": 0
+          }
+        },
+        "P07-20240529-191007": {
+          "explain": {
+            "count": 32,
+            "mean_nll_change": -0.10508241504430771,
+            "improved": 26,
+            "worse": 6,
+            "tied": 0
+          },
+          "track": {
+            "count": 299,
+            "mean_nll_change": 0.2226330229271216,
+            "improved": 21,
+            "worse": 278,
+            "tied": 0
+          }
+        },
+        "P07-20240529-194518": {
+          "explain": {
+            "count": 39,
+            "mean_nll_change": -0.26873141068678635,
+            "improved": 36,
+            "worse": 3,
+            "tied": 0
+          },
+          "track": {
+            "count": 281,
+            "mean_nll_change": 0.0443957450126838,
+            "improved": 109,
+            "worse": 172,
+            "tied": 0
+          }
+        },
+        "P07-20240530-102543": {
+          "explain": {
+            "count": 38,
+            "mean_nll_change": 0.007387794946369372,
+            "improved": 20,
+            "worse": 18,
+            "tied": 0
+          },
+          "track": {
+            "count": 326,
+            "mean_nll_change": 0.25972793584952325,
+            "improved": 87,
+            "worse": 239,
+            "tied": 0
+          }
+        },
+        "P07-20240530-111344": {
+          "explain": {
+            "count": 2,
+            "mean_nll_change": -0.4647289514541626,
+            "improved": 2,
+            "worse": 0,
+            "tied": 0
+          },
+          "track": {
+            "count": 24,
+            "mean_nll_change": -0.04716982195774714,
+            "improved": 11,
+            "worse": 13,
+            "tied": 0
+          }
+        },
+        "P07-20240531-101357": {
+          "explain": {
+            "count": 35,
+            "mean_nll_change": -0.23976787499019078,
+            "improved": 28,
+            "worse": 7,
+            "tied": 0
+          },
+          "track": {
+            "count": 399,
+            "mean_nll_change": 0.10894218662328888,
+            "improved": 139,
+            "worse": 260,
+            "tied": 0
+          }
+        },
+        "P07-20240531-201703": {
+          "explain": {
+            "count": 37,
+            "mean_nll_change": -0.03380105141046885,
+            "improved": 14,
+            "worse": 23,
+            "tied": 0
+          },
+          "track": {
+            "count": 272,
+            "mean_nll_change": 0.2720142822055256,
+            "improved": 46,
+            "worse": 226,
+            "tied": 0
+          }
+        }
+      }
+    }
+  },
+  "paired_validation_checks": {
+    "identical_id_sets": true,
+    "identical_supervised_token_counts": true,
+    "all_raw_loss_hashes_match_markers": true
+  },
+  "selected_checkpoint": {
+    "selected_stage": "epoch1",
+    "status": "selected",
+    "selection_metric": "mean_per_example_explain_nll",
+    "selected_metric": 1.8163069549359774,
+    "candidates": [
+      {
+        "stage": "epoch1",
+        "mean_per_example_explain_nll": 1.8163069549359774
+      },
+      {
+        "stage": "epoch2",
+        "mean_per_example_explain_nll": 1.998133324478802
+      }
+    ],
+    "tie_break": "epoch1",
+    "base_eligible": false,
+    "checkpoint": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909",
+    "meaning": "Lowest complete Explain assistant-target NLL, including goal/next/termination; not semantic WHY accuracy"
+  },
+  "recovery": {
+    "status": "finalization_recovered_zero_updates",
+    "original_optimizer_launch_returncode": 1,
+    "original_optimizer_launch_wall_seconds": 342578.53583192825,
+    "original_optimizer_launch_wall_hours": 95.16070439775785,
+    "zero_update_resume_wall_seconds": 62.255173206329346,
+    "additional_optimizer_steps": 0,
+    "protected_file_hash_checks": {
+      "training/main/optimizer_steps_rank0.jsonl": true,
+      "training/main/optimizer_steps_rank1.jsonl": true,
+      "validation/base/loss.jsonl": true,
+      "validation/base/completed.json": true,
+      "validation/epoch1/loss.jsonl": true,
+      "validation/epoch1/completed.json": true,
+      "validation/epoch2/loss.jsonl": true,
+      "validation/epoch2/completed.json": true,
+      "training/main/checkpoints/checkpoint-909/completed.json": true,
+      "training/main/checkpoints/checkpoint-1818/completed.json": true
+    },
+    "all_protected_hashes_unchanged": true,
+    "finalization_diagnostic_passed": true,
+    "finalization_classification": "root_fsdp_unsharded_after_eval_confirmed",
+    "limitations": [
+      "The prior process terminated without serializing frozen base tensors. The diagnostic can reproduce the layout-dependent audit failure and verify the recovered artifact, but cannot retrospectively compare the vanished GPU allocation byte-for-byte."
+    ],
+    "training_code_hashes_match_completion_identity": {
+      "common.py": true,
+      "data.py": true,
+      "model.py": true,
+      "checkpoints.py": true,
+      "train.py": true
+    }
+  },
+  "generation": {
+    "epoch1": {
+      "saved_records": 47,
+      "unique_ids": 47,
+      "expected_records": 228,
+      "completion_marker_present": false,
+      "prediction_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch1/generation.jsonl",
+      "sha256": "dca47b993ad1cf6e4ff2b242cf593d035384a1f722324e07062c3528a862e9eb"
+    },
+    "epoch2": {
+      "saved_records": 0,
+      "unique_ids": 0,
+      "expected_records": 228,
+      "completion_marker_present": false,
+      "prediction_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch2/generation.jsonl",
+      "sha256": null
+    }
+  },
+  "process_status": {
+    "host_ps_checked": true,
+    "host_ps_command": "ps -p 3374075,3634188,3635277 -o pid,ppid,stat,etime,args",
+    "pids_absent": [
+      3374075,
+      3634188,
+      3635277
+    ],
+    "saved_active_status": "stopped_for_storage_constraint",
+    "evaluation_running": false
+  },
+  "gpu_status_snapshot": {
+    "host_commands_verified": true,
+    "gpus": [
+      {
+        "index": 0,
+        "uuid": "GPU-f63ffaff-cdd7-e954-cea4-b051c47fbb20"
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-1ac69f34-45b7-8b31-05a6-98cce9530168"
+      },
+      {
+        "index": 2,
+        "uuid": "GPU-ecbea9da-d7ec-3646-3ae9-5290a7a3ccec"
+      },
+      {
+        "index": 3,
+        "uuid": "GPU-403d7717-f478-cd58-ae1e-e1f597ce4a5e"
+      },
+      {
+        "index": 4,
+        "uuid": "GPU-b304b940-881d-d087-1038-dfc8c7bf4db0"
+      },
+      {
+        "index": 5,
+        "uuid": "GPU-c1cd9558-ae3d-33e4-2201-06492e888f5b"
+      },
+      {
+        "index": 6,
+        "uuid": "GPU-94de5d09-018e-138b-2327-c9200b002287"
+      },
+      {
+        "index": 7,
+        "uuid": "GPU-c3e24419-4982-f374-4e84-47004328d6f2"
+      }
+    ],
+    "compute_apps": [
+      {
+        "gpu_uuid": "GPU-ecbea9da-d7ec-3646-3ae9-5290a7a3ccec",
+        "pid": 1915189,
+        "process_name": "VLLM::Worker_TP0",
+        "used_memory": "42102 MiB"
+      },
+      {
+        "gpu_uuid": "GPU-403d7717-f478-cd58-ae1e-e1f597ce4a5e",
+        "pid": 1915190,
+        "process_name": "VLLM::Worker_TP1",
+        "used_memory": "42102 MiB"
+      },
+      {
+        "gpu_uuid": "GPU-b304b940-881d-d087-1038-dfc8c7bf4db0",
+        "pid": 3687904,
+        "process_name": "VLLM::Worker_TP0",
+        "used_memory": "42014 MiB"
+      },
+      {
+        "gpu_uuid": "GPU-c1cd9558-ae3d-33e4-2201-06492e888f5b",
+        "pid": 3687905,
+        "process_name": "VLLM::Worker_TP1",
+        "used_memory": "42014 MiB"
+      },
+      {
+        "gpu_uuid": "GPU-94de5d09-018e-138b-2327-c9200b002287",
+        "pid": 351382,
+        "process_name": "VLLM::Worker_TP0",
+        "used_memory": "42116 MiB"
+      },
+      {
+        "gpu_uuid": "GPU-c3e24419-4982-f374-4e84-47004328d6f2",
+        "pid": 351383,
+        "process_name": "VLLM::Worker_TP1",
+        "used_memory": "42116 MiB"
+      }
+    ],
+    "authorized_gpu_indices": [
+      0,
+      1
+    ],
+    "authorized_gpu_compute_apps": [],
+    "no_gpu_jobs_launched_or_changed": true
+  },
+  "storage": {
+    "free_bytes_at_audit_write": 938717184,
+    "generation_resume_minimum_free_bytes": 3221225472,
+    "generation_blocked_by_free_space": true,
+    "historical_tmp_aliases": {
+      "/tmp/hdepic-qwen38-sft-env": "/data/yaxuanli/qwen38-storage/hdepic-qwen38-sft-env",
+      "/tmp/hdepic-qwen38-27b-env": "/data/yaxuanli/qwen38-storage/hdepic-qwen38-27b-env",
+      "/tmp/hdepic-qwen38-27b-hf": "/data/yaxuanli/qwen38-storage/hdepic-qwen38-27b-hf",
+      "/tmp/hdepic-qwen38-sft-checkpoints": "/data/yaxuanli/qwen38-storage/hdepic-qwen38-sft-checkpoints"
+    }
+  },
+  "interpretation": {
+    "supported": "Epoch1 improves held-out full assistant-target teacher-forced likelihood, especially Explain, versus the same base on identical validation rows.",
+    "not_established": [
+      "WHY semantic accuracy improvement",
+      "GOAL semantic accuracy improvement",
+      "NEXT class or semantic accuracy improvement",
+      "Current action accuracy improvement on Track",
+      "Test-set generalization"
+    ],
+    "nll_definition": "Arithmetic mean of each example mean NLL over the entire assistant target plus termination token; Explain includes WHY, GOAL, NEXT and termination, not WHY alone.",
+    "limitations": [
+      "Validation uses P07 only (nine correlated videos).",
+      "Semantic/reference label human calibration remains pending.",
+      "Epoch1 generation is partial at47/228; epoch2 generation not started.",
+      "The original process failed after all updates during a layout-sensitive frozen-parameter audit; diagnostic and zero-update recovery are retained.",
+      "The 33.97/35.99-second completion-marker timings belong to zero-update finalization and must not replace the95.16-hour original-run duration.",
+      "Minibatch training-loss first/last values are different batches; they are not paired accuracy measurements."
+    ]
+  },
+  "parameter_update_proofs": {
+    "0": {
+      "all_992_local_lora_tensors_changed": true,
+      "frozen_parameter_sample_count": 1184,
+      "frozen_sample_hashes_unchanged": true,
+      "frozen_optimizer_membership": 0
+    },
+    "1": {
+      "all_992_local_lora_tensors_changed": true,
+      "frozen_parameter_sample_count": 1184,
+      "frozen_sample_hashes_unchanged": true,
+      "frozen_optimizer_membership": 0
+    }
+  },
+  "video_consistency": {
+    "epoch1": {
+      "explain": {
+        "improved_video_means": 9,
+        "worse_video_means": 0
+      },
+      "track": {
+        "improved_video_means": 4,
+        "worse_video_means": 5
+      }
+    },
+    "epoch2": {
+      "explain": {
+        "improved_video_means": 8,
+        "worse_video_means": 1
+      },
+      "track": {
+        "improved_video_means": 2,
+        "worse_video_means": 7
+      }
+    }
+  }
+}

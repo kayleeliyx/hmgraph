@@ -1,4 +1,4 @@
-"""Gemma multimodal loading and inference for W window frame prompts.
+"""Multimodal loading and inference for W window frame prompts.
 
 Inputs:
   Model id/path, sampled frame paths, and L1 prompt string.
@@ -13,11 +13,12 @@ from typing import Iterable, List
 
 import torch
 from PIL import Image
-from transformers import AutoModelForImageTextToText, AutoProcessor
+import transformers
+from transformers import AutoProcessor, Qwen3VLMoeForConditionalGeneration
 
 
 class GemmaVLM:
-    """Thin plain-transformers wrapper for Gemma multimodal inference."""
+    """Thin plain-transformers wrapper for Qwen3-VL multimodal inference."""
 
     def __init__(
         self,
@@ -30,18 +31,20 @@ class GemmaVLM:
         self.device = device if torch.cuda.is_available() else "cpu"
         self.max_new_tokens = max_new_tokens
         dtype = getattr(torch, torch_dtype) if self.device != "cpu" else torch.float32
+        print(f"[GemmaVLM] transformers_version={transformers.__version__}")
+        print(f"[GemmaVLM] model_id={model_id}")
         self.processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
         device_map = "auto" if self.device == "auto" else ({"": self.device} if self.device != "cpu" else None)
-        self.model = AutoModelForImageTextToText.from_pretrained(
+        self.model = Qwen3VLMoeForConditionalGeneration.from_pretrained(
             model_id,
-            torch_dtype=dtype,
+            dtype=dtype,
             device_map=device_map,
             trust_remote_code=True,
         )
         self.model.eval()
 
     def _generate_from_content(self, content: list[dict]) -> str:
-        """Run Gemma on multimodal chat content and return verbatim output text."""
+        """Run Qwen3-VL on multimodal chat content and return verbatim output text."""
         messages = [{"role": "user", "content": content}]
         inputs = self.processor.apply_chat_template(
             messages,
@@ -62,10 +65,14 @@ class GemmaVLM:
             )
         prompt_len = inputs["input_ids"].shape[-1]
         generated = output_ids[:, prompt_len:]
-        return self.processor.decode(generated[0], skip_special_tokens=True).strip()
+        return self.processor.decode(
+            generated[0],
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False,
+        ).strip()
 
     def infer(self, frame_paths: Iterable[str | Path], prompt: str) -> str:
-        """Run Gemma on a list of frame paths and return verbatim output text."""
+        """Run Qwen3-VL on a list of frame paths and return verbatim output text."""
         images: List[Image.Image] = [
             Image.open(path).convert("RGB") for path in frame_paths
         ]
@@ -80,7 +87,7 @@ class GemmaVLM:
         after_frame_paths: Iterable[str | Path],
         prompt: str,
     ) -> str:
-        """Run Gemma on before/target/after W frame groups and return raw text."""
+        """Run Qwen3-VL on before/target/after W frame groups and return raw text."""
         before_images = [Image.open(path).convert("RGB") for path in before_frame_paths]
         target_images = [Image.open(path).convert("RGB") for path in target_frame_paths]
         after_images = [Image.open(path).convert("RGB") for path in after_frame_paths]
@@ -130,7 +137,7 @@ class GemmaVLM:
         crop_frame_paths: Iterable[str | Path],
         prompt: str,
     ) -> str:
-        """Run Gemma on before/target full frames plus target-only detail crops."""
+        """Run Qwen3-VL on before/target full frames plus target-only detail crops."""
         before_images = [Image.open(path).convert("RGB") for path in before_frame_paths]
         target_images = [Image.open(path).convert("RGB") for path in target_frame_paths]
         crop_images = [Image.open(path).convert("RGB") for path in crop_frame_paths]

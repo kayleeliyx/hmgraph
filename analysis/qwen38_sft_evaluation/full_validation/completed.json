@@ -1,0 +1,45 @@
+{
+  "completed_utc": "2026-10-12T00:08:28.812070+00:00",
+  "status": "complete",
+  "models": [
+    "base",
+    "epoch1",
+    "epoch2"
+  ],
+  "completed_generations_per_model": 228,
+  "why_eligible_per_model": 226,
+  "goal_next_eligible_per_model": 228,
+  "pending_semantic_packets": 0,
+  "semantic_ratings": "provisional_assistant_assessments",
+  "human_validation_performed": false,
+  "track_generation_and_test_evaluation_performed": false,
+  "selected_checkpoint_step": 909,
+  "checkpoint_selection": "lowest full Explain validation target NLL",
+  "retained_epoch_checkpoint_steps": [
+    909,
+    1818
+  ],
+  "deleted_intermediate_checkpoint_steps": [
+    250,
+    500,
+    750,
+    1000,
+    1250,
+    1500,
+    1750
+  ],
+  "free_GiB": 13.025192260742188,
+  "browser_check_passed": true,
+  "artifacts_sha256": {
+    "report.html": "f2ae8d26eacf17117409ac2d12184c3ae3c721941757da1cc08f7d64cc448935",
+    "report.md": "e975d1aa29c9476ad214ad9ca4388f2baa7fcbafd65b1920304310ea5f561fee",
+    "analysis.json": "a5dcf7cb46e8bdc4720ba9c283d57130a182330eaa85509a31a9c7f20086780d",
+    "examples.json": "5d5388613b481ff328f02fb16d8e8aa2e7734481c0aa1a64a7d6977b2eedc35c",
+    "full_comparison/scores/manifest.json": "56c86ef7a45eb0c1981c2c07c98e089125ae6cda00590ad2e8af879783537e97",
+    "full_comparison/scores/summary.json": "2ed6c7ba6122c10883b1200fc08c114a7b5c400a8987b7ba605363eb9e5fe10e",
+    "report_ui_check.json": "7f1da87707d53f8eaffd479a2b1f947cc481e830db88eada8f1ddd38caff7247",
+    "generation_completion_audit.json": "c4641891f98985a68dd9effc9186bfc97fbeb6f101ab7b4b209e2b7663ae1baf",
+    "protected_artifacts_audit.json": "f1009a99371214cf9107332412e39e786e608881eb8b148a67e2cfbe565ef7bf",
+    "semantic_consistency_check.json": "1477ff0b12521d248f0fc57ad063e8b28124d0d079e1116d6f045728ff019aa8"
+  }
+}

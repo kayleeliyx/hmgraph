@@ -1,0 +1,73 @@
+experiment:
+  name: hd_epic_why_dev100_c3_v2
+  variant: c3_v2
+  seed: 42
+  development_sample_size: 100
+
+dataset:
+  json_path: /data/kailaic/HDEPIC/data/hd-epic-annotations/vqa-benchmark/fine_grained_why_recognition.json
+  official_source: https://github.com/hd-epic/hd-epic-annotations/blob/main/vqa-benchmark/fine_grained_why_recognition.json
+  video_roots:
+    - /data/kailaic/HDEPIC/data/HD-EPIC/Videos
+  video_overrides: {}
+
+reference:
+  run_root: runs/e0/hd_epic_why_pilot
+  expected_annotation_sha256: d22531be3f23a8c4dd182693edac2acb5b75cc5ea017228cd89716cb5b3048d4
+
+outputs:
+  run_root: runs/e0/hd_epic_why_dev100_c3_v2
+  analysis_root: analysis/e0/hd_epic_why_dev100_c3_v2
+  log_path: logs/e0/hd_epic_why_dev100_c3_v2.log
+
+frames:
+  count: 16
+  image_detail: high
+  preprocessing:
+    max_edge: 1280
+    jpeg_quality: 90
+    colorspace: RGB
+    resize: preserve_aspect_ratio_lanczos_if_needed
+    jpeg_subsampling: 0
+
+model:
+  provider: openai_chat_completions
+  identifier: azure/gpt-5.6-sol
+  base_url: http://messi.eecs.umich.edu:8080/v1
+  credential_environment_variable: ACTGROUND_E0_API_KEY
+
+generation:
+  prompt_version: e0_self_knowledge_v1
+  reasoning_effort: medium
+  structured_output: true
+  max_output_tokens: 2000
+  requested_fact_count_min: 3
+  requested_fact_count_max: 5
+  requested_total_words_min: 80
+  requested_total_words_max: 180
+
+answer:
+  prompt_version: e0_answer_v1
+  reasoning_effort: medium
+  max_output_tokens: 4096
+
+retrieval:
+  version: e0_wikipedia_reference_v2
+  provider: wikipedia_mediawiki_api
+  endpoint: https://en.wikipedia.org/w/api.php
+  corpus_cache_location: runs/e0/hd_epic_why_dev100_c3_v2/cache/knowledge
+  max_search_results: 5
+  max_pages: 5
+  fact_count: 3
+  extract_chars: 1200
+  local_text_limit_chars: 1200
+  fact_word_budget: 180
+  timeout_seconds: 30
+  max_retries: 2
+  strict_complete_coverage: false
+  user_agent: ActGround-E0/2.0 (HD-EPIC research development revision)
+
+execution:
+  concurrency: 2
+  request_timeout_seconds: 300
+  max_retries: 2

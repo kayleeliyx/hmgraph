@@ -1,0 +1,116 @@
+{
+  "created_utc": "2026-10-11T23:50:18.084546+00:00",
+  "protected_files": [
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/adapter_config.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/adapter_config.json",
+      "mode": "entire_file",
+      "expected_sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+      "actual_sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/adapter_model.safetensors",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/adapter_model.safetensors",
+      "mode": "entire_file",
+      "expected_sha256": "20dfb23614497e16a79c11b175f5c783f8599a9bb9cf24058fa1d72992028345",
+      "actual_sha256": "20dfb23614497e16a79c11b175f5c783f8599a9bb9cf24058fa1d72992028345",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/completed.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/completed.json",
+      "mode": "entire_file",
+      "expected_sha256": "ad6e5359a6831ff96ad5a03792b027c79e9f002bcc7719ad73d3ebb50e2b897e",
+      "actual_sha256": "ad6e5359a6831ff96ad5a03792b027c79e9f002bcc7719ad73d3ebb50e2b897e",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/rank-00000.pt",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/rank-00000.pt",
+      "mode": "entire_file",
+      "expected_sha256": "426194496fe8c7293b96f19a16d86f70578e25f7a6db6133528785e38957a97b",
+      "actual_sha256": "426194496fe8c7293b96f19a16d86f70578e25f7a6db6133528785e38957a97b",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/rank-00001.pt",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-909/rank-00001.pt",
+      "mode": "entire_file",
+      "expected_sha256": "10cd6f15e22af12193f7e01c6b9cc09f231db5beed47323ef6953443ed94b925",
+      "actual_sha256": "10cd6f15e22af12193f7e01c6b9cc09f231db5beed47323ef6953443ed94b925",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/adapter_config.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/adapter_config.json",
+      "mode": "entire_file",
+      "expected_sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+      "actual_sha256": "81629d4a32a0e3af8c77a881049c8a25e5f170a92e81d07095ac7d973ebc04ca",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/adapter_model.safetensors",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/adapter_model.safetensors",
+      "mode": "entire_file",
+      "expected_sha256": "c9e47c87ca50f1afdc84826a42e555f253e1f60f34f8bac9be534c7c66bc9547",
+      "actual_sha256": "c9e47c87ca50f1afdc84826a42e555f253e1f60f34f8bac9be534c7c66bc9547",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/completed.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/completed.json",
+      "mode": "entire_file",
+      "expected_sha256": "5cd3370417abc2a25c7010fd977275ebf34c13118729bf3682fd9da2e2b4ce2c",
+      "actual_sha256": "5cd3370417abc2a25c7010fd977275ebf34c13118729bf3682fd9da2e2b4ce2c",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/rank-00000.pt",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/rank-00000.pt",
+      "mode": "entire_file",
+      "expected_sha256": "68c321c9dc15a5d62da5adffffbfb55b152a9a02ea38662cfe2fed0da8453e38",
+      "actual_sha256": "68c321c9dc15a5d62da5adffffbfb55b152a9a02ea38662cfe2fed0da8453e38",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/rank-00001.pt",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/checkpoints/checkpoint-1818/rank-00001.pt",
+      "mode": "entire_file",
+      "expected_sha256": "61c3d161bed509e59fd3b5663d43e964204ee1ec6c0c1207b7a6bfa90899ada6",
+      "actual_sha256": "61c3d161bed509e59fd3b5663d43e964204ee1ec6c0c1207b7a6bfa90899ada6",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/selected_checkpoint.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/selected_checkpoint.json",
+      "mode": "entire_file",
+      "expected_sha256": "bc46e506433aeb8d918a3efbb1254ece0399c96953a75d82fd11e18ea7a1a567",
+      "actual_sha256": "bc46e506433aeb8d918a3efbb1254ece0399c96953a75d82fd11e18ea7a1a567",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/completed.json",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/training/main/completed.json",
+      "mode": "entire_file",
+      "expected_sha256": "a4b614bfacf25ab39baa9a65ca670e55d55112ea2d5d17c701087082b91bb467",
+      "actual_sha256": "a4b614bfacf25ab39baa9a65ca670e55d55112ea2d5d17c701087082b91bb467",
+      "unchanged": true
+    },
+    {
+      "path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch1/generation.jsonl",
+      "resolved_path": "/data/yaxuanli/ActGround/runs/hdepic_sft_qwen38_27b_v1/predictions/epoch1/generation.jsonl",
+      "mode": "original_47_record_prefix",
+      "expected_sha256": "dca47b993ad1cf6e4ff2b242cf593d035384a1f722324e07062c3528a862e9eb",
+      "actual_sha256": "dca47b993ad1cf6e4ff2b242cf593d035384a1f722324e07062c3528a862e9eb",
+      "unchanged": true
+    }
+  ],
+  "all_protected_bytes_unchanged": true,
+  "checkpoint_steps": [
+    909,
+    1818
+  ],
+  "existing_epoch1_prediction_prefix_unchanged": true,
+  "free_GiB": 13.041725158691406
+}

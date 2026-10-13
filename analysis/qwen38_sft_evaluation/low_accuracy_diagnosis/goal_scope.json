@@ -1,0 +1,78 @@
+{
+ "initial_sft": {
+  "explain": {
+   "records_with_goal": 1271,
+   "goal_interval_seconds_p25_median_p75": [
+    88,
+    210,
+    744
+   ],
+   "actions_inside_goal_interval_p25_median_p75": [
+    34,
+    100,
+    263
+   ],
+   "query_position_in_interval_median": 0.52,
+   "goal_interval_spans_roughly_whole_video": 163,
+   "query_inside_a_recipe_step_or_prep_span": 562,
+   "query_inside_a_recipe_step_span": 342,
+   "covering_recipe_span_seconds_median": 34.8
+  },
+  "track": {
+   "records_with_goal": 12629,
+   "goal_interval_seconds_p25_median_p75": [
+    121,
+    294,
+    705
+   ],
+   "actions_inside_goal_interval_p25_median_p75": [
+    44,
+    115,
+    260
+   ],
+   "query_position_in_interval_median": 0.49,
+   "goal_interval_spans_roughly_whole_video": 1071,
+   "query_inside_a_recipe_step_or_prep_span": 5813,
+   "query_inside_a_recipe_step_span": 3726,
+   "covering_recipe_span_seconds_median": 36.9
+  }
+ },
+ "validation": {
+  "explain": {
+   "records_with_goal": 228,
+   "goal_interval_seconds_p25_median_p75": [
+    351,
+    508,
+    828
+   ],
+   "actions_inside_goal_interval_p25_median_p75": [
+    110,
+    145,
+    293
+   ],
+   "query_position_in_interval_median": 0.45,
+   "goal_interval_spans_roughly_whole_video": 47,
+   "query_inside_a_recipe_step_or_prep_span": 115,
+   "query_inside_a_recipe_step_span": 97,
+   "covering_recipe_span_seconds_median": 47.6
+  },
+  "track": {
+   "records_with_goal": 1981,
+   "goal_interval_seconds_p25_median_p75": [
+    291,
+    499,
+    828
+   ],
+   "actions_inside_goal_interval_p25_median_p75": [
+    109,
+    145,
+    249
+   ],
+   "query_position_in_interval_median": 0.5,
+   "goal_interval_spans_roughly_whole_video": 390,
+   "query_inside_a_recipe_step_or_prep_span": 899,
+   "query_inside_a_recipe_step_span": 650,
+   "covering_recipe_span_seconds_median": 39.3
+  }
+ }
+}

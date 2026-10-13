@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-12T00:07:58.548449+00:00",
+  "reviewed_semantic_outcomes": 1362,
+  "labels": {
+    "base": {
+      "why": {
+        "incorrect": 78,
+        "partial": 50,
+        "correct": 98
+      },
+      "goal": {
+        "partial": 43,
+        "incorrect": 183,
+        "correct": 2
+      }
+    },
+    "epoch1": {
+      "why": {
+        "incorrect": 97,
+        "partial": 54,
+        "correct": 75
+      },
+      "goal": {
+        "incorrect": 128,
+        "correct": 8,
+        "partial": 92
+      }
+    },
+    "epoch2": {
+      "why": {
+        "incorrect": 93,
+        "partial": 52,
+        "correct": 81
+      },
+      "goal": {
+        "incorrect": 133,
+        "correct": 11,
+        "partial": 84
+      }
+    }
+  },
+  "identical_reference_prediction_groups": 1028,
+  "text_label_conflicts": [],
+  "central_contradiction_label_check_passed": true
+}

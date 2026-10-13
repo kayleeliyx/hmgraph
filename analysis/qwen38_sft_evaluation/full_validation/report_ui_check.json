@@ -1,0 +1,333 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-12T00:07:24.166Z",
+  "examples": 228,
+  "videos": 9,
+  "video_filters": [
+    {
+      "video": "P07-20240529-102652",
+      "matches": 11
+    },
+    {
+      "video": "P07-20240529-131737",
+      "matches": 15
+    },
+    {
+      "video": "P07-20240529-134410",
+      "matches": 19
+    },
+    {
+      "video": "P07-20240529-191007",
+      "matches": 32
+    },
+    {
+      "video": "P07-20240529-194518",
+      "matches": 39
+    },
+    {
+      "video": "P07-20240530-102543",
+      "matches": 38
+    },
+    {
+      "video": "P07-20240530-111344",
+      "matches": 2
+    },
+    {
+      "video": "P07-20240531-101357",
+      "matches": 35
+    },
+    {
+      "video": "P07-20240531-201703",
+      "matches": 37
+    }
+  ],
+  "paired_filters": [
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "gain",
+      "matches": 27
+    },
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "loss",
+      "matches": 50
+    },
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "same",
+      "matches": 149
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "gain",
+      "matches": 6
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "loss",
+      "matches": 0
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "same",
+      "matches": 222
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "gain",
+      "matches": 34
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "loss",
+      "matches": 14
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "same",
+      "matches": 180
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "gain",
+      "matches": 32
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "loss",
+      "matches": 49
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "same",
+      "matches": 145
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "gain",
+      "matches": 9
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "loss",
+      "matches": 0
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "same",
+      "matches": 219
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "gain",
+      "matches": 31
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "loss",
+      "matches": 13
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "same",
+      "matches": 184
+    }
+  ],
+  "combined_filters": [
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 0
+    },
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 2
+    },
+    {
+      "model": "epoch1",
+      "field": "why",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 2
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 0
+    },
+    {
+      "model": "epoch1",
+      "field": "goal",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 1
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 1
+    },
+    {
+      "model": "epoch1",
+      "field": "next",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 0
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 2
+    },
+    {
+      "model": "epoch2",
+      "field": "why",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 2
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 0
+    },
+    {
+      "model": "epoch2",
+      "field": "goal",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "gain",
+      "video": "P07-20240529-102652",
+      "matches": 1
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "loss",
+      "video": "P07-20240529-102652",
+      "matches": 1
+    },
+    {
+      "model": "epoch2",
+      "field": "next",
+      "change": "same",
+      "video": "P07-20240529-102652",
+      "matches": 9
+    }
+  ],
+  "viewport_checks": [
+    {
+      "width": 1440,
+      "state": "collapsed",
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "body_width": 1440
+    },
+    {
+      "width": 1440,
+      "state": "all expanded",
+      "viewport_width": 1440,
+      "document_width": 1440,
+      "body_width": 1440
+    },
+    {
+      "width": 390,
+      "state": "all expanded",
+      "viewport_width": 390,
+      "document_width": 390,
+      "body_width": 390
+    },
+    {
+      "width": 390,
+      "state": "collapsed",
+      "viewport_width": 390,
+      "document_width": 390,
+      "body_width": 390
+    },
+    {
+      "width": 390,
+      "state": "case and technical details expanded",
+      "viewport_width": 390,
+      "document_width": 390,
+      "body_width": 390
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "search": {
+    "case_insensitive_and_trimmed": true,
+    "video_intersection": true,
+    "empty_result": true,
+    "reset": true
+  },
+  "expand_collapse": {
+    "manual": true,
+    "visible_only": true,
+    "collapse_hidden": true,
+    "all_cases": true
+  }
+}

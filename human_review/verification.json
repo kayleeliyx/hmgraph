@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-08",
+  "unit_and_http_tests": {
+    "passed": 62,
+    "failed": 0
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "Interface renders saved examples",
+      "Task filtering and example navigation",
+      "Compact laptop layout keeps the first decision visible",
+      "All 16 causal input frames load",
+      "Real video decodes and playback stops at the observed query boundary",
+      "Model names hidden and automated scores hidden",
+      "Observed and future evidence have distinct explicit bounds",
+      "Filmstrip opens enlarged evidence",
+      "Human decision persists and is hash-bound after reload",
+      "GOAL and ordered NEXT support semantic and component review",
+      "Save-and-next navigation restores annotation notes",
+      "Review export contains the saved human decision",
+      "Completed prediction review survives reload and reviewed filtering",
+      "Keyboard navigation, semantic labels and playback work",
+      "Fast reviewer changes cannot override a newer example selection"
+    ],
+    "browser": "156.0.8078.4",
+    "isolated_state": true,
+    "page_errors": []
+  },
+  "catalog": {
+    "examples": 2209,
+    "model_outputs": 7083,
+    "models": 5,
+    "videos_available": 9,
+    "media_sidecars_validated": 2209,
+    "warnings": []
+  },
+  "semantic_packet_contract": {
+    "matched_evaluator": 8207,
+    "mismatches": 0
+  },
+  "standalone_copy_without_training_or_evaluator_imports": true,
+  "synthetic_annotations_in_production_database": 0,
+  "source_sha256": {
+    "assets/timeline_annotations.json.gz": "a6051ccaf9b04ac5dbe045b2e257da70db931ef962ef83015aef3a34b192c74d",
+    "build_timeline.py": "969a54a0cb38aa618634afb7280b2f553828441157bd4f1d1b7ee0337724c09d",
+    "data.py": "c55662195194f112c1e46b7690115720af4980eaef5cdd9605292acc9d95d7e7",
+    "review.py": "220b1a05e5e0f22e17c980167e8386031e23514bf5bd7dcbf3048e7bed74766b",
+    "server.py": "9edbc9276f2204887d710415b2f3833b17de0d303ee707a878b6c15246b54d0c",
+    "static/app.css": "bc7ac2b6dcd597962d9d9a2713d1ce841f53c5995d05d734fe09f57816a242c5",
+    "static/app.js": "e72de2cd24f315776b635fbc723d80f4516721759316c210b08402ba56b8f1a6",
+    "static/index.html": "03388cd7f43405bad9fd50a59574a7211ef77c83980a56db4ec097cb4df34094",
+    "static/timeline.css": "3b49e9d474374ab509ac9fb321bb4a6f21dcd0de6facb8d63fe586c807a4c54c",
+    "static/timeline.html": "21fcdfe9ce93c0d7dc43b4a7df4dde9c858ae1d2c918c18e51abad21111218c8",
+    "static/timeline.js": "54a4de4a36ba9a9b4b950164c30095ce7083fb560a5954617fa7d5471aea1fd2",
+    "store.py": "363f95d492b1764b227a74829d16d5ec3007aada020b412fc2844b8b7351930d",
+    "tests/test_browser.cjs": "760a5a31642f6038a8acb7d6ef09dd0c7215dc42a13d6547b716c45c905978a3",
+    "tests/test_data.py": "9660f4614ab07cf1fd69db87f396b00ac70eaec427295b2724aa200eb3b4b88a",
+    "tests/test_lifecycle.py": "0fae740f55af84e3a91425f2b6ec2a976f2ae0a180f7b77fa9f256c67c141c93",
+    "tests/test_server.py": "351d03c9591ba6eb739f7eac7f9b810cfb884889d1ca357393f957545c8ec702",
+    "tests/test_store.py": "aa7c4ebb938a3fec040fdc42231fab823c8f573279e5d4ebe4544283f3f79dac",
+    "tests/test_timeline_api.py": "888bb5e300aff53ba3c542dc29bdd7a35158f9caff438e2d58058b0b79df7660",
+    "tests/test_timeline_browser.cjs": "7c8ee52e2f95cee2fb0608dc5182f26481feb4ba2b9162cd2b4b9370758d7bfd",
+    "tests/test_timeline_data.py": "437a5d66d59a3876adfca37ac0c742b2ddc24899a45c567c9075331ceb068f74",
+    "timeline_data.py": "416cc1f82cf1e6c8aa19886ec9e0d1086d3fe31c5055216ed7330bba3f130ae8"
+  },
+  "lifecycle_tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "access_repair": {
+    "server_was_stopped": true,
+    "persistent_background_mode": true,
+    "http_status": 200,
+    "browser_workspace_visible": true,
+    "video_loaded": true,
+    "javascript_errors": [],
+    "verified_detached_parent_pid": 1
+  },
+  "timeline_browser": {
+    "passed": true,
+    "checks": [
+      "All 156 videos and 59,454 source actions remain separate from 2,209 queries",
+      "WHY alignment, heterogeneous GOAL scope, query points and union coverage are preserved",
+      "Videos without predictions have no review points or artificial zero accuracy",
+      "Timeline workspace renders source videos",
+      "Source-video search and evaluated-query filters preserve the correct cohorts",
+      "Full-video playback decodes actual local video frames",
+      "Zoom, pan and full-video fit change the visible time window",
+      "Complete source intervals and WHY statuses remain inspectable and seek the video",
+      "Category filters use annotation counts and time charts merge overlaps",
+      "Query points link to the correct review case, field and model with future evidence",
+      "Review deep links preserve selection and bind saved human labels to future evidence",
+      "GOAL deep links retain the field and remember timeline evidence without URL hints",
+      "NEXT position deep links focus the requested row and retain explicit future evidence",
+      "Saved labels reload as timestamped human review points",
+      "Current timeline exports a standalone SVG",
+      "Source-only videos remain playable and explicitly show unmeasured review results",
+      "Reversed GOAL timings retain original endpoints and render only as flagged markers"
+    ],
+    "browser": "156.0.8078.4",
+    "isolated_state": true,
+    "page_errors": []
+  },
+  "timeline_catalog": {
+    "source_videos": 156,
+    "source_actions": 59454,
+    "source_goal_intervals": 1490,
+    "source_why_candidates": 4296,
+    "accepted_why_pending_human_validation": 3124,
+    "sampled_evaluation_queries": 2209,
+    "videos_with_evaluated_queries": 9,
+    "preserves_overlaps_gaps_and_source_issues": true,
+    "coverage_uses_interval_unions": true,
+    "human_decisions_are_query_model_field_points": true
+  }
+}

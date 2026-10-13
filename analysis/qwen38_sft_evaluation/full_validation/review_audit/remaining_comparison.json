@@ -1,0 +1,177 @@
+{
+  "sample_size": 34,
+  "label_agreements": 28,
+  "label_disagreements": [
+    {
+      "packet_id": "983e52fc27ea405d5d5f51d8e402d617bf77e3267a7a814f6a3d59be90866b81",
+      "prompt_sha256": "67b9e9f04722438759b808ed5b72f73698be2558ed97c8a75de56ece9b6ff223",
+      "primary": {
+        "field": "goal",
+        "label": "incorrect",
+        "justification": "The coequal meat-mixture task changes the asserted central preparation from portioning and arranging cookies to a different food preparation; this contradiction overrides the dough fragment.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": true,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "independent": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Preparing dough balls captures the cookie portioning and shaping component, but does not express arranging the cookies on the lined tray. Preparing a meat mixture is an unsupported additional task.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    },
+    {
+      "packet_id": "732d257d508d93f8bcb97cf981ff4f1f8173d84052615e7dad2deeb4c3d1c6ef",
+      "prompt_sha256": "4167287e46ef558cceb8793d0c4c46aaec78c3dd4012756d9314bff1ce754d05",
+      "primary": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Putting things away and general cleaning capture cleanup but lose the specified surface-wiping activity.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": true,
+          "too_narrow": false
+        }
+      },
+      "independent": {
+        "field": "goal",
+        "label": "correct",
+        "justification": "Cleaning and putting things away covers the essential cleaning and tidying activities. The individual surfaces and the wiping procedure need not all be enumerated.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": false
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    },
+    {
+      "packet_id": "9f92c98bf2eb6a51f8fb3e418957e7ce07c7bc3ba8e2243c12f137bcc1719133",
+      "prompt_sha256": "643f3aa4f319da8d02f73e296c30ef462f37be6be9e96b9bb1fd3d6e6387a4bc",
+      "primary": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Putting items away and wiping a counter covers some annotated cleanup but omits other named surfaces; pizza-dough preparation is unsupported.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "independent": {
+        "field": "goal",
+        "label": "correct",
+        "justification": "Putting things away and wiping the countertop identifies both tidying and surface cleaning; enumerating every surface is unnecessary. Gathering flour and a scale for pizza dough is an unsupported additional task.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": false
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    },
+    {
+      "packet_id": "996a9a8304cae723e1c4f0ac078549edc9c2c6e281e1eeb0e7ca7f8551511cc5",
+      "prompt_sha256": "f9b7521fba56aa91c0a9fa02e4c723b4badede5dfb638fce25e5f8465aa6a20a",
+      "primary": {
+        "field": "why",
+        "label": "correct",
+        "justification": "Captures transferring the remaining yoghurt from the spoon into the receiving vessel; calling that canister a glass is unsupported specificity.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": false
+        }
+      },
+      "independent": {
+        "field": "why",
+        "label": "partial",
+        "justification": "Removing the remaining yoghurt from the spoon captures the transfer purpose, but the answer names a glass instead of the specified canister. The packet does not establish those receptacles as equivalent.",
+        "flags": {
+          "unsupported_addition": true,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": true
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    },
+    {
+      "packet_id": "0450bfbf10dd7a40a49b9d32153301cf02f763f0c18cfa5be193e1af83e60f39",
+      "prompt_sha256": "09bffee6eb8674d8f549c00fdf3d8ba3a07d308d35d5dce5ab8e201a0691cabc",
+      "primary": {
+        "field": "why",
+        "label": "partial",
+        "justification": "Captures transferring ground coffee into the espresso basket but omits clearing all coffee granules remaining on the spoon.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": true,
+          "too_narrow": false
+        }
+      },
+      "independent": {
+        "field": "why",
+        "label": "correct",
+        "justification": "Making the ground coffee fall into the espresso basket expresses the stated transfer of the coffee granules into that basket; the definite batch of coffee does not require repeating the word all.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": false
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    },
+    {
+      "packet_id": "70eb7a1c5c35a677bbfc9f991d0d5884dbeebd78986a204581c08a55cff6f7bf",
+      "prompt_sha256": "7cb3cf82cb3158e5492f9cb6ca04e227d25c7ac907a69ee6c42ab23e1c83d904",
+      "primary": {
+        "field": "goal",
+        "label": "partial",
+        "justification": "Identifies general cleaning and tidying but omits wiping the specified sink, tiles, surfaces and cupboards.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": true,
+          "too_narrow": false
+        }
+      },
+      "independent": {
+        "field": "goal",
+        "label": "correct",
+        "justification": "Cleaning and putting things away identifies the essential cleaning and tidying activities; the enumerated surfaces and wiping procedure are not independently required tasks.",
+        "flags": {
+          "unsupported_addition": false,
+          "contradiction": false,
+          "too_broad": false,
+          "too_narrow": false
+        }
+      },
+      "status": "unresolved_rubric_boundary_retained_primary_provisional_rating"
+    }
+  ],
+  "stratified_sample_not_population_accuracy": true,
+  "independent_reviewer_received_model_labels": false,
+  "human_validation": false,
+  "independent_judgments_sha256": "2597f023f75b6c7d26eed688a21c10e1e187e389435f721b33f6db87e7f4b003",
+  "interpretation": "Primary and independent ratings both remain visible. Disagreements concern provisional reference scope or a destination identity, and do not establish which reviewer is correct. No reference scope or criterion was changed in response to model results.",
+  "primary_snapshot": "Current primary judgments after model-independent same-text consistency corrections; see goal_consistency_corrections.json",
+  "primary_reviews_corrected_for_text_consistency": true,
+  "independent_qa_imported": false,
+  "compared_with_current_primary_judgments": true
+}

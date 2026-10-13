@@ -1,0 +1,46 @@
+{
+  "version": "hdepic_field_evaluation_v1",
+  "input_sha256": {
+    "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/config.json": "f159ee94d544f5baab92a694eca473f221c3888031aa50e8f2988eb539b61430",
+    "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/references.jsonl": "e310e98caabfca26856cc7d3b5653477e96d2e8241b640da599acf7109e5526a",
+    "/data/yaxuanli/ActGround/evaluation/assets/mapper.json": "4cbd5e54b49d6d3f93c4b954780613046ecebdf9079136d4ac3017acf1398def",
+    "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/base.jsonl": "6514c4427e2f4a3b93b0cbb934e53d815eeb34f43ea55cdedb22440e4907e06b",
+    "/data/yaxuanli/ActGround/analysis/qwen38_sft_evaluation/full_validation/base_only/judgments.jsonl": "d6dcf499c5619a392b37bd50ad29ee60469c0f44227e5e67bc050c16598472ff"
+  },
+  "code_sha256": {
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/__init__.py": "e30975ba6807f8392ce9fa61b022a6ea09068be266204bef6c54b1a62529bf3d",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/__main__.py": "3919ac0846faaaa416151e982dd44168366b084b377a8f89e9d907e03777c39c",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/actions.py": "90771f12523531a0b9beff4331cb0c349a63335d946e3f50eebc3e4285ba31e2",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/extraction.py": "4653cf9efec80cf882e1a8feb45051e78b2aec6d743e1d32be63d2bab1ef2704",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/mapper.py": "6c602e60c09854f25932978a23a685b89b9ba5ddaa61c28626a2f4c3766232d7",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/references.py": "f8385f0bba0ce2392e47bfab1172245116d6d0c0a4e8e3613b6f5753221cd5a3",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/semantics.py": "22810120c0ceb85806604981ce811672d0577aa5f45a1c4fb73a037cd8dfec05",
+    "/data/yaxuanli/ActGround/evaluation/hdepic_eval/workflow.py": "d0de11f859ca100b5679f2ef966784d7f146f0708e2db23887aa2702d13e0d81"
+  },
+  "mapper_sha256": "e9394362eb8833ab597b2bfd3fed702c1fee40263e6c4e8a65f637f829c79d6f",
+  "reference_count": 228,
+  "semantic_rubric_sha256": "11eff038bcd3c09ee5ee3f2af76a236d53740cc4219e7deb4defaf7e18abeaf7",
+  "judge_input": "blind text agreement; no visual-support claims or future frames",
+  "model_inference_calls": 0,
+  "human_review_performed": false,
+  "existing_reports_modified": false,
+  "pending_packet_count": 356,
+  "standalone_bundle": true,
+  "config": {
+    "references": "references.jsonl",
+    "reference_format": "prepared",
+    "mapper": "/data/yaxuanli/ActGround/evaluation/assets/mapper.json",
+    "output": "scores",
+    "models": [
+      {
+        "name": "base",
+        "tasks": [
+          "explain"
+        ],
+        "predictions": "base.jsonl"
+      }
+    ],
+    "comparisons": []
+  },
+  "config_sha256": "d206030016a76b31e8bc985ab4bdce990733c558bf17a4878f590be0b8fa0b00"
+}
